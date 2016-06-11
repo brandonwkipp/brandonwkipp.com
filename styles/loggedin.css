@@ -1,0 +1,114 @@
+body {
+	background-color:#930000;
+}
+a {
+	text-decoration:none;
+	color:#000000; 
+}
+#back {
+	margin:auto;
+	margin-top:10px;
+	margin-bottom:20px;
+	width:300px;
+	font-size:1.5em;
+	font-family:courier;
+	text-align:center;
+	padding-left:2px;
+	padding-right:2px;
+	border:2px solid #000000;
+	border-radius:6px;
+}
+#congrats {
+	font-family:courier;
+	width:400px;
+	margin:auto;
+	margin-top:50px;
+}
+#container {
+	position:relative;
+	width:193px;
+	margin:auto;
+	margin-top:20px;
+}
+#jsProj {
+	position:relative;
+	margin:auto;
+	width:100%;
+	padding:4px;
+	text-align:center;
+	border:2px solid #000000;
+	border-radius:6px;
+	background-color:#214381;
+	overflow:hidden;
+}
+#webProj {
+	position:relative;
+	width:100%;
+	margin:auto;
+	margin-top:10px;
+	padding:4px;
+	text-align:center;
+	border:2px solid #000000;
+	border-radius:6px;
+	background-color:#214381;
+	overflow:hidden;
+}
+#jsText {
+	float:left;
+	color:#FFFFFF;
+}
+#card {
+	float:right;
+	position:relative;
+	width:60px;
+	height:83px;
+	padding-right:2px;
+	border:2px solid #930000;
+	border-radius:10px;
+	background-color:#FFFFFF;
+}
+#topCorner {
+	position:relative;
+	float:left;
+	font-family:cursive;
+	font-size:1em;
+	padding-left:1px;
+}
+#bottomCorner {
+	position:relative;
+	float:right;
+	bottom:-5%;
+	right:5%;
+	font-family:cursive;
+	font-size:1em;
+	-webkit-transform:rotate(-180deg);
+	-moz-transform:rotate(-180deg); 
+	-o-transform:rotate(-180deg); 
+	transform:rotate(-180deg);
+	ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+#cardCenter {
+	position:relative;
+	margin-top:45%;
+	text-align:center;
+	font-size:1.5em;
+}
+#webText {
+	float:left;
+	color:#FFFFFF;
+}
+#webAlbum {
+	float:right;
+	width:83px;
+	height:83px;
+	border:2px solid #930000;
+}
+#copyright {
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	font-family:courier;
+	text-align:center;
+}

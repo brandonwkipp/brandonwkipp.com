@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+</head>
+<body>
+<script>
+var array = [-9231,4309,332,3033,1221,4080,5555,1111,0,6,5,333,44,3,3,6,4,4444,75];
+
+function convert(num) {
+	var output = [];
+	var input_string = '';
+	var input = num.toString();
+	var count = input.length;
+	for(var i = 0; i < count; i++)
+	{
+		input_string += input.substr(i,1); 
+	}
+	function ones(digit,tens,hundreds) 
+	{
+		switch(digit) 
+		{
+			case '0':
+				if(hundreds == '1')
+				{
+					if(tens == '1')
+					{
+						output.push('ten');
+					}
+				}else 
+				{
+					if(tens == '1')
+					{
+						output.push('ten');
+					}else
+					{
+						output.push('zero');
+					}
+				}
+			break;
+			case '1':
+				if(tens == '1') {
+					output.push('eleven');
+				}else 
+				{
+					if(tens > '0') output.push('-');
+					output.push('one');
+				}
+			break;
+			case '2':
+				if(tens > '0') output.push('-');
+				output.push('two');
+				if(tens == '1') output.push('twelve');
+			break;
+			case '3':
+				if(tens > '0') output.push('-');
+				output.push('three');
+				if(tens == '1') output.push('thriteen');
+			break;
+			case '4':
+				if(tens > '0') output.push('-');
+				output.push('four');
+				if(tens == '1') output.push('fourteen');
+			break;
+			case '5':
+				if(tens > '0') output.push('-');
+				output.push('five');
+				if(tens == '1') output.push('fifteen');
+			break;
+			case '6':
+				if(tens > '0') output.push('-');
+				output.push('six');
+				if(tens == '1') output.push('sixteen');
+			break;
+			case '7':
+				if(tens > '0') output.push('-');
+				output.push('seven');
+				if(tens == '1') output.push('seventeen');
+			break;
+			case '8':
+				if(tens > '0') output.push('-');
+				output.push('eight');
+				if(tens == '1') output.push('eighteen');
+			break;
+			case '9':
+				if(tens > '0') output.push('-');
+				output.push('nine');
+				if(tens == '1') output.push('nineteen');
+			break;
+		}
+		console.log(output.join(""));
+	}
+	function tens(digit) 
+	{
+		switch(digit) 
+		{
+			case '2':
+				output.push('twenty');
+			break;
+			case '3':
+				output.push('thirty');
+			break;
+			case '4':
+				output.push('forty');
+			break;
+			case '5':
+				output.push('fifty');
+			break;
+			case '6':
+				output.push('sixty');
+			break;
+			case '7':
+				output.push('seventy');
+			break;
+			case '8':
+				output.push('eighty');
+			break;
+			case '9':
+				output.push('ninety');
+			break; 
+		}
+	}
+	function hundreds(digit)
+	{
+		switch(digit) 
+		{
+			case '0':
+			break;
+			case '1':
+				output.push('one hundred and ');
+			break;
+			case '2':
+				output.push('two hundred and ');
+			break;
+			case '3':
+				output.push('three hundred and ');
+			break;
+			case '4':
+				output.push('four hundred and ');
+			break;
+			case '5':
+				output.push('five hundred and ');
+			break;
+			case '6':
+				output.push('six hundred and ');
+			break;
+			case '7':
+				output.push('seven hundred and ');
+			break;
+			case '8':
+				output.push('eight hundred and ');
+			break;
+			case '9':
+				output.push('nine hundred and ');
+			break; 
+		}
+	}
+	function thousands(digit,hundreds)
+	{
+		switch(digit) 
+		{
+			case '0':
+			break;
+			case '1':
+				output.push('one thousand');
+				if(hundreds == '0')
+				{
+					output.push(' and ');
+				}else 
+				{
+					output.push(', ');
+				}
+			break;
+			case '2':
+				output.push('two thousand');
+				if(hundreds == '0')
+				{
+					output.push(' and ');
+				}else 
+				{
+					output.push(', ');
+				}
+			break;
+			case '3':
+				output.push('three thousdand');
+				if(hundreds == '0')
+				{
+					output.push(' and ');
+				}else 
+				{
+					output.push(', ');
+				}
+			break;
+			case '4':
+				output.push('four thousand');
+				if(hundreds == '0')
+				{
+					output.push(' and ');
+				}else 
+				{
+					output.push(', ');
+				}
+			break;
+			case '5':
+				output.push('five thousand');
+				if(hundreds == '0')
+				{
+					output.push(' and ');
+				}else 
+				{
+					output.push(', ');
+				}
+			break;
+			case '6':
+				output.push('six thousand');
+				if(hundreds == '0')
+				{
+					output.push(' and ');
+				}else 
+				{
+					output.push(', ');
+				}
+			break;
+			case '7':
+				output.push('seven thousand');
+				if(hundreds == '0')
+				{
+					output.push(' and ');
+				}else 
+				{
+					output.push(', ');
+				}
+			break;
+			case '8':
+				output.push('eight thousand');
+				if(hundreds == '0')
+				{
+					output.push(' and ');
+				}else 
+				{
+					output.push(', ');
+				}
+			break;
+			case '9':
+				output.push('nine thousand');
+				if(hundreds == '0')
+				{
+					output.push(' and ');
+				}else 
+				{
+					output.push(', ');
+				}
+			break; 
+		}
+	}
+	switch(count) 
+	{
+		case 0: 
+		break;
+		case 1:
+			var one = input_string.slice(-1);
+			ones(one);
+		break;
+		case 2:
+			var ten = input_string.slice(-2,1);
+			var one = input_string.slice(-1);
+			tens(ten);
+			ones(one,ten);
+		break;
+		case 3:
+			var hundred = input_string.slice(-3,-2);
+			var ten = input_string.slice(-2,-1);
+			var one = input_string.slice(-1);
+			hundreds(hundred);
+			tens(ten);
+			ones(one,ten,1);
+		break;
+		case 4:
+			var thousand = input_string.slice(-4,-3);
+			var hundred = input_string.slice(-3,-2);
+			var ten = input_string.slice(-2,-1);
+			var one = input_string.slice(-1);
+			thousands(thousand,hundred);
+			hundreds(hundred);
+			tens(ten);
+			ones(one,ten,1);
+		break;
+		default:
+		break;
+	}
+}
+
+for(var i = 0; i < array.length; i++)
+{
+	convert(array[i]);
+}
+</script>
+</body>
+</html>

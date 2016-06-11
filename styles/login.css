@@ -1,0 +1,65 @@
+body {
+	background-color:#930000;
+}
+a {
+	text-decoration:none;
+	color:#000000;
+}
+#back {
+	margin:auto;
+	margin-top:10px;
+	margin-bottom:20px;
+	width:300px;
+	font-size:1.5em;
+	font-family:courier;
+	text-align:center;
+	padding-left:2px;
+	padding-right:2px;
+	border:2px solid #000000;
+	border-radius:6px;
+}
+#container {
+	width:90%;
+	height:500px;
+	margin:auto;
+}
+#text {
+	float:left;
+	width:32%;
+	padding:8px;
+	font-family:courier;
+}
+#form {
+	float:left;
+	position:relative;
+	margin:auto;
+	padding-top:8px;
+	padding-bottom:8px;
+	width:34%; 
+	height:482px;
+	border:2px solid #000000;
+	border-top-color:#930000;
+	border-bottom-color:#930000;
+	font-family:courier;
+	text-align:center;
+	background: -webkit-linear-gradient(#C2C2A3, #930000); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(#C2C2A3, #930000); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(#C2C2A3, #930000); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(#C2C2A3, #930000); /* Standard syntax */
+}
+.message {
+	color:#000000;
+}
+#register {
+	float:right;
+	position:relative;
+	padding-top:8px;
+	padding-bottom:8px;
+	width:32%; 
+	font-family:courier;
+	text-align:right;
+	background: -webkit-linear-gradient(#C2C2A3, #930000); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(#C2C2A3, #930000); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(#C2C2A3, #930000); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(#C2C2A3, #930000); /* Standard syntax */
+}

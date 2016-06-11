@@ -1,0 +1,26 @@
+{
+    "blog": [
+        {
+            "author": "Brandon W. Kipp",
+            "date": "06/5/2016",
+            "id": "1",
+            "title": "Settled In",
+            "text": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget ipsum non orci tempor mattis. Pellentesque eget diam ornare, maximus ex ac, feugiat augue. Sed viverra ornare augue in lobortis. Sed viverra maximus odio eu posuere. Suspendisse sit amet aliquet lorem, nec porttitor eros. Nam ex tortor, porta quis luctus in, tristique vel ante. Donec id dapibus enim. Nunc faucibus nibh id felis faucibus blandit. Nullam porta nunc elementum dolor malesuada scelerisque. Praesent dignissim felis mauris, vel bibendum sapien interdum et. Maecenas a felis maximus, aliquet metus eget, commodo leo. Aenean cursus magna at sapien porta, ut mollis quam viverra. In in convallis leo. Suspendisse posuere sodales ex, quis tincidunt tortor convallis at. Fusce vitae fringilla libero. Fusce feugiat posuere commodo. Integer in arcu elit. Mauris eu ligula tellus. Nulla vitae arcu eget erat pellentesque facilisis. Aliquam eros erat, tempus eu mauris ac, aliquam lacinia orci. Quisque tempor mollis sem, at dapibus nulla euismod ac. Maecenas non ligula ac mauris bibendum ornare. Aliquam luctus hendrerit erat eu porta. Fusce non justo id orci imperdiet tincidunt quis eu lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris blandit, eros eu venenatis lobortis, ligula eros viverra tortor, dapibus iaculis ex nunc vitae dolor. Nullam euismod maximus nunc, at euismod felis malesuada id. Sed at elit cursus, dignissim ligula vitae, lacinia elit. Pellentesque efficitur, libero nec elementum porta, elit elit rutrum quam, ac porttitor velit elit eu enim. Nam a luctus turpis. Mauris a lectus volutpat nulla mattis accumsan. Etiam at consectetur dui. Sed gravida diam vel euismod rutrum. Nullam bibendum metus in lectus tempor porta. Aliquam eu condimentum odio, nec aliquet augue. Nam rhoncus dignissim pretium. Curabitur sodales ligula at arcu molestie, quis bibendum ante sagittis. Aenean volutpat turpis vel consectetur dapibus. Integer tincidunt nibh sed dolor lobortis, ut suscipit ligula malesuada. In et convallis dui, et hendrerit eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam interdum mauris pulvinar sagittis egestas. Fusce ac libero sed enim fringilla maximus eu et justo. Cras cursus ex in magna blandit pretium. Maecenas sodales vel lacus eu aliquet. Nunc vestibulum dictum sapien, non vulputate massa sagittis eget. Donec volutpat auctor semper. Suspendisse semper condimentum accumsan. Nullam bibendum elit sed nisl fringilla, vitae rutrum turpis venenatis."
+            ]
+        },
+        {
+            "author": "Brandon W. Kipp",
+            "date": "06/3/2016",
+            "id": "0",
+            "title": "First Blog Ever",
+            "text": [
+                "So, I guess this is my first blog entry on this site. Today, I moved to Minneapolis all the way from",
+                "Wisconsin with the intention of finding a new trail to blaze. For the past five years, I've been running",
+                "a tiny recording studio. So many good things had come from that; I met so many creative and talented people.",
+                "I got paid to do something I loved. Most importantly, I learned a lot about who I am. Like, that I happen to",
+                "love business and finance. Never knew."
+            ]
+        }
+    ]
+}
