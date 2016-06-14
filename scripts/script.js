@@ -17,6 +17,9 @@ function activeSwitch(element) {
         $(element).addClass('active open');
     }
 }
+function resumeSwitch() {
+    document.getElementById('content-box').innerHTML = '<img src="pdfs/resume-placeholder.png">';
+}
 function init() {
     var ul = document.getElementById('navTabs');
     var list = ul.getElementsByTagName('li');
@@ -68,3 +71,32 @@ function init() {
 }
 
 init();
+
+/*
+
+<div id="myCarousel" class="carousel slide" data-interval="false">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+          <img src="images/icons/twitter-icon.png">
+      </div>
+      <div class="item">
+          <img src="images/icons/reddit-icon.png">
+      </div>
+      <div class="item">
+          <img src="images/icons/soundcloud-icon.png">
+      </div>
+    </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="background-image:none;">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="background-image:none;">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+*/
