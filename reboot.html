@@ -9,75 +9,80 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link rel="stylesheet" href="styles/reboot.css"/>
 
+<!-- Latest Less CDN -->
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.6.1/less.min.js"></script>-->
+
 </head>
 
-<body>
-<div id="greeting" class="col-md-4 hidden-xs">
-    <h3 id="name" style="font-family:'Montserrat';margin-bottom:5px;">Brandon W. Kipp</h3>
-    <div id="image-container">
-        <img id="portrait" draggable="false" src="images/1.png" width="200px" height="200px"></img>
-    </div>
-    <div id="blurb">
-        <p style="font-size:36px;margin-bottom:5px;">hello.</p>
-        <p>My name is Brandon and I’m an aspiring web developer from the great state of Wisconsin. My passions lie in
-        web UI/UX design and music technology. My biggest goal with web design, right now, is to make peoples' lives
-        easier through my intuitive web app: <a href="#">SoundSword</a>. Aside from all that, I love business, philosophy,
-        finance, reading, tea, rum, biking, and live music.</p>
-    </div>
-</div>
-<div id="content" class="col-md-8 top">
-    <ul id="navTabs" class="nav nav-tabs">
-        <li id="projects">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                Projects<span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-                <li><a href="#">SoundSword - a sound editing web app</a></li>
-                <li><a href="https://blackestnapkin.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
-            </ul>
-        </li>
-        <li id="blog" class="active"><a href="#">Blog</a></li>
-        <li id="about"><a href="#">About Me</a></li>
-        <li id="connect">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                Connect<span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-                <li><a href="https://twitter.com/brandonwkipp"><img class="icon" src="images/icons/twitter-icon.png"/> Twitter</a></li>
-                <li><a href="https://linkedin.com/in/brandonwkipp"><img class="icon" src="images/icons/linkedin-icon.png"/> LinkedIn</a></li>
-                <li><a href="https://soundcloud.com/brandonwkipp"><img class="icon" src="images/icons/soundcloud-icon.png"/> SoundCloud</a></li>
-                <li><a href="https://reddit.com/user/BlackestNapkin"><img class="icon" src="images/icons/reddit-icon.png"/> Reddit</a></li>
-                <li><a href="https://github.com/blackestnapkin"><img class="icon" src="images/icons/github-icon.png"/> Github</a></li>
-            </ul>
-        </li>
-        <li id="contact"><a href="#" data-toggle="modal" data-target="#contact-modal">Contact</a></li>
-        <!-- Modal -->
-        <div id="contact-modal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Contact</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form method="post" action="email_form.php">
-                            <input class="form-input" type="text" placeholder="Your Name*"/>
-                            <input class="form-input" type="text" placeholder="Your Email Address*"/>
-                            <input class="form-input" type="text" placeholder="Subject*"/>
-                            <textarea class="form-input message" type="text" placeholder="Message*"></textarea>
-                            <span style="display:inline-block;width:100%;margin-top:5px;">
-                                <input class="form-submit" type="submit" class="btn btn-info" value="Send Message"/>
-                            </span>
-                        </form>
-                    </div>
+<body class="color-tone-a">
+        <div id="greeting" class="col-md-4 hidden-xs">
+            <div>
+                <h3 id="name">Brandon W. Kipp</h3>
+                <div id="blurb" class="color-tone-b color-tone-d">
+                    <p style="font-size:36px;">hello.</p>
+                    <p>My name is Brandon and I’m an aspiring web developer from the great state of Wisconsin. My passions lie in
+                    web UI/UX design and music technology. My biggest goal with web design, right now, is to make peoples' lives
+                    easier through my intuitive web app: <a href="#">SoundSword</a>. Aside from all that, I love business, philosophy,
+                    finance, reading, tea, rum, biking, and live music.</p>
                 </div>
+                <div id="image-container">
+                    <img id="portrait" class="" draggable="false" src="images/1.png" width="200px" height="200px"></img>
+                </div>
+
             </div>
         </div>
-    </ul>
-    <div id="content-box"></div>
-
-</div>
+        <div id="content" class="col-md-8 top">
+            <ul id="navTabs" class="nav nav-tabs color-tone-e">
+                <li id="projects">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        Projects<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">SoundSword - a sound editing web app</a></li>
+                        <li><a href="https://blackestnapkin.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
+                    </ul>
+                </li>
+                <li id="blog" class="active"><a href="#">Blog</a></li>
+                <li id="resume"><a href="#">Resume</a></li>
+                <li id="connect">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        Connect<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://twitter.com/brandonwkipp"><img class="icon" src="images/icons/twitter-icon.png"/> Twitter</a></li>
+                        <li><a href="https://linkedin.com/in/brandonwkipp"><img class="icon" src="images/icons/linkedin-icon.png"/> LinkedIn</a></li>
+                        <li><a href="https://soundcloud.com/brandonwkipp"><img class="icon" src="images/icons/soundcloud-icon.png"/> SoundCloud</a></li>
+                        <li><a href="https://reddit.com/user/BlackestNapkin"><img class="icon" src="images/icons/reddit-icon.png"/> Reddit</a></li>
+                        <li><a href="https://github.com/brandonwkipp"><img class="icon" src="images/icons/github-icon.png"/> Github</a></li>
+                    </ul>
+                </li>
+                <li id="contact"><a href="#" data-toggle="modal" data-target="#contact-modal">Contact</a></li>
+                <!-- Modal -->
+                <div id="contact-modal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="color-tone-c color-tone-d">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title" style="color:#FFF;">Contact</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form method="post" action="email_form.php">
+                                    <input class="form-input" type="text" placeholder="Your Name*"/>
+                                    <input class="form-input" type="text" placeholder="Your Email Address*"/>
+                                    <input class="form-input" type="text" placeholder="Subject*"/>
+                                    <textarea class="form-input message" type="text" placeholder="Message*"></textarea>
+                                    <span style="display:inline-block;width:100%;margin-top:5px;">
+                                        <input class="form-submit" type="submit" class="btn btn-info" value="Send Message"/>
+                                    </span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+            <div id="content-box" class="color-tone-b color-tone-d"></div>
+        </div>
 
 <!-- Latest compiled and minified jQuery -->
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>

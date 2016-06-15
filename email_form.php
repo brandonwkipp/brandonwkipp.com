@@ -1,5 +1,7 @@
+<?php
+
 $errors = '';
-$myemail = 'yourname@website.com';
+$myemail = 'brandonwkipp@gmail.com';
 
 if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['message']))
 {
@@ -26,3 +28,5 @@ if(empty($errors))
     //redirect to the 'thank you' page
     header('Location: contact-form-thank-you.html');
 }
+
+?>

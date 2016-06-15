@@ -6,64 +6,102 @@ html,
 body {
 	min-height: 100%;
 	height: 100%;
-	background-color: #00CC99;
 	font-family: 'Montserrat';
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
 h3 {
-	position:relative;
-	margin:0 auto;
-	margin-top:25px;
-	margin-bottom:100px;
-	text-align:center;
-	font-family:courier;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 25px;
+	margin-bottom: 100px;
+	text-align: center;
+	font-family: courier;
 }
 a {
-	text-decoration:none;
-	color:#000000;
+	text-decoration: none;
+	color: #000000;
 }
 a:focus {
 	outline: none;
 }
+.color-tone-a {
+    /* background */
+    background-color: #E2FFD8;
+}
+.color-tone-b {
+    /* div backgrounds */
+    background-color: #A8FF8C;
+}
+.color-tone-c {
+    /*modal background */
+    background-color: #30415D;
+}
+.color-tone-d {
+    /* main borders style */
+    border-color: #527F44;
+    border-style: solid;
+}
+.color-tone-e {
+    /* nav-bar background */
+    background-color: #AF473C;
+}
 .top {
 	margin-top: 5px;
 }
+.affix, .affix-top, .affix-bottom {
+    top: 0px !important;
+    width: 33%;
+}
 #greeting {
-	border-right: 1px solid #DDD;
+    position: relative;
+    height: 100%;
 }
 #name {
 	text-align: left;
+    font-family: 'Montserrat';
+    margin-bottom: 5px;
 }
 #portrait {
 	display: block;
-	width: 200px;
-	border: 5px solid #000;
-	margin: auto;
+    position: absolute;
+    bottom: 2%;
+	width: 125px;
+    height: 125px;
+	border: 5px solid #AF473C;
+    border-radius: 100%;;
 }
 #blurb {
 	position: relative;
 	width: 95%;
 	margin-top: 10px;
-	border: 10px solid #fff;
+	border-width: 10px;
 	border-radius: 20px;
-	background: #ff4d4d;
-	padding: 15px;
+	padding: 15px 15px 0px 15px;
 	font-size: 16px;
 	font-family: 'Montserrat';
 }
 #content {
-	height: 75%;
+    position: relative;
+	height: 100%;
+    border-left: 1px solid #527F44;;
+}
+#navTabs {
+    width: 95%;
+    margin: auto;
+    border-radius: 20px;
 }
 #content-box {
 	display: block;
 	position: relative;
 	width: 95%;
-	height: 100%;
+	height: 85%;
 	margin: auto;
 	margin-top: 15px;
-	border: 10px solid #fff;
+	border-width: 10px;
 	border-radius: 20px;
-	background: #ff4d4d;
-	padding: 15px;
+	padding: 15px 15px 0px 15px;
 	font-size: 16px;
 	font-family: 'Montserrat';
 	overflow-y: scroll;
@@ -71,17 +109,17 @@ a:focus {
 #content-box::-webkit-scrollbar {
     width: 13px;
     height: 13px;
-	background: #FFF;
+	background: #527F44;
 }
 #content-box::-webkit-scrollbar-track {
-      background-color: #b46868;
-	  border-top-right-radius: 10px;
-	  border-bottom-right-radius: 10px;
+    background-color: #B46868;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 #content-box::-webkit-scrollbar-thumb {
-      background-color: rgba(0, 0, 0, 0.2);
-	  border-top-right-radius: 10px;
-	  border-bottom-right-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .blog-entry {
 
@@ -95,15 +133,19 @@ a:focus {
 .blog-date {
 	text-align: right;
 }
-.blog-text {
-
+#resume-image {
+    display: block;
+    width: 600px;
+    height: 600px;
+    margin: auto;
 }
 .icon {
 	width: 25px;
 	height: 25px;
 }
-.modal-content {
-	background-color: #00CC99;
+.modal-border {
+	border: 10px solid #FFF;
+    border-radius: 20px;
 }
 .form-input {
 	display: block;
@@ -124,33 +166,27 @@ a:focus {
     line-height: 1em;
 }
 .message::-moz-placeholder { /* Firefox 19+ */
-  color: pink;
+    height: 1em;
+    line-height: 1em;
 }
 .message:-ms-input-placeholder { /* IE 10+ */
-  color: pink;
+    height: 1em;
+    line-height: 1em;
 }
 .message:-moz-placeholder { /* Firefox 18- */
-  color: pink;
+    height: 1em;
+    line-height: 1em;
 }
 .form-submit {
     float: right;
 }
 
 /*Bootstrap modifications*/
-
-.nav-tabs > li > a:hover{
-    border-radius: 3px;
-}
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:focus,
 .nav-tabs > li.active > a:hover {
-	background: #00cc99;
-	color: #fff;
-}
-
-.nav-tabs > li > a:focus,
-.nav-tabs > li > a:hover {
-	background-color: #00cc99;
-	color: #000;
-	border-bottom: 1px solid #ddd;
+	background: #AF473C;
+	color: #FFF;
+    border-style: none;
+    border-radius: 20px;
 }

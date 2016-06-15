@@ -14,11 +14,11 @@ function activeSwitch(element) {
         $(element).addClass('active open');
     }else
     {
-        $(element).addClass('active open');
+        $(element).addClass('active');
     }
 }
 function resumeSwitch() {
-    document.getElementById('content-box').innerHTML = '<img src="pdfs/resume-placeholder.png">';
+    document.getElementById('content-box').innerHTML = '<img id="resume-img" src="images/resume.png" width="650px" height="650px">';
 }
 function init() {
     var ul = document.getElementById('navTabs');
@@ -65,7 +65,7 @@ function init() {
     document.getElementById('portrait').addEventListener('mouseout', function() {
         document.getElementById('portrait').src = 'images/1.png';
     });
-    document.getElementById('about').addEventListener('click', function() {
+    document.getElementById('resume').addEventListener('click', function() {
         resumeSwitch();
     });
 }
