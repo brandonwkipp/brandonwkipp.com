@@ -177,6 +177,11 @@ a:focus {
     height: 1em;
     line-height: 1em;
 }
+#form-submit-container {
+    display: inline-block;
+    width: 100%;
+    margin-top: 5px;
+}
 .form-submit {
     float: right;
 }
@@ -189,4 +194,7 @@ a:focus {
 	color: #FFF;
     border-style: none;
     border-radius: 20px;
+}
+.modal-title {
+    color: #FFF;
 }

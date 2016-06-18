@@ -2,6 +2,22 @@
     "blog": [
         {
             "author": "Brandon W. Kipp",
+            "date": "06/6/2016",
+            "id": "2",
+            "links": [
+                "https://color.adobe.com"
+            ],
+            "title": "Colors",
+            "text": [
+                "Today, I'm updating the color scheme on my website. I've never really researched color theory before today,",
+                "but there is quite a bit of information on the internet. I read a couple blogs and was vaguely reminded of",
+                "Art class in high school, but I didn't really pay attention back then. Anyway, I found this rad tool at",
+                "https://color.adobe.com where you can pick these color templates based on dividing the color wheel in",
+                "intuitive ways."
+            ]
+        },
+        {
+            "author": "Brandon W. Kipp",
             "date": "06/5/2016",
             "id": "1",
             "title": "Settled In",

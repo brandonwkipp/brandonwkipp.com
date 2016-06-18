@@ -1,3 +1,9 @@
+<?php
+
+    session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,8 +44,8 @@
                         Projects<span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">SoundSword - a sound editing web app</a></li>
-                        <li><a href="https://blackestnapkin.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
+                        <li><a href="soundsword">SoundSword - a sound editing web app</a></li>
+                        <li><a href="https://brandonwkipp.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
                     </ul>
                 </li>
                 <li id="blog" class="active"><a href="#">Blog</a></li>
@@ -64,15 +70,15 @@
                         <div class="color-tone-c color-tone-d">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title" style="color:#FFF;">Contact</h4>
+                                <h4 class="modal-title">Contact</h4>
                             </div>
                             <div class="modal-body">
                                 <form method="post" action="email_form.php">
-                                    <input class="form-input" type="text" placeholder="Your Name*"/>
-                                    <input class="form-input" type="text" placeholder="Your Email Address*"/>
-                                    <input class="form-input" type="text" placeholder="Subject*"/>
-                                    <textarea class="form-input message" type="text" placeholder="Message*"></textarea>
-                                    <span style="display:inline-block;width:100%;margin-top:5px;">
+                                    <input class="form-input" type="text" placeholder="Your Name*" autocomplete="off"/>
+                                    <input class="form-input" type="text" placeholder="Your Email Address*" autocomplete="off"/>
+                                    <input class="form-input" type="text" placeholder="Subject*" autocomplete="off"/>
+                                    <textarea class="form-input message" type="text" placeholder="Message*" autocomplete="off"></textarea>
+                                    <span id="form-submit-container">
                                         <input class="form-submit" type="submit" class="btn btn-info" value="Send Message"/>
                                     </span>
                                 </form>
