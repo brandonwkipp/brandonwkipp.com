@@ -17,34 +17,30 @@
 
 <!-- Latest Less CDN -->
 <!--<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.6.1/less.min.js"></script>-->
-
 </head>
-
 <body class="color-tone-a">
-        <div id="greeting" class="col-md-4 hidden-xs">
-            <div>
-                <h3 id="name">Brandon W. Kipp</h3>
-                <div id="blurb" class="color-tone-b color-tone-d">
-                    <p style="font-size:36px;">hello.</p>
-                    <p>My name is Brandon and I’m an aspiring web developer from the great state of Wisconsin. My passions lie in
-                    web UI/UX design and music technology. My biggest goal with web design, right now, is to make peoples' lives
-                    easier through my intuitive web app: <a href="#">SoundSword</a>. Aside from all that, I love business, philosophy,
-                    finance, reading, tea, rum, biking, and live music.</p>
-                </div>
-                <div id="image-container">
-                    <img id="portrait" class="" draggable="false" src="images/1.png" width="200px" height="200px"></img>
-                </div>
-
-            </div>
+    <div id="greeting" class="col-md-2">
+        <div id="blurb" class="color-tone-b color-tone-d hidden-xs">
+            <p style="font-size:36px;">hello.</p>
+            <p>My name is Brandon and I’m an aspiring web developer from the great state of Wisconsin. My passions lie in
+            web UI/UX design and music technology. My biggest goal with web design, right now, is to make peoples' lives
+            easier through my intuitive web app: <a href="#">SoundSword</a>. Aside from all that, I love business, philosophy,
+            finance, bots, reading, tea, rum, biking, and live music.</p>
         </div>
-        <div id="content" class="col-md-8 top">
-            <ul id="navTabs" class="nav nav-tabs color-tone-e">
+    </div>
+    <div id="content" class="col-md-10">
+        <div id="name-container" class="top">
+            <span id="name">Brandon W. Kipp</span>
+            <img id="portrait" class="" draggable="false" src="images/1.png" width="200px" height="200px"></img>
+        </div>
+        <div class="tabs-center color-tone-e top">
+            <ul id="navTabs" class="nav nav-tabs nav-justified top container">
                 <li id="projects">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         Projects<span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="soundsword">SoundSword - a sound editing web app</a></li>
+                        <li><a href="../soundsword/index.php">SoundSword - a sound editing web app</a></li>
                         <li><a href="https://brandonwkipp.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
                     </ul>
                 </li>
@@ -63,41 +59,38 @@
                     </ul>
                 </li>
                 <li id="contact"><a href="#" data-toggle="modal" data-target="#contact-modal">Contact</a></li>
-                <!-- Modal -->
-                <div id="contact-modal" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
-                        <!-- Modal content-->
-                        <div class="color-tone-c color-tone-d">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Contact</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form method="post" action="email_form.php">
-                                    <input class="form-input" type="text" placeholder="Your Name*" autocomplete="off"/>
-                                    <input class="form-input" type="text" placeholder="Your Email Address*" autocomplete="off"/>
-                                    <input class="form-input" type="text" placeholder="Subject*" autocomplete="off"/>
-                                    <textarea class="form-input message" type="text" placeholder="Message*" autocomplete="off"></textarea>
-                                    <span id="form-submit-container">
-                                        <input class="form-submit" type="submit" class="btn btn-info" value="Send Message"/>
-                                    </span>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </ul>
-            <div id="content-box" class="color-tone-b color-tone-d"></div>
         </div>
-
+        <div id="content-box" class="color-tone-b color-tone-d"></div>
+    </div>
 <!-- Latest compiled and minified jQuery -->
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
 <!-- Scripts -->
 <script type="text/javascript" src="scripts/script.js"></script>
 
+<div id="contact-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="color-tone-c color-tone-d">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Contact</h4>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="email_form.php">
+                    <input class="form-input" type="text" placeholder="Your Name*" autocomplete="off"/>
+                    <input class="form-input" type="text" placeholder="Your Email Address*" autocomplete="off"/>
+                    <input class="form-input" type="text" placeholder="Subject*" autocomplete="off"/>
+                    <textarea class="form-input message" type="text" placeholder="Message*" autocomplete="off"></textarea>
+                    <span id="form-submit-container">
+                        <input class="form-submit" type="submit" class="btn btn-info" value="Send Message"/>
+                    </span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

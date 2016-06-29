@@ -1,3 +1,4 @@
+var blogContent;
 function activeSwitch(element) {
     var ul = document.getElementById('navTabs');
     var list = ul.getElementsByTagName('li');
@@ -19,6 +20,9 @@ function activeSwitch(element) {
 }
 function resumeSwitch() {
     document.getElementById('content-box').innerHTML = '<img id="resume-img" src="images/resume.png" width="650px" height="650px">';
+}
+function blogSwitch() {
+    document.getElementById('content-box').innerHTML = blogContent;
 }
 function init() {
     var ul = document.getElementById('navTabs');
@@ -57,6 +61,7 @@ function init() {
             blog.appendChild(divider);
 
             document.getElementById('content-box').appendChild(blog);
+            blogContent = document.getElementById('content-box').innerHTML;
         }
     });
     document.getElementById('portrait').addEventListener('mouseover', function() {
@@ -64,6 +69,9 @@ function init() {
     });
     document.getElementById('portrait').addEventListener('mouseout', function() {
         document.getElementById('portrait').src = 'images/1.png';
+    });
+    document.getElementById('blog').addEventListener('click', function() {
+        blogSwitch();
     });
     document.getElementById('resume').addEventListener('click', function() {
         resumeSwitch();

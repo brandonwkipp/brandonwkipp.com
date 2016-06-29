@@ -2,18 +2,49 @@
     "blog": [
         {
             "author": "Brandon W. Kipp",
+            "date": "06/9/2016",
+            "id": "4",
+            "title": "Based x 64",
+            "text": [
+                "TIL that Base64 exists and makes life easier sometimes. Base64, for those unfamiliar, is a type of encoding.",
+                "So, the vast majority of humans do math in Base10; we've got 10 symbols (0-9), and all our numbers come from those 10",
+                "symbols in differing combinations. Computers do math in Base2 with just 0's and 1's. Base64 uses uppercase A-Z, lowercase a-z,",
+                "0-9, '+', and '/' which adds up to 64 different characters. Apparently, its first use was in email. Currently, I'm using it to",
+                "cache HTML5 canvases in a web app. It works well and loads the images much faster than redrawing them every time the page loads.",
+                "I originally made the mistake of storing the Base64 strings in a MySQL database, but have since learned that a better way to do it,",
+                 "is to store the cached images in a directory instead. The reason being is that I'm storing lots of cached images and to read them from",
+                 "the database is a very network-heavy use of resources."
+            ]
+        },
+        {
+            "author": "Brandon W. Kipp",
+            "date": "06/7/2016",
+            "id": "3",
+            "title": "Tomato Plant",
+            "text": [
+                "My girlfriend brought home a Cherry Tomato plant today from a local church. It's pretty small, but I'm excited to see",
+                "how big it gets. I've got this UV grow light that only emits the relevant wavelengths required to grow plants. It's sort",
+                "of pink. I like plants; I'm pretty fascinated with botany and how their nature relates to us and even how the future of",
+                "plants will look. There was an article I read that talked about a group of lab scientists who were able to get a tree to",
+                "pull up links of wire through their Xylem (kinda like veins, but for moving water). When water hit these specially made",
+                "links, they stuck together and the wire that formed was able to conduct electricity. What does that mean for the future?",
+                "Maybe if trees are able to transmit WiFi, we'll stop cutting them down. MAybe they'll evolve their own version of an",
+                "antenna. That would be remarkable."
+            ]
+        },
+        {
+            "author": "Brandon W. Kipp",
             "date": "06/6/2016",
             "id": "2",
-            "links": [
-                "https://color.adobe.com"
-            ],
             "title": "Colors",
             "text": [
                 "Today, I'm updating the color scheme on my website. I've never really researched color theory before today,",
                 "but there is quite a bit of information on the internet. I read a couple blogs and was vaguely reminded of",
                 "Art class in high school, but I didn't really pay attention back then. Anyway, I found this rad tool at",
                 "https://color.adobe.com where you can pick these color templates based on dividing the color wheel in",
-                "intuitive ways."
+                "intuitive ways. The old color scheme I was using was terrible, but I had no idea how to pick good colors.",
+                "It has got me thinking about the way things are packaged, and how satisfying a simple color scheme is. I'm",
+                "sure I'm more likely to buy a product if its color scheme is pleasing to me."
             ]
         },
         {
@@ -27,7 +58,7 @@
                 "you let it affect you. You change your response. These walls aren't your home. No walls could ever enclose what you call home.",
                 "Life knows no bounds. It cannot be contained. Plants can erode through our best attempts at strength. Plants can hide our strength.",
                 "How weird it must be to be an architect. An architect's art is no less permanent than a painting. You can make prints of paintings.",
-                "You can make replicas of buildings. The experience can not be felt. Only artists see art. Only artists experience art. Replication",
+                "You can make replicas of buildings. The experience can not be felt. Only artists feel art. Only artists experience art. Replication",
                 "puts us one infinitely long degree away from art. So, what then are we experiencing when we experience a replication?"
             ]
         },

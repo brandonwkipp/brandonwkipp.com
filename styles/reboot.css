@@ -11,14 +11,6 @@ body {
     margin: 0;
     overflow: hidden;
 }
-h3 {
-	position: relative;
-	margin: 0 auto;
-	margin-top: 25px;
-	margin-bottom: 100px;
-	text-align: center;
-	font-family: courier;
-}
 a {
 	text-decoration: none;
 	color: #000000;
@@ -33,6 +25,7 @@ a:focus {
 .color-tone-b {
     /* div backgrounds */
     background-color: #A8FF8C;
+    background: #92BF7F;
 }
 .color-tone-c {
     /*modal background */
@@ -50,32 +43,36 @@ a:focus {
 .top {
 	margin-top: 5px;
 }
-.affix, .affix-top, .affix-bottom {
-    top: 0px !important;
-    width: 33%;
-}
 #greeting {
     position: relative;
     height: 100%;
 }
+#name-container {
+    position: relative;
+    width: 50%;
+    margin: auto;
+}
 #name {
-	text-align: left;
+    position: relative;
+    display: inline-block;
     font-family: 'Montserrat';
-    margin-bottom: 5px;
+    font-size: 2.75em;
+    text-shadow: 2px 2px #AAA;
+    vertical-align: middle;
 }
 #portrait {
-	display: block;
-    position: absolute;
-    bottom: 2%;
-	width: 125px;
-    height: 125px;
-	border: 5px solid #AF473C;
+	display: inline-block;
+	width: 85px;
+    height: 85px;
+	border: 2px solid #000;
     border-radius: 100%;;
 }
 #blurb {
-	position: relative;
+	position: absolute;
 	width: 95%;
-	margin-top: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
 	border-width: 10px;
 	border-radius: 20px;
 	padding: 15px 15px 0px 15px;
@@ -85,12 +82,18 @@ a:focus {
 #content {
     position: relative;
 	height: 100%;
-    border-left: 1px solid #527F44;;
+    border-left: 1px solid #527F44;
 }
-#navTabs {
+.tabs-center {
+    position: relative;
     width: 95%;
     margin: auto;
     border-radius: 20px;
+}
+#navTabs {
+    position: relative;
+    width: 75%;
+    z-index: 2;
 }
 #content-box {
 	display: block;
@@ -99,12 +102,13 @@ a:focus {
 	height: 85%;
 	margin: auto;
 	margin-top: 15px;
-	border-width: 10px;
-	border-radius: 20px;
-	padding: 15px 15px 0px 15px;
+	border-width: 5px;
+	border-radius: 10px;
+	padding: 15px;
 	font-size: 16px;
 	font-family: 'Montserrat';
 	overflow-y: scroll;
+    z-index: 1;
 }
 #content-box::-webkit-scrollbar {
     width: 13px;
@@ -133,7 +137,8 @@ a:focus {
 .blog-date {
 	text-align: right;
 }
-#resume-image {
+#resume-img {
+    position: relative;
     display: block;
     width: 600px;
     height: 600px;
@@ -187,13 +192,42 @@ a:focus {
 }
 
 /*Bootstrap modifications*/
+.nav > li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 0px !important;
+}
+.nav-tabs.nav-justified > li > a {
+    border-style: none !important;
+}
+.nav-tabs {
+    border-bottom: none !important;
+}
+
+.nav-tabs.nav-justified > .active > a,
+.nav-tabs.nav-justified > .active > a:focus,
+.nav-tabs.nav-justified > .active > a:hover  {
+    background: #AF473C;
+	color: #FFF !important;
+    border-style: none !important;
+}
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:focus,
 .nav-tabs > li.active > a:hover {
 	background: #AF473C;
-	color: #FFF;
+	color: #FFF !important;
     border-style: none;
-    border-radius: 20px;
+}
+.nav-tabs > li > a,
+.nav-tabs > li > a:focus,
+.nav-tabs > li > a:hover {
+	background: #AF473C;
+	color: #000 !important;
+    border-style: none;
 }
 .modal-title {
     color: #FFF;
