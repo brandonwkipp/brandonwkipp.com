@@ -2,6 +2,21 @@
     "blog": [
         {
             "author": "Brandon W. Kipp",
+            "date": "06/14/2016",
+            "id": "5",
+            "title": "SS Update",
+            "text": [
+                "So, I finally have a working color palette and a way to change waveform image color in SoundSword. My cousin, Tim,",
+                "originally came up with the caching idea, and then I started storing them for faster recall when you reload the page.",
+                "Then, I read a bunch about 'Composite Operations' which are a bunch of methods to add content onto already drawn canvases.",
+                "Essentially, you just draw a rentangle the size of the canvas whose color you want to change, fill it with whatever color",
+                "you want, and the composite operation applies the new canvas color only over the existing canvas lines and boom. It looks",
+                "like you changed the color. There is a little bit of a glitch, it makes the canvas look a bit more blocky. I'm sure there is",
+                "a way to fix it though."
+            ]
+        },
+        {
+            "author": "Brandon W. Kipp",
             "date": "06/9/2016",
             "id": "4",
             "title": "Based x 64",
@@ -12,8 +27,11 @@
                 "0-9, '+', and '/' which adds up to 64 different characters. Apparently, its first use was in email. Currently, I'm using it to",
                 "cache HTML5 canvases in a web app. It works well and loads the images much faster than redrawing them every time the page loads.",
                 "I originally made the mistake of storing the Base64 strings in a MySQL database, but have since learned that a better way to do it,",
-                 "is to store the cached images in a directory instead. The reason being is that I'm storing lots of cached images and to read them from",
-                 "the database is a very network-heavy use of resources."
+                "is to store the cached images in a directory instead. The reason being is that I'm storing lots of cached images and to read them from",
+                "the database can cause a serious strain on the network. In addition, I'm now trying to stored Base64 encoded audio files, which are way",
+                "bigger than the images I'm already caching. However, I've sort of hit a stumbling block because the browser runs out of memory when I'm",
+                "looping through the large ArrayBuffers and crashes (I'm doing this all in JavaScript). I've got a couple of ideas, but I'm not sure they",
+                "will work. Will update later."
             ]
         },
         {

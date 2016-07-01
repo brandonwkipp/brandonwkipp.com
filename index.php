@@ -1,6 +1,10 @@
 <?php
 
-    session_start();
+session_start();
+
+require_once 'security.php';
+
+$error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
 
 ?>
 
@@ -13,13 +17,13 @@
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<link rel="stylesheet" href="styles/reboot.css"/>
+<link rel="stylesheet" href="styles/index.css"/>
 
 <!-- Latest Less CDN -->
 <!--<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.6.1/less.min.js"></script>-->
 </head>
 <body class="color-tone-a">
-    <div id="greeting" class="col-md-2">
+    <div class="col-md-2 hidden-sm hidden-xs" style="height:100%;">
         <div id="blurb" class="color-tone-b color-tone-d hidden-xs">
             <p style="font-size:36px;">hello.</p>
             <p>My name is Brandon and I’m an aspiring web developer from the great state of Wisconsin. My passions lie in
@@ -31,7 +35,7 @@
     <div id="content" class="col-md-10">
         <div id="name-container" class="top">
             <span id="name">Brandon W. Kipp</span>
-            <img id="portrait" class="" draggable="false" src="images/1.png" width="200px" height="200px"></img>
+            <img id="portrait" draggable="false" src="images/1.png" width="200px" height="200px"></img>
         </div>
         <div class="tabs-center color-tone-e top">
             <ul id="navTabs" class="nav nav-tabs nav-justified top container">
@@ -73,19 +77,24 @@
 <div id="contact-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <!-- Modal content-->
-        <div class="color-tone-c color-tone-d">
+        <div class="color-tone-b color-tone-d">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Contact</h4>
             </div>
             <div class="modal-body">
-                <form method="post" action="email_form.php">
-                    <input class="form-input" type="text" placeholder="Your Name*" autocomplete="off"/>
-                    <input class="form-input" type="text" placeholder="Your Email Address*" autocomplete="off"/>
-                    <input class="form-input" type="text" placeholder="Subject*" autocomplete="off"/>
-                    <textarea class="form-input message" type="text" placeholder="Message*" autocomplete="off"></textarea>
+                <?php
+                    if(isset($error))
+                    {
+                        ?><span class="error-row"><?= $error ?></span><?php
+                    }
+                ?>
+                <form method="post" action="form.php">
+                    <input class="form-input" type="text" name="name" placeholder="Your Name*" autocomplete="off" <?php echo isset($_SESSION['name']) ? ' value="' . e($_SESSION['name']) . '"' : '' ?>>
+                    <input class="form-input" type="text" name="email" placeholder="Your Email Address*" autocomplete="off" <?php echo isset($_SESSION['email']) ? ' value="' . e($_SESSION['email']) . '"' : '' ?>>
+                    <textarea class="form-input message" type="text" name="message" placeholder="Message*" autocomplete="off"><?php echo isset($_SESSION['message']) ? e($_SESSION['message']) : '' ?></textarea>
                     <span id="form-submit-container">
-                        <input class="form-submit" type="submit" class="btn btn-info" value="Send Message"/>
+                        <input class="form-submit" type="submit" name="submit" class="btn btn-info" value="Send Message"/>
                     </span>
                 </form>
             </div>
@@ -93,4 +102,19 @@
     </div>
 </div>
 </body>
+<?php
+
+
+if(!is_null($error))
+{
+    echo '<script>$("#contact-modal").modal("show");</script>';
+}
+
+
+unset($_SESSION['error']);
+unset($_SESSION['name']);
+unset($_SESSION['email']);
+unset($_SESSION['message']);
+
+?>
 </html>
