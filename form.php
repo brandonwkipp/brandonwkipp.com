@@ -27,8 +27,10 @@ if(isset($_POST['name'], $_POST['email'], $_POST['message']))
 
         $mail->isSMTP();
         $mail->SMTPAuth = true;
+        $mail->SMTPDebug = 0;
+        $mail->Debugoutput = 'html';
 
-        $mail->Host = 'smtpout.secureserver.net';
+        $mail->Host = 'a2plcpnl0722.prod.iad2.secureserver.net';
         $mail->Username = 'brandon@brandonwkipp.com';
         $mail->Password = 'Lemongrab80!';
         $mail->SMTPSecure = 'ssl';
@@ -38,29 +40,30 @@ if(isset($_POST['name'], $_POST['email'], $_POST['message']))
 
         $mail->Subject = 'Contact form submitted';
         $mail->Body = 'From: ' . $_POST['name'] . ' (' . $_POST['email'] . ')<p>' . $_POST['message'] . '</p>';
-
         $mail->FromName = 'Contact Form';
-
         $mail->AddAddress('brandon@brandonwkipp.com', 'Brandon Kipp');
-        if($mail->send())
-        {
-            header('Location: index.php');
-            die();
-        }else
+
+        if(!$mail->send())
         {
             $error = 'Sorry, could not send email. Try again later.';
+
+            $_SESSION['error'] = $error;
+            $_SESSION['name'] = $name;
+            $_SESSION['email'] = $email;
+            $_SESSION['message'] = $message;
         }
+
+        header('Location: index.php');
     }
 }else
 {
     $error = 'Something went wrong.';
+
+    $_SESSION['error'] = $error;
+    $_SESSION['name'] = $name;
+    $_SESSION['email'] = $email;
+    $_SESSION['message'] = $message;
+
+    header('Location: index.php');
 }
-
-$_SESSION['error'] = $error;
-$_SESSION['name'] = $name;
-$_SESSION['email'] = $email;
-$_SESSION['message'] = $message;
-
-header('Location: index.php');
-
 ?>
