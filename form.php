@@ -28,9 +28,9 @@ if(isset($_POST['name'], $_POST['email'], $_POST['message']))
         $mail->isSMTP();
         $mail->SMTPAuth = true;
 
-        $mail->Host = 'smtp.gmail.com';
-        $mail->Username = 'blackestnapkin@gmail.com';
-        $mail->Password = 'Redcharm15';
+        $mail->Host = 'smtpout.secureserver.net';
+        $mail->Username = 'brandon@brandonwkipp.com';
+        $mail->Password = 'Lemongrab80!';
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
 
@@ -41,10 +41,10 @@ if(isset($_POST['name'], $_POST['email'], $_POST['message']))
 
         $mail->FromName = 'Contact Form';
 
-        $mail->AddAddress('blackestnapkin@gmail.com', 'Brandon Kipp');
+        $mail->AddAddress('brandon@brandonwkipp.com', 'Brandon Kipp');
         if($mail->send())
         {
-            header('Location: reboot.php');
+            header('Location: index.php');
             die();
         }else
         {
