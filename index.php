@@ -65,42 +65,41 @@ $error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
                 <li id="contact"><a href="#" data-toggle="modal" data-target="#contact-modal">Contact</a></li>
             </ul>
             <div class="panel-group hidden-sm hidden-md hidden-lg">
-                <div class="panel panel-default">
+                <a data-toggle="collapse" href="#mobile-menu"><div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#collapse1">Menu</a>
-                        </h4>
+                        <h4 class="panel-title">Menu</h4>
                     </div>
-                    <div id="collapse1" class="panel-collapse collapse">
+                    <div id="mobile-menu" class="panel-collapse collapse">
                         <ul class="list-group">
-                            <li id="projects" class="list-group-item">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                    Projects
-                                    <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="../soundsword/index.php">SoundSword - a sound editing web app</a></li>
-                                    <li><a href="https://brandonwkipp.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
-                                </ul>
+                            <li id="mobile-projects" class="list-group-item panel-group" data-toggle="collapse" href="#mobile-projects-menu">
+                                <div class="panel panel-default panel-panel">Projects<span class="caret"></span>
+                                    <div id="mobile-projects-menu" class="panel-collapse collapse">
+                                        <ul class="list-group mobile-ul">
+                                            <li class="list-group-item mobile-list-item"><a href="../soundsword/index.php">SoundSword - a sound editing web app</a></li>
+                                            <li class="list-group-item mobile-list-item"><a href="https://brandonwkipp.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </li>
-                            <li id="blog" class="active list-group-item"><a href="#">Blog</a></li>
-                            <li id="resume" class="list-group-item"><a href="#">Resume</a></li>
-                            <li id="connect" class="list-group-item">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                    Connect<span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="https://twitter.com/brandonwkipp"><img class="icon" src="images/icons/twitter-icon.png"/> Twitter</a></li>
-                                    <li><a href="https://linkedin.com/in/brandonwkipp"><img class="icon" src="images/icons/linkedin-icon.png"/> LinkedIn</a></li>
-                                    <li><a href="https://soundcloud.com/brandonwkipp"><img class="icon" src="images/icons/soundcloud-icon.png"/> SoundCloud</a></li>
-                                    <li><a href="https://reddit.com/user/BlackestNapkin"><img class="icon" src="images/icons/reddit-icon.png"/> Reddit</a></li>
-                                    <li><a href="https://github.com/brandonwkipp"><img class="icon" src="images/icons/github-icon.png"/> Github</a></li>
-                                </ul>
+                            <li id="mobile-blog" class="active list-group-item" data-toggle="collapse" data-target="#mobile-menu">Blog</li>
+                            <li id="mobile-resume" class="list-group-item" data-toggle="modal" data-target="#resume-modal">Resume</li>
+                            <li id="mobile-connect" class="list-group-item panel-group" data-toggle="collapse" href="#mobile-connect-menu">
+                                <div class="panel panel-default panel-panel">Connect<span class="caret"></span>
+                                    <div id="mobile-connect-menu" class="panel-collapse collapse">
+                                        <ul class="list-group mobile-ul">
+                                            <li class="list-group-item mobile-list-item"><a href="https://linkedin.com/in/brandonwkipp"><img class="icon" src="images/icons/linkedin-icon.png"/> LinkedIn</a></li>
+                                            <li class="list-group-item mobile-list-item"><a href="https://github.com/brandonwkipp"><img class="icon" src="images/icons/github-icon.png"/> Github</a></li>
+                                            <li class="list-group-item mobile-list-item"><a href="https://twitter.com/brandonwkipp"><img class="icon" src="images/icons/twitter-icon.png"/> Twitter</a></li>
+                                            <li class="list-group-item mobile-list-item"><a href="https://soundcloud.com/brandonwkipp"><img class="icon" src="images/icons/soundcloud-icon.png"/> SoundCloud</a></li>
+                                            <li class="list-group-item mobile-list-item"><a href="https://reddit.com/user/BlackestNapkin"><img class="icon" src="images/icons/reddit-icon.png"/> Reddit</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </li>
-                            <li id="contact" class="list-group-item"><a href="#" data-toggle="modal" data-target="#contact-modal">Contact</a></li>
+                            <li id="mobile-contact" class="list-group-item" data-toggle="modal" data-target="#contact-modal">Contact</li>
                         </ul>
                     </div>
-                </div>
+                </div></a>
             </div>
         </div>
         <div id="content-box" class="color-tone-b color-tone-d"></div>
@@ -139,6 +138,17 @@ $error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
         </div>
     </div>
 </div>
+
+<div id="resume-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div>
+            <div class="modal-header resume-modal"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
+            <div class="modal-body"><img id="resume-img" src="images/resume.png" width="1100px" height="599px"></div>
+        </div>
+    </div>
+</div>
+
 </body>
 <?php
 

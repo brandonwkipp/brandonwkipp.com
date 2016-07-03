@@ -15,9 +15,12 @@ a {
 	text-decoration: none;
 	color: #000000;
 }
-a:focus {
+a:focus,
+a:hover {
 	outline: none;
+    text-decoration: none;
 }
+
 .color-tone-a {
     /* background */
     background-color: #E2FFD8;
@@ -257,6 +260,18 @@ a:focus {
 .modal-title {
     color: #FFF;
 }
+.panel-panel {
+    border-style: none;
+}
+.mobile-ul {
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+}
+.mobile-list-item {
+    display: inline-block;
+    border-style: none;
+    padding: 10px;
+}
 
 /* Media Queries */
 
@@ -355,11 +370,16 @@ a:focus {
           margin: auto;
       }
       #name {
+          margin-left: 15px;
           font-size: 1.75em;
       }
       #portrait {
           width: 45px;
           height: 45px
+      }
+      .panel-group {
+          margin-top: 5px;
+          margin-bottom: 5px;
       }
       .panel-heading {
           background: #AF473C !important;
@@ -367,12 +387,42 @@ a:focus {
           text-align: center;
       }
       #content-box {
+          margin-top: 10px;
           padding: 5px 10px;
-          height: -webkit-calc(100% - 125px);
-          height: -moz-calc(100% - 125px);
+          height: -webkit-calc(100% - 115px);
+          height: -moz-calc(100% - 115px);
       }
       .blog-title {
+          margin-top: 5px;
           font-size: 1.5em;
+      }
+}
+/* Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+      #name {
+          margin-left: 75px !important;
+      }
+      .blog-title {
+          margin-top: 5px;
+          font-size: 1.5em;
+      }
+      #contact-modal {
+          height: 100%;
+      }
+      .modal-dialog {
+          height: -webkit-calc(100% - 20px);
+          height: -moz-calc(100% - 20px);
+      }
+      .modal-body {
+          padding: 5px 0px 0px 0px;
+      }
+      .message {
+          height: -webkit-calc(100% - 50px);
+          height: -moz-calc(100% - 50px);
       }
 }
 /* ----------- iPhone 6 ----------- */
@@ -386,16 +436,17 @@ a:focus {
           overflow: scroll;
       }
       #name-container {
-          left: 27.125px;
           width: 95%;
           margin: auto;
       }
       #name {
+          margin-left: 25px;
           font-size: 2em;
+          text-shadow: 1.5px 1.5px #AAA;
       }
       #portrait {
-          width: 55px;
-          height: 55px
+          width: 50px;
+          height: 50px
       }
       .panel {
           margin-top: 10px;
@@ -404,6 +455,9 @@ a:focus {
           background: #AF473C !important;
           color: #FFF !important;
           text-align: center;
+      }
+      .blog-title {
+          margin-top: 5px;
       }
 }
 /* Landscape */
@@ -416,9 +470,13 @@ a:focus {
           overflow: scroll;
       }
       #name-container {
-          left: 65px;
+          left: 0px;
           width: 95%;
           margin: auto;
+      }
+      #name {
+          margin-left: 115px;
+          text-shadow: 1.5px 1.5px #AAA;
       }
       #portrait {
           height: 65px;
@@ -440,6 +498,7 @@ a:focus {
       }
       .blog-title {
           margin-top: 5px;
+          font-size: 1.75em;
       }
 }
 /* ----------- iPhone 6+ ----------- */
@@ -468,6 +527,9 @@ a:focus {
           background: #AF473C !important;
           color: #FFF !important;
           text-align: center;
+      }
+      .blog-title {
+          margin-top: 5px;
       }
 
 }
@@ -500,6 +562,23 @@ a:focus {
       }
 }
 /* ----------- Galaxy S5 ----------- */
+/* Portrait */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+      #content-box {
+          padding: 0px 10px;
+          margin-top: 0px;
+      }
+      .blog-title {
+          margin-top: 5px;
+      }
+      #name {
+          margin-left: 30.75px;
+      }
+}
 /* Landscape */
 @media screen
   and (device-width: 640px)
@@ -508,7 +587,9 @@ a:focus {
   and (orientation: landscape) {
       #name-container {
           width: 95%;
-          left: 65px;
+      }
+      #name {
+          margin-left: 115px !important;
       }
       #portrait {
           width: 65px;
@@ -531,6 +612,15 @@ a:focus {
       .blog-title {
           margin-top: 5px;
           font-size: 1.5em;
+      }
+      #resume-img {
+          width: 540px;
+          height: 294px;
+      }
+      .resume-modal {
+          height: 21px;
+          padding: 0px;
+          border-style: none;
       }
 }
 

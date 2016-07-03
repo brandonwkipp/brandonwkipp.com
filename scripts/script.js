@@ -19,8 +19,7 @@ function activeSwitch(element) {
     }
 }
 function resumeSwitch() {
-    console.log('resume')
-    document.getElementById('content-box').innerHTML = '<img id="resume-img" src="images/resume.png" width="1100px" height="599px"><div class="download-row"><a class="portrait" href="KippBrandonResume-portrait.pdf" download="KippBrandonResume-portrait.pdf"><button class="btn btn-primary">Download (Portrait)</button></a><a class="landscape" href="KippBrandonResume-landscape.pdf" download="KippBrandonResume-landscape.pdf"><button class="btn btn-primary">Download (Landscape)</button></a></div>';
+    document.getElementById('content-box').innerHTML = '<img id="resume-img" src="images/resume.png" width="1100px" height="599px"><div class="download-row hidden-xs"><a class="portrait" href="KippBrandonResume-portrait.pdf" download="KippBrandonResume-portrait.pdf"><button class="btn btn-primary">Download (Portrait)</button></a><a class="landscape" href="KippBrandonResume-landscape.pdf" download="KippBrandonResume-landscape.pdf"><button class="btn btn-primary">Download (Landscape)</button></a></div>';
 }
 function blogSwitch() {
     document.getElementById('content-box').innerHTML = blogContent;
@@ -74,13 +73,22 @@ function init() {
     document.getElementById('blog').addEventListener('click', function() {
         blogSwitch();
     });
+    document.getElementById('mobile-blog').addEventListener('click', function() {
+        blogSwitch();
+    });
     document.getElementById('resume').addEventListener('click', function() {
         resumeSwitch();
     });
+    var listItems = document.querySelectorAll('.mobile-list-item');
+    for(var i = 0; i < listItems.length; i++)
+    {
+        $(listItems[i]).click(function(event) {
+            event.stopPropagation();
+        });
+    }
 }
 
 init();
-
 /*
 
 <div id="myCarousel" class="carousel slide" data-interval="false">
