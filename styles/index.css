@@ -50,9 +50,12 @@ a:focus {
     margin: auto;
 	border-width: 5px;
 	border-radius: 10px;
-	padding: 15px 15px 0px 15px;
-	font-size: 16px;
+	padding: 0px 15px;
+	font-size: 1.15em;
 	font-family: 'Montserrat';
+}
+#greeting {
+    font-size: 36px;
 }
 #content {
     position: relative;
@@ -62,7 +65,8 @@ a:focus {
 }
 #name-container {
     position: relative;
-    width: 50%;
+    width: -webkit-calc(50% + 85px);
+    width: -moz-calc(50% + 85px);
     margin: auto;
     left: 42.5px;
 }
@@ -88,6 +92,11 @@ a:focus {
     border-radius: 20px;
 }
 #navTabs {
+    position: relative;
+    width: 75%;
+    z-index: 2;
+}
+#smallMenu {
     position: relative;
     width: 75%;
     z-index: 2;
@@ -247,4 +256,291 @@ a:focus {
 }
 .modal-title {
     color: #FFF;
+}
+
+/* Media Queries */
+
+/* ----------- iPad 1 and 2 ----------- */
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+      #blurb {
+          height: 97%;
+          width: 99%;
+          padding: 0px 5px;
+          font-size: 1em;
+          text-align: center;
+      }
+      #greeting {
+          position: relative;
+          margin-top: 40%;
+      }
+      #navTabs {
+          width: 95%;
+          padding: 0px !important;
+      }
+      #navTabs > li {
+          display: inline-block !important;
+          width: 19%;
+      }
+
+}
+/* Portrait */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+      .panel-heading {
+          background: #AF473C !important;
+          color: #FFF !important;
+          text-align: center;
+      }
+}
+/* ----------- iPad 3 and 4 ----------- */
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2) {
+      #blurb {
+          height: 97%;
+          width: 99%;
+          padding: 0px 5px;
+          font-size: 1em;
+          text-align: center;
+      }
+      #greeting {
+          position: relative;
+          margin-top: 40%;
+      }
+      #navTabs {
+          width: 95%;
+          padding: 0px !important;
+      }
+      #navTabs > li {
+          display: inline-block !important;
+          width: 19%;
+      }
+}
+/* Portrait */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+      .panel-heading {
+          background: #AF473C !important;
+          color: #FFF !important;
+          text-align: center;
+      }
+}
+/* ----------- iPhone 5 ----------- */
+/* Portrait */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+      body {
+          overflow: scroll;
+      }
+      #name-container {
+          left: 0px;
+          width: 95%;
+          margin: auto;
+      }
+      #name {
+          font-size: 1.75em;
+      }
+      #portrait {
+          width: 45px;
+          height: 45px
+      }
+      .panel-heading {
+          background: #AF473C !important;
+          color: #FFF !important;
+          text-align: center;
+      }
+      #content-box {
+          padding: 5px 10px;
+          height: -webkit-calc(100% - 125px);
+          height: -moz-calc(100% - 125px);
+      }
+      .blog-title {
+          font-size: 1.5em;
+      }
+}
+/* ----------- iPhone 6 ----------- */
+/* Portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+      body {
+          overflow: scroll;
+      }
+      #name-container {
+          left: 27.125px;
+          width: 95%;
+          margin: auto;
+      }
+      #name {
+          font-size: 2em;
+      }
+      #portrait {
+          width: 55px;
+          height: 55px
+      }
+      .panel {
+          margin-top: 10px;
+      }
+      .panel-heading {
+          background: #AF473C !important;
+          color: #FFF !important;
+          text-align: center;
+      }
+}
+/* Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+      body {
+          overflow: scroll;
+      }
+      #name-container {
+          left: 65px;
+          width: 95%;
+          margin: auto;
+      }
+      #portrait {
+          height: 65px;
+          width: 65px;
+      }
+      .panel-group {
+          margin-bottom: 5px;
+      }
+      .panel-heading {
+          background: #AF473C !important;
+          color: #FFF !important;
+          text-align: center;
+      }
+      #content-box {
+          margin-top: 5px;
+          height: -webkit-calc(100% - 110px);
+          height: -moz-calc(100% - 110px);
+          padding: 10px;
+      }
+      .blog-title {
+          margin-top: 5px;
+      }
+}
+/* ----------- iPhone 6+ ----------- */
+/* Portrait */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+      body {
+          overflow: scroll;
+      }
+      #name-container {
+          left: 27.125px;
+          width: 95%;
+          margin: auto;
+      }
+      #name {
+          font-size: 2em;
+      }
+      #portrait {
+          width: 55px;
+          height: 55px
+      }
+      .panel-heading {
+          background: #AF473C !important;
+          color: #FFF !important;
+          text-align: center;
+      }
+
+}
+/* Landscape */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+      #portrait {
+          width: 65px;
+          height: 65px;
+      }
+      .panel-group {
+          margin-bottom: 5px;
+      }
+      .panel-heading {
+          background: #AF473C !important;
+          color: #FFF !important;
+          text-align: center;
+      }
+      #content-box {
+          margin-top: 5px;
+          height: -webkit-calc(100% - 110px);
+          height: -moz-calc(100% - 110px);
+          padding: 10px;
+      }
+      .blog-title {
+          margin-top: 5px;
+      }
+}
+/* ----------- Galaxy S5 ----------- */
+/* Landscape */
+@media screen
+  and (device-width: 640px)
+  and (device-height: 360px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+      #name-container {
+          width: 95%;
+          left: 65px;
+      }
+      #portrait {
+          width: 65px;
+          height: 65px;
+      }
+      .panel-group {
+          margin-bottom: 0px !important;
+      }
+      .panel-heading {
+          background: #AF473C !important;
+          color: #FFF !important;
+          text-align: center;
+      }
+      #content-box {
+          margin-top: 5px;
+          height: -webkit-calc(100% - 119px);
+          height: -moz-calc(100% - 119px);
+          padding: 5px;
+      }
+      .blog-title {
+          margin-top: 5px;
+          font-size: 1.5em;
+      }
+}
+
+@media (max-width: 768px) {
+    #navTabs {
+        width: 95%;
+        padding: 0px !important;
+    }
+    #navTabs > li {
+        display: inline-block !important;
+        width: 19%;
+    }
 }

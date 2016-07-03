@@ -25,7 +25,7 @@ $error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
 <body class="color-tone-a">
     <div class="col-md-2 hidden-sm hidden-xs" style="height:100%;">
         <div id="blurb" class="color-tone-b color-tone-d hidden-xs">
-            <p style="font-size:36px;">hello.</p>
+            <p id="greeting">hello.</p>
             <p>My name is Brandon and I’m an aspiring web developer from the great state of Wisconsin. My passions lie in
             web UI/UX design and music technology. My biggest goal with web design, right now, is to make peoples' lives
             easier through my intuitive web app: <a href="#">SoundSword</a>. Aside from all that, I love business, philosophy,
@@ -38,7 +38,7 @@ $error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
             <img id="portrait" draggable="false" src="images/1.png" width="200px" height="200px"></img>
         </div>
         <div class="tabs-center color-tone-e top">
-            <ul id="navTabs" class="nav nav-tabs nav-justified top container">
+            <ul id="navTabs" class="nav nav-tabs nav-justified top container hidden-xs">
                 <li id="projects">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         Projects<span class="caret"></span>
@@ -64,6 +64,44 @@ $error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
                 </li>
                 <li id="contact"><a href="#" data-toggle="modal" data-target="#contact-modal">Contact</a></li>
             </ul>
+            <div class="panel-group hidden-sm hidden-md hidden-lg">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse1">Menu</a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li id="projects" class="list-group-item">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Projects
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../soundsword/index.php">SoundSword - a sound editing web app</a></li>
+                                    <li><a href="https://brandonwkipp.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
+                                </ul>
+                            </li>
+                            <li id="blog" class="active list-group-item"><a href="#">Blog</a></li>
+                            <li id="resume" class="list-group-item"><a href="#">Resume</a></li>
+                            <li id="connect" class="list-group-item">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Connect<span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://twitter.com/brandonwkipp"><img class="icon" src="images/icons/twitter-icon.png"/> Twitter</a></li>
+                                    <li><a href="https://linkedin.com/in/brandonwkipp"><img class="icon" src="images/icons/linkedin-icon.png"/> LinkedIn</a></li>
+                                    <li><a href="https://soundcloud.com/brandonwkipp"><img class="icon" src="images/icons/soundcloud-icon.png"/> SoundCloud</a></li>
+                                    <li><a href="https://reddit.com/user/BlackestNapkin"><img class="icon" src="images/icons/reddit-icon.png"/> Reddit</a></li>
+                                    <li><a href="https://github.com/brandonwkipp"><img class="icon" src="images/icons/github-icon.png"/> Github</a></li>
+                                </ul>
+                            </li>
+                            <li id="contact" class="list-group-item"><a href="#" data-toggle="modal" data-target="#contact-modal">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="content-box" class="color-tone-b color-tone-d"></div>
     </div>

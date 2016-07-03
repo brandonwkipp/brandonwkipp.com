@@ -19,7 +19,7 @@ function activeSwitch(element) {
     }
 }
 function resumeSwitch() {
-
+    console.log('resume')
     document.getElementById('content-box').innerHTML = '<img id="resume-img" src="images/resume.png" width="1100px" height="599px"><div class="download-row"><a class="portrait" href="KippBrandonResume-portrait.pdf" download="KippBrandonResume-portrait.pdf"><button class="btn btn-primary">Download (Portrait)</button></a><a class="landscape" href="KippBrandonResume-landscape.pdf" download="KippBrandonResume-landscape.pdf"><button class="btn btn-primary">Download (Landscape)</button></a></div>';
 }
 function blogSwitch() {
