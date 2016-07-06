@@ -1,13 +1,3 @@
-<?php
-
-session_start();
-
-require_once 'security.php';
-
-$error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,31 +6,18 @@ $error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Latest compiled and minified CSS -->
-<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
--->
-<link rel="stylesheet" href="../bootstrap-3.3.6-dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link rel="stylesheet" href="styles/styles.css"/>
-
-<script src="https://platform.twitter.com/widgets.js"></script>
 
 </head>
 <body>
-    <div class="col-md-2 hidden-sm hidden-xs" style="height:100%;">
-        <div id="blurb" class="hidden-xs">
-            <p id="greeting">hello.</p>
-            <p>My name is Brandon and I’m an aspiring web developer from the great state of Wisconsin. My passions lie in
-            web UI/UX design and music technology. My biggest goal with web design, right now, is to make peoples' lives
-            easier through my intuitive web app: <a href="#">SoundSword</a>. Aside from all that, I love business, philosophy,
-            finance, bots, reading, tea, rum, biking, and live music.</p>
-        </div>
-    </div>
-    <div id="content" class="col-md-10">
-        <div id="name-container">
+    <div id="content" class="col-md-12">
+        <div id="name-container" class="top">
             <span id="name">Brandon W. Kipp</span>
-            <img id="portrait" draggable="false"></img>
+            <img id="portrait" draggable="false" src="images/1.png" width="200px" height="200px"></img>
         </div>
-        <div class="tabs-center">
-            <ul id="navTabs" class="nav nav-tabs nav-justified container hidden-xs">
+        <div class="tabs-center top">
+            <ul id="navTabs" class="nav nav-tabs nav-justified top container hidden-xs">
                 <li id="projects">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         Projects<span class="caret"></span>
@@ -48,7 +25,6 @@ $error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
                     <ul class="dropdown-menu">
                         <li><a href="../soundsword/index.php">SoundSword - a sound editing web app</a></li>
                         <li><a href="https://brandonwkipp.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
-                        <li><a id="bots" href="#">BotNet - my personal collection of Twitter Bots</a></li>
                     </ul>
                 </li>
                 <li id="blog" class="active"><a href="#">Blog</a></li>
@@ -80,7 +56,6 @@ $error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
                                         <ul class="list-group mobile-ul">
                                             <li class="list-group-item mobile-list-item"><a href="../soundsword/index.php">SoundSword - a sound editing web app</a></li>
                                             <li class="list-group-item mobile-list-item"><a href="https://brandonwkipp.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
-                                            <li class="list-group-item mobile-list-item"><a href="bots.html">BotNet - my personal collection of Twitter Bots</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -106,67 +81,23 @@ $error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
                 </div></a>
             </div>
         </div>
-        <div id="content-box"></div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <div id="prossbot" class="bot">
+                <p class="bot-title">ProssBot</p>
+                <p class="bot-explanation">A bot dedicated to tweeting lyrics of one of my
+                    favorite local artists I worked with at Maple Tree Studio.</p>
+                <a class="twitter-timeline" href="https://twitter.com/prossbot" data-chrome="noheader nofooter"></a>
+                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
     </div>
 <!-- Latest compiled and minified jQuery -->
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
-<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
--->
-
-<script src="../bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <!-- Scripts -->
-<script type="text/javascript" src="scripts/script.js"></script>
-
-<div id="contact-modal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Contact</h4>
-        </div>
-        <div class="modal-body">
-            <?php
-                if(isset($error))
-                {
-                    ?><span class="error-row"><?= $error ?></span><?php
-                }
-            ?>
-            <form method="post" action="form.php">
-                <input class="form-input" type="text" name="name" placeholder="Your Name*" autocomplete="off" <?php echo isset($_SESSION['name']) ? ' value="' . e($_SESSION['name']) . '"' : '' ?>>
-                <input class="form-input" type="text" name="email" placeholder="Your Email Address*" autocomplete="off" <?php echo isset($_SESSION['email']) ? ' value="' . e($_SESSION['email']) . '"' : '' ?>>
-                <textarea class="form-input message" type="text" name="message" placeholder="Message*" autocomplete="off"><?php echo isset($_SESSION['message']) ? e($_SESSION['message']) : '' ?></textarea>
-                <span id="form-submit-container">
-                    <input class="form-submit" type="submit" name="submit" class="btn btn-info" value="Send Message"/>
-                </span>
-            </form>
-        </div>
-    </div>
+<script type="text/javascript" src=""></script>
 </div>
 
-<div id="resume-modal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div>
-            <div class="modal-header resume-modal"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-            <div class="modal-body"><img id="resume-img"></div>
-        </div>
-    </div>
-</div>
 </body>
-<?php
-
-
-if(!is_null($error))
-{
-    echo '<script>$("#contact-modal").modal("show");</script>';
-}
-
-
-unset($_SESSION['error']);
-unset($_SESSION['name']);
-unset($_SESSION['email']);
-unset($_SESSION['message']);
-
-?>
 </html>

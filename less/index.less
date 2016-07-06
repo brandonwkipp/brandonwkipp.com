@@ -1,0 +1,198 @@
+@backgroundColor: #E2FFD8;
+@divBackgroundColor: #92BF7F;
+@modalBackgroundColor: #30415D;
+@navBackgroundColor: #AF473C;
+@image-path: "../images";
+
+.main-borders {
+    border-color: #527F44;
+    border-style: solid;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+html,
+body {
+	min-height: 100%;
+	height: 100%;
+	font-family: 'Montserrat';
+    padding: 0;
+    margin: 0;
+    background: @backgroundColor;
+    overflow: hidden;
+}
+a,
+a:focus,
+a:hover {
+	text-decoration: none;
+	color: #000000;
+    outline: none;
+}
+#blurb {
+	position: relative;
+	width: 95%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+    background: @divBackgroundColor;
+	border-width: 5px;
+	border-radius: 10px;
+	padding: 0px 15px;
+	font-size: 1.15em;
+	font-family: 'Montserrat';
+    .main-borders;
+}
+#greeting {
+    font-size: 36px;
+}
+#content {
+    position: relative;
+	height: 100%;
+    margin: auto;
+    border-left: 1px solid #527F44;
+}
+#name-container {
+    position: relative;
+    width: ~"-webkit-calc(50% + 85px)";
+    width: ~"-moz-calc(50% + 85px)";
+    margin: auto;
+    left: 42.5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#name {
+    position: relative;
+    display: inline-block;
+    font-family: 'Montserrat';
+    font-size: 2.75em;
+    text-shadow: 2px 2px #AAA;
+    vertical-align: middle;
+}
+#portrait {
+	display: inline-block;
+	width: 85px;
+    height: 85px;
+	border: 2px solid #000;
+    border-radius: 100%;
+    background: ~"url('@{image-path}/1.png')";
+    background-size: contain;
+}
+.tabs-center {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    border-radius: 20px;
+    background: @navBackgroundColor;
+    margin-top: 5px;
+}
+#navTabs {
+    position: relative;
+    width: 75%;
+    z-index: 2;
+}
+#smallMenu {
+    position: relative;
+    width: 75%;
+    z-index: 2;
+}
+#content-box {
+	display: block;
+	position: relative;
+	width: 100%;
+    height: ~"-webkit-calc(100% - 155px)";
+    height: ~"-moz-calc(100% - 155px)";
+	margin: auto;
+	margin-top: 15px;
+    background: @divBackgroundColor;
+	border-width: 5px;
+	border-radius: 10px;
+    .main-borders;
+	padding: 15px;
+	font-size: 16px;
+	font-family: 'Montserrat';
+	overflow-y: scroll;
+    z-index: 1;
+}
+#content-box::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+	background: #527F44;
+}
+#content-box::-webkit-scrollbar-track {
+    background-color: #B46868;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#content-box::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.blog-title {
+	margin-bottom: 5px;
+	font-size: 36px;
+	font-family: 'Montserrat';
+	text-decoration: underline;
+}
+.blog-date {
+	text-align: right;
+}
+#resume-img {
+    position: relative;
+    display: block;
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    background: ~"url('@{image-path}/resume.png')";
+}
+.download-row {
+    position: relative;
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+}
+.portrait {
+    float: left;
+}
+.landscape {
+    float: right;
+}
+.icon {
+	width: 25px;
+	height: 25px;
+}
+
+/*Bootstrap modifications*/
+.nav > li {
+    padding: 10px 0px;
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 0px !important;
+}
+.nav-tabs.nav-justified > li > a {
+    border-style: none !important;
+}
+.nav-tabs {
+    border-bottom: none !important;
+}
+
+.nav-tabs.nav-justified > .active > a,
+.nav-tabs.nav-justified > .active > a:focus,
+.nav-tabs.nav-justified > .active > a:hover,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover  {
+    background: @navBackgroundColor;
+	color: #FFF !important;
+    border-style: none !important;
+}
+.nav-tabs > li > a,
+.nav-tabs > li > a:focus,
+.nav-tabs > li > a:hover {
+	background: @navBackgroundColor;
+	color: #000 !important;
+    border-style: none;
+}

@@ -19,10 +19,19 @@ function activeSwitch(element) {
     }
 }
 function resumeSwitch() {
-    document.getElementById('content-box').innerHTML = '<img id="resume-img" src="images/resume.png" width="1100px" height="599px"><div class="download-row hidden-xs"><a class="portrait" href="KippBrandonResume-portrait.pdf" download="KippBrandonResume-portrait.pdf"><button class="btn btn-primary">Download (Portrait)</button></a><a class="landscape" href="KippBrandonResume-landscape.pdf" download="KippBrandonResume-landscape.pdf"><button class="btn btn-primary">Download (Landscape)</button></a></div>';
+    document.getElementById('content-box').innerHTML = '<img id="resume-img"><div class="download-row hidden-xs"><a class="portrait" href="KippBrandonResume-portrait.pdf" download="KippBrandonResume-portrait.pdf"><button class="btn btn-primary">Download (Portrait)</button></a><a class="landscape" href="KippBrandonResume-landscape.pdf" download="KippBrandonResume-landscape.pdf"><button class="btn btn-primary">Download (Landscape)</button></a></div>';
 }
 function blogSwitch() {
     document.getElementById('content-box').innerHTML = blogContent;
+}
+function botSwitch() {
+    var bots = '<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">';
+    bots += '<div id="prossbot" class="bot"><p class="bot-title">ProssBot</p><p class="bot-explanation">';
+    bots += 'A bot dedicated to tweeting lyrics of one of myfavorite local artists I worked with at Maple Tree Studio.</p>';
+    bots += '<a class="twitter-timeline" href="https://twitter.com/prossbot" data-chrome="noheader nofooter"></a></div></div>';
+
+    document.getElementById('content-box').innerHTML = bots;
+    twttr.widgets.load();
 }
 function init() {
     var ul = document.getElementById('navTabs');
@@ -79,6 +88,9 @@ function init() {
     document.getElementById('resume').addEventListener('click', function() {
         resumeSwitch();
     });
+    document.getElementById('bots').addEventListener('click', function() {
+        botSwitch();
+    });
     var listItems = document.querySelectorAll('.mobile-list-item');
     for(var i = 0; i < listItems.length; i++)
     {
@@ -89,31 +101,3 @@ function init() {
 }
 
 init();
-/*
-
-<div id="myCarousel" class="carousel slide" data-interval="false">
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-          <img src="images/icons/twitter-icon.png">
-      </div>
-      <div class="item">
-          <img src="images/icons/reddit-icon.png">
-      </div>
-      <div class="item">
-          <img src="images/icons/soundcloud-icon.png">
-      </div>
-    </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="background-image:none;">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="background-image:none;">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-*/
