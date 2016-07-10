@@ -99,5 +99,12 @@ function init() {
         });
     }
 }
+function test(array) {
+    var blogs = JSON.parse(array);
+    for(var i = blogs.length; i != 0; i--)
+    {
+        console.log(blogs[i - 1].title);
+    }
+}
 
 init();
