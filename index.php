@@ -21,8 +21,6 @@ if ($conn->connect_error)
     die("Connection failed: " . $conn->connect_error);
 }else
 {
-    echo "Connected successfully";
-
     mysqli_set_charset($conn,"utf8");
 
     $blogs = [];
@@ -41,14 +39,6 @@ if ($conn->connect_error)
             $row_array = array('date'=>$date,'id'=>$id,'text'=>$text,'title'=>$title);
             array_push($blogs, $row_array);
         }
-    /*$sql = "SELECT * FROM blog";
-    $result = $conn->query($sql);
-    if($result->num_rows > 0)
-    {
-        foreach($result as $row_array)
-        {
-            array_push($blogs, $row_array);
-        }*/
     } else {
         echo "0 results";
     }
@@ -83,9 +73,9 @@ $conn->close();
             finance, bots, reading, tea, rum, biking, and live music.</p>
         </div>
     </div>
-    <div id="content" class="col-md-10">
+    <div id="content" class="col-md-10 col-sm-10">
         <div id="name-container">
-            <span id="name">Brandon W. Kipp</span>
+            <div id="name">Brandon W. Kipp</div>
             <img id="portrait" draggable="false"></img>
         </div>
         <div class="tabs-center">
@@ -169,7 +159,7 @@ $conn->close();
 
 <script>
 
-test('<?php echo json_encode($blogs, JSON_HEX_APOS) ?>');
+init('<?php echo json_encode($blogs, JSON_HEX_APOS) ?>');
 
 </script>
 

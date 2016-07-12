@@ -8,6 +8,11 @@
     border-color: #527F44;
     border-style: solid;
 }
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/Montserrat-Regular.ttf');
@@ -20,7 +25,7 @@ body {
     padding: 0;
     margin: 0;
     background: @backgroundColor;
-    overflow: hidden;
+    overflow: none;
 }
 a,
 a:focus,
@@ -34,6 +39,8 @@ a:hover {
 	width: 95%;
     top: 50%;
     transform: translateY(-50%);
+    height: ~"-webkit-calc(100% - 15px)";
+    height: ~"-moz-calc(100% - 15px)";
     margin: auto;
     background: @divBackgroundColor;
 	border-width: 5px;
@@ -54,23 +61,28 @@ a:hover {
 }
 #name-container {
     position: relative;
-    width: ~"-webkit-calc(50% + 85px)";
-    width: ~"-moz-calc(50% + 85px)";
+    width: 95%;
+    height: 85px;
     margin: auto;
-    left: 42.5px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 #name {
     position: relative;
     display: inline-block;
+    left: ~"-webkit-calc(50% - 42.5px)";
+    left: ~"-moz-calc(50% - 42.5px)";
+    top: 50%;
+    transform: translate(-50%,-50%);
     font-family: 'Montserrat';
     font-size: 2.75em;
     text-shadow: 2px 2px #AAA;
-    vertical-align: middle;
 }
 #portrait {
+    position: absolute;
 	display: inline-block;
+    right: ~"-webkit-calc(50% - 215px)";
+    right: ~"-moz-calc(50% - 215px)";
 	width: 85px;
     height: 85px;
 	border: 2px solid #000;

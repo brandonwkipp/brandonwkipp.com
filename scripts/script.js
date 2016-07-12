@@ -33,7 +33,7 @@ function botSwitch() {
     document.getElementById('content-box').innerHTML = bots;
     twttr.widgets.load();
 }
-function init() {
+function init(array) {
     var ul = document.getElementById('navTabs');
     var list = ul.getElementsByTagName('li');
 
@@ -46,33 +46,32 @@ function init() {
 
         });
     }
-    $.get("content.json", function(data) {
-        for(var i = 0; i < data["blog"].length; i++)
-        {
-            var blog = document.createElement("div");
-            blog.className = "blog-entry";
+    var blogs = JSON.parse(array);
+    for(var i = blogs.length; i != 0; i--)
+    {
+        var blog = document.createElement("div");
+        blog.className = "blog-entry";
 
-            var divider = document.createElement("hr");
+        var divider = document.createElement("hr");
 
-            var title = document.createElement("h3");
-            title.className = "blog-title";
-            title.innerHTML = data["blog"][i].title;
+        var title = document.createElement("h3");
+        title.className = "blog-title";
+        title.innerHTML = blogs[i - 1].title;
 
-            var date = document.createElement("p");
-            date.className = "blog-date";
-            date.innerHTML = data["blog"][i].date;
+        var date = document.createElement("p");
+        date.className = "blog-date";
+        date.innerHTML = blogs[i - 1].date;
 
-            var text = document.createTextNode(data["blog"][i].text.join('\n'));
+        var text = document.createTextNode(blogs[i - 1].text);
 
-            blog.appendChild(title);
-            blog.appendChild(date);
-            blog.appendChild(text);
-            blog.appendChild(divider);
+        blog.appendChild(title);
+        blog.appendChild(date);
+        blog.appendChild(text);
+        blog.appendChild(divider);
 
-            document.getElementById('content-box').appendChild(blog);
-            blogContent = document.getElementById('content-box').innerHTML;
-        }
-    });
+        document.getElementById('content-box').appendChild(blog);
+        blogContent = document.getElementById('content-box').innerHTML;
+    }
     document.getElementById('portrait').addEventListener('mouseover', function() {
         document.getElementById('portrait').src = 'images/2.png';
     });
@@ -99,12 +98,3 @@ function init() {
         });
     }
 }
-function test(array) {
-    var blogs = JSON.parse(array);
-    for(var i = blogs.length; i != 0; i--)
-    {
-        console.log(blogs[i - 1].title);
-    }
-}
-
-init();
