@@ -332,6 +332,8 @@ a:hover {
   #portrait {
     width: 62px !important;
     height: 62px !important;
+    right: -webkit-calc(50% - 165px) !important;
+    right: -moz-calc(50% - 165px) !important;
   }
   .tabs-center {
     margin-top: 2.5px;
