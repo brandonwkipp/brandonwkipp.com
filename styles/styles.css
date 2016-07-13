@@ -293,10 +293,14 @@ a:hover {
   }
   #name {
     font-size: 1.75em;
+    left: -webkit-calc(50% - 30px);
+    left: -moz-calc(50% - 30px);
   }
   #portrait {
     width: 45px;
     height: 45px;
+    right: -webkit-calc(50% - 125px);
+    right: -moz-calc(50% - 125px);
   }
   .panel-group {
     margin-top: 5px;
@@ -305,8 +309,8 @@ a:hover {
   #content-box {
     margin-top: 10px;
     padding: 5px 10px;
-    height: -webkit-calc(-15%);
-    height: -moz-calc(-15%);
+    height: -webkit-calc(100% - 115px);
+    height: -moz-calc(100% - 115px);
   }
   .blog-title {
     margin-top: 5px;
@@ -372,6 +376,8 @@ a:hover {
   #portrait {
     width: 50px;
     height: 50px;
+    right: -webkit-calc(50% - 145px);
+    right: -moz-calc(50% - 145px);
   }
   .panel {
     margin-top: 10px;
@@ -395,6 +401,8 @@ a:hover {
   #portrait {
     height: 65px;
     width: 65px;
+    right: -webkit-calc(50% - 195px);
+    right: -moz-calc(50% - 195px);
   }
   .tabs-center {
     margin-top: 2.5px !important;
@@ -426,6 +434,9 @@ a:hover {
     width: 55px;
     height: 55px;
   }
+  #content-box {
+    margin-top: 5px !important;
+  }
   .blog-title {
     margin-top: 5px;
   }
@@ -438,6 +449,8 @@ a:hover {
   #portrait {
     width: 65px;
     height: 65px;
+    right: -webkit-calc(50% - 195px);
+    right: -moz-calc(50% - 195px);
   }
   #content-box {
     margin-top: 5px;
@@ -452,9 +465,18 @@ a:hover {
 /* ----------- Galaxy S5 ----------- */
 /* Portrait */
 @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+  #name {
+    left: -webkit-calc(50% - 30px);
+    left: -moz-calc(50% - 30px);
+  }
+  #portrait {
+    width: 45px;
+    height: 45px;
+    right: -webkit-calc(50% - 125px);
+    right: -moz-calc(50% - 125px);
+  }
   #content-box {
     padding: 0px 10px;
-    margin-top: 0px;
   }
   .blog-title {
     margin-top: 5px;
@@ -508,11 +530,12 @@ a:hover {
     width: 19%;
   }
   .panel {
+    margin: 0px !important;
     box-shadow: none;
     -webkit-box-shadow: none;
   }
   .panel-group {
-    margin-bottom: 0px !important;
+    margin: 0px auto !important;
   }
   .panel-heading {
     background: #AF473C !important;

@@ -73,7 +73,7 @@ $conn->close();
             finance, bots, reading, tea, rum, biking, and live music.</p>
         </div>
     </div>
-    <div id="content" class="col-md-10 col-sm-10">
+    <div id="content" class="col-md-10 col-sm-12">
         <div id="name-container">
             <div id="name">Brandon W. Kipp</div>
             <img id="portrait" draggable="false"></img>
