@@ -102,12 +102,9 @@
           overflow: scroll;
       }
       #name-container {
-          left: 0px;
-          width: 95%;
-          margin: auto;
+          height: 45px;
       }
       #name {
-          margin-left: 15px;
           font-size: 1.75em;
       }
       #portrait {
@@ -117,11 +114,6 @@
       .panel-group {
           margin-top: 5px;
           margin-bottom: 5px;
-      }
-      .panel-heading {
-          background: #AF473C !important;
-          color: #FFF !important;
-          text-align: center;
       }
       #content-box {
           margin-top: 10px;
@@ -140,26 +132,45 @@
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
+      #content {
+          padding: 0px 10px !important;
+      }
+      #name-container {
+          height: 62px !important;
+          margin: 2.5px auto;
+      }
       #name {
-          margin-left: 75px !important;
+          font-size: 2.35em;
+      }
+      #portrait {
+          width: 62px !important;
+          height: 62px !important;
+      }
+      .tabs-center {
+          margin-top: 2.5px;
+      }
+      #content-box {
+          margin-top: 1.5px !important;
+          height: ~"-webkit-calc(100% - 110px) !important";
+          height: ~"-moz-calc(100% - 110px) !important";
       }
       .blog-title {
-          margin-top: 5px;
-          font-size: 1.5em;
+          margin-top: 0px !important;
+          font-size: 1.45em !important;
       }
       #contact-modal {
           height: 100%;
       }
       .modal-dialog {
-          height: -webkit-calc(100% - 20px);
-          height: -moz-calc(100% - 20px);
+          height: ~"-webkit-calc(100% - 20px)";
+          height: ~"-moz-calc(100% - 20px)";
       }
       .modal-body {
           padding: 5px 0px 0px 0px;
       }
       .message {
-          height: -webkit-calc(100% - 50px);
-          height: -moz-calc(100% - 50px);
+          height: ~"-webkit-calc(100% - 50px)";
+          height: ~"-moz-calc(100% - 50px)";
       }
 }
 /* ----------- iPhone 6 ----------- */
@@ -173,11 +184,9 @@
           overflow: scroll;
       }
       #name-container {
-          width: 95%;
-          margin: auto;
+          height: 50px;
       }
       #name {
-          margin-left: 25px;
           font-size: 2em;
           text-shadow: 1.5px 1.5px #AAA;
       }
@@ -187,11 +196,6 @@
       }
       .panel {
           margin-top: 10px;
-      }
-      .panel-heading {
-          background: #AF473C !important;
-          color: #FFF !important;
-          text-align: center;
       }
       .blog-title {
           margin-top: 5px;
@@ -207,30 +211,23 @@
           overflow: scroll;
       }
       #name-container {
-          left: 0px;
-          width: 95%;
-          margin: auto;
+          height: 65px;
+          margin-bottom: 2.5px !important;
       }
       #name {
-          margin-left: 115px;
           text-shadow: 1.5px 1.5px #AAA;
       }
       #portrait {
           height: 65px;
           width: 65px;
       }
-      .panel-group {
-          margin-bottom: 5px;
-      }
-      .panel-heading {
-          background: #AF473C !important;
-          color: #FFF !important;
-          text-align: center;
+      .tabs-center {
+          margin-top: 2.5px !important;
       }
       #content-box {
           margin-top: 5px;
-          height: -webkit-calc(100% - 110px);
-          height: -moz-calc(100% - 110px);
+          height: ~"-webkit-calc(100% - 124px)";
+          height: ~"-moz-calc(100% - 124px)";
           padding: 10px;
       }
       .blog-title {
@@ -249,9 +246,7 @@
           overflow: scroll;
       }
       #name-container {
-          left: 27.125px;
-          width: 95%;
-          margin: auto;
+          height: 55px;
       }
       #name {
           font-size: 2em;
@@ -259,11 +254,6 @@
       #portrait {
           width: 55px;
           height: 55px
-      }
-      .panel-heading {
-          background: #AF473C !important;
-          color: #FFF !important;
-          text-align: center;
       }
       .blog-title {
           margin-top: 5px;
@@ -276,22 +266,17 @@
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) {
+      #name-container {
+          height: 65px;
+      }
       #portrait {
           width: 65px;
           height: 65px;
       }
-      .panel-group {
-          margin-bottom: 5px;
-      }
-      .panel-heading {
-          background: #AF473C !important;
-          color: #FFF !important;
-          text-align: center;
-      }
       #content-box {
           margin-top: 5px;
-          height: -webkit-calc(100% - 110px);
-          height: -moz-calc(100% - 110px);
+          height: ~"-webkit-calc(100% - 124px)";
+          height: ~"-moz-calc(100% - 124px)";
           padding: 10px;
       }
       .blog-title {
@@ -312,9 +297,6 @@
       .blog-title {
           margin-top: 5px;
       }
-      #name {
-          margin-left: 30.75px;
-      }
 }
 /* Landscape */
 @media screen
@@ -323,27 +305,25 @@
   and (-webkit-device-pixel-ratio: 3)
   and (orientation: landscape) {
       #name-container {
-          width: 95%;
+          height: 65px;
+          margin: 2.5px auto;
       }
       #name {
-          margin-left: 115px !important;
+          font-size: 2.5em;
       }
       #portrait {
           width: 65px;
           height: 65px;
+          right: ~"-webkit-calc(50% - 180px)";
+          right: ~"-moz-calc(50% - 180px)";
       }
-      .panel-group {
-          margin-bottom: 0px !important;
-      }
-      .panel-heading {
-          background: #AF473C !important;
-          color: #FFF !important;
-          text-align: center;
+      .tabs-center {
+          margin-top: 2.5px;
       }
       #content-box {
           margin-top: 5px;
-          height: -webkit-calc(100% - 119px);
-          height: -moz-calc(100% - 119px);
+          height: ~"-webkit-calc(100% - 119px)";
+          height: ~"-moz-calc(100% - 119px)";
           padding: 5px;
       }
       .blog-title {
@@ -368,5 +348,20 @@
     #navTabs > li {
         display: inline-block !important;
         width: 19%;
+    }
+    .panel {
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+    .panel-group {
+        margin-bottom: 0px !important;
+    }
+    .panel-heading {
+        background: #AF473C !important;
+        color: #FFF !important;
+        text-align: center;
+    }
+    #content-box {
+        overflow-x: hidden;
     }
 }
