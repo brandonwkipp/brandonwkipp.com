@@ -91,7 +91,7 @@ $conn->close();
                     </ul>
                 </li>
                 <li id="blog" class="active"><a href="#">Blog</a></li>
-                <li id="resume"><a href="#">Resume</a></li>
+                <li id="resume" data-toggle="modal" data-target="#resume-modal"><a href="#">Resume</a></li>
                 <li id="connect">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         Connect<span class="caret"></span>
@@ -119,7 +119,7 @@ $conn->close();
                                         <ul class="list-group mobile-ul">
                                             <li class="list-group-item mobile-list-item"><a href="../soundsword/index.php">SoundSword - a sound editing web app</a></li>
                                             <li class="list-group-item mobile-list-item"><a href="https://brandonwkipp.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
-                                            <li class="list-group-item mobile-list-item"><a href="bots.html">BotNet - my personal collection of Twitter Bots</a></li>
+                                            <li id="mobile-bots" class="list-group-item mobile-list-item"><a href="#">BotNet - my personal collection of Twitter Bots</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -188,13 +188,11 @@ init('<?php echo json_encode($blogs, JSON_HEX_APOS) ?>');
         </div>
     </div>
 </div>
-
 <div id="resume-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
-        <!-- Modal content-->
-        <div>
-            <div class="modal-header resume-modal"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-            <div class="modal-body"><img id="resume-img"></div>
+        <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <img id="resume-img" draggable="false"></img>
         </div>
     </div>
 </div>

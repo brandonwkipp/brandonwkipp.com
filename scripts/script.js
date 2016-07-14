@@ -25,10 +25,11 @@ function blogSwitch() {
     document.getElementById('content-box').innerHTML = blogContent;
 }
 function botSwitch() {
-    var bots = '<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">';
-    bots += '<div id="prossbot" class="bot"><p class="bot-title">ProssBot</p><p class="bot-explanation">';
-    bots += 'A bot dedicated to tweeting lyrics of one of myfavorite local artists I worked with at Maple Tree Studio.</p>';
-    bots += '<a class="twitter-timeline" href="https://twitter.com/prossbot" data-chrome="noheader nofooter"></a></div></div>';
+    var bots = '<div id="prossbot" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 bot">';
+    bots += '<p class="bot-title">ProssBot</p><p class="bot-explanation">';
+    bots += 'A bot dedicated to tweeting lyrics of one of my favorite local artists I worked with at Maple Tree Studio.</p>';
+    bots += '<a class="twitter-timeline" href="https://twitter.com/prossbot" data-chrome="noheader nofooter"></a></div>';
+    bots += '<div class="hidden-xs col-sm-8 col-md-8 col-lg-8"><p class="bot-explanation">More bots coming soon.</p></div>'
 
     document.getElementById('content-box').innerHTML = bots;
     twttr.widgets.load();
@@ -84,11 +85,13 @@ function init(array) {
     document.getElementById('mobile-blog').addEventListener('click', function() {
         blogSwitch();
     });
-    document.getElementById('resume').addEventListener('click', function() {
-        resumeSwitch();
-    });
     document.getElementById('bots').addEventListener('click', function() {
         botSwitch();
+    });
+    document.getElementById('mobile-bots').addEventListener('click', function() {
+        botSwitch();
+        $('#mobile-menu').removeClass('in');
+        $('#mobile-projects-menu').removeClass('in');
     });
     var listItems = document.querySelectorAll('.mobile-list-item');
     for(var i = 0; i < listItems.length; i++)
