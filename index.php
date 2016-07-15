@@ -7,13 +7,13 @@ require_once 'security.php';
 $error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
 
 $servername = "localhost";
-//$username = "soundsword_admin";
-//$password = "Lemongrab80!";
-//$db = "kipp_blog";
+$username = "soundsword_admin";
+$password = "Lemongrab80!";
+$db = "kipp_blog";
 
-$username = "root";
-$password = "";
-$db = "personal";
+//$username = "root";
+//$password = "";
+//$db = "personal";
 
 $newArray = '';
 // Create connection
@@ -71,7 +71,7 @@ $conn->close();
     <div class="col-md-2 hidden-sm hidden-xs" style="height:100%;">
         <div id="blurb" class="hidden-xs">
             <p id="greeting">hello.</p>
-            <p>My name is Brandon and I’m an aspiring web developer from the great state of Wisconsin. My passions lie in
+            <p id="bio">My name is Brandon and I’m an aspiring web developer from the great state of Wisconsin. My passions lie in
             web UI/UX design and music technology. My biggest goal with web design, right now, is to make peoples' lives
             easier through my intuitive web app: <a href="#">SoundSword</a>. Aside from all that, I love business, philosophy,
             finance, bots, reading, tea, rum, biking, and live music.</p>
@@ -111,14 +111,14 @@ $conn->close();
                 <li id="contact"><a href="#" data-toggle="modal" data-target="#contact-modal">Contact</a></li>
             </ul>
             <div class="panel-group hidden-sm hidden-md hidden-lg">
-                <a data-toggle="collapse" href="#mobile-menu"><div class="panel panel-default">
-                    <div class="panel-heading">
+                <div class="panel panel-default">
+                    <div class="panel-heading" data-toggle="collapse" href="#mobile-menu">
                         <h4 class="panel-title">Menu</h4>
                     </div>
                     <div id="mobile-menu" class="panel-collapse collapse">
                         <ul class="list-group">
                             <li id="mobile-projects" class="list-group-item panel-group" data-toggle="collapse" href="#mobile-projects-menu">
-                                <div class="panel panel-default panel-panel">Projects<span class="caret"></span>
+                                <div class="panel panel-default panel-panel"><span class="pointer">Projects</span><span class="caret pointer"></span>
                                     <div id="mobile-projects-menu" class="panel-collapse collapse">
                                         <ul class="list-group mobile-ul">
                                             <li class="list-group-item mobile-list-item"><a href="../soundsword/index.php">SoundSword - a sound editing web app</a></li>
@@ -194,10 +194,8 @@ init('<?php echo json_encode($blogs, JSON_HEX_APOS) ?>');
 </div>
 <div id="resume-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
-        <div class="modal-body">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <img id="resume-img" draggable="false"></img>
-        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div id="resume-img" draggable="false"></div>
     </div>
 </div>
 </body>
@@ -208,7 +206,6 @@ if(!is_null($error))
 {
     echo '<script>$("#contact-modal").modal("show");</script>';
 }
-
 
 unset($_SESSION['error']);
 unset($_SESSION['name']);

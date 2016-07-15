@@ -1,9 +1,9 @@
-CREATE DATABASE IF NOT EXISTS `blogs`;
+CREATE DATABASE IF NOT EXISTS `kipp_blogs`;
 
-USE `blogs`;
+USE `kipp_blogs`;
 
-CREATE TABLE IF NOT EXISTS `users` (
-  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `blogs` (
+  `author` varchar(255) NOT NULL,
   `username` varchar(45) DEFAULT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(45) NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `date_updated` datetime DEFAULT NULL,
   `date_temp_password_sent` datetime DEFAULT NULL,
   `auto_login_key` varchar(64) DEFAULT NULL,
-  PRIMARY KEY (`user_id`),
+  PRIMARY KEY (`id`),
   UNIQUE KEY `auto_login_key_UNIQUE` (`auto_login_key`),
   KEY `EMAIL_USERNAME_INDEX` (`username`,`email`)
 );

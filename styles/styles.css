@@ -19,6 +19,9 @@
   margin-left: auto;
   margin-right: auto;
 }
+.pointer {
+  pointer-events: none;
+}
 @font-face {
   font-family: 'Montserrat';
   src: url('../fonts/Montserrat-Regular.ttf');
@@ -45,8 +48,6 @@ a:hover {
   width: 95%;
   top: 50%;
   transform: translateY(-50%);
-  height: -webkit-calc(100% - 15px);
-  height: -moz-calc(100% - 15px);
   margin: auto;
   background: #92BF7F;
   border-width: 5px;
@@ -58,7 +59,15 @@ a:hover {
   border-style: solid;
 }
 #greeting {
-  font-size: 36px;
+  display: block;
+  position: relative;
+  font-size: 3em;
+}
+#bio {
+  display: block;
+  position: relative;
+  text-align: center;
+  font-size: 1em;
 }
 #content {
   position: relative;
@@ -158,28 +167,6 @@ a:hover {
 .blog-date {
   text-align: right;
 }
-#resume-img {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  background: url('../images/resume.png');
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-.download-row {
-  position: relative;
-  width: 50%;
-  margin: auto;
-  margin-top: 10px;
-}
-.portrait {
-  float: left;
-}
-.landscape {
-  float: right;
-}
 .icon {
   width: 25px;
   height: 25px;
@@ -217,6 +204,16 @@ a:hover {
   border-style: none;
 }
 @media (max-width: 768px) {
+  body {
+    overflow-y: scroll;
+  }
+  #name-container {
+    height: 65px;
+  }
+  #portrait {
+    width: 65px;
+    height: 65px;
+  }
   #navTabs {
     width: 95%;
     padding: 0px !important;
@@ -238,16 +235,35 @@ a:hover {
     color: #FFF !important;
     text-align: center;
   }
+  .panel-panel {
+    border-style: none;
+  }
   #content-box {
     margin-top: 5px;
+    height: -webkit-calc(100% - 124px);
     overflow-x: hidden;
   }
   .blog-title {
     margin-top: 0px;
     font-size: 1.25em;
   }
+  .mobile-list-item {
+    background: #AAA;
+  }
 }
-@media screen and (max-width: 568px) {
+@media only screen and (max-width: 736px) and (orientation: landscape) {
+  #name {
+    font-size: 2.25em;
+    left: -webkit-calc(50% - 32.5px);
+  }
+  #portrait {
+    right: -webkit-calc(50% - 175px);
+  }
+  #content-box {
+    height: -webkit-calc(100% - 125px);
+  }
+}
+@media only screen and (max-width: 568px) and (orientation: landscape) {
   #name-container {
     height: 55px !important;
   }
@@ -256,8 +272,7 @@ a:hover {
     left: -webkit-calc(50% - 25px) !important;
   }
   #portrait {
-    float: left;
-    right: 0;
+    right: -webkit-calc(50% - 145px);
     width: 55px !important;
     height: 55px !important;
   }
@@ -265,35 +280,42 @@ a:hover {
     height: -webkit-calc(100% - 114px);
   }
 }
-@media screen and (max-width: 320px) {
-  #name-container {
-    height: 50px;
-  }
-  #name {
-    left: -webkit-calc(50% - 25px);
-  }
-  #portrait {
-    float: left;
-    right: 0;
-    width: 50px;
-    height: 50px;
-  }
-}
-@media screen and (max-width: 736px) {
-  #name-container {
-    height: 65px;
-  }
+/* portrait */
+@media only screen and (max-width: 480px) and (orientation: portrait) {
   #name {
     font-size: 2.25em;
     left: -webkit-calc(50% - 32.5px);
   }
   #portrait {
-    width: 65px;
-    height: 65px;
     right: -webkit-calc(50% - 175px);
   }
   #content-box {
     height: -webkit-calc(100% - 125px);
+  }
+}
+@media only screen and (max-width: 360px) and (orientation: portrait) {
+  #name-container {
+    height: 55px !important;
+  }
+  #name {
+    font-size: 1.85em;
+    left: -webkit-calc(50% - 25px) !important;
+  }
+  #portrait {
+    right: -webkit-calc(50% - 145px);
+    width: 55px !important;
+    height: 55px !important;
+  }
+  #content-box {
+    height: -webkit-calc(100% - 114px);
+  }
+}
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+  #content {
+    padding: 0px 7.5px;
+  }
+  #content-box {
+    padding: 5px;
   }
 }
 .modal-dialog {
@@ -357,12 +379,24 @@ a:hover {
   float: right;
 }
 #resume-modal > .modal-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 0px;
-  width: 80%;
-  height: 90%;
-}
-#resume-modal > .modal-dialog > .modal-body {
-  width: 90% !important;
-  height: 100%;
+  width: 75%;
+  height: 75%;
   margin: auto;
+}
+#resume-img {
+  position: relative;
+  display: block;
+  width: 95%;
+  height: -webkit-calc(100% - 42px);
+  margin: auto;
+  margin-top: 21px;
+  background: url('../images/resume.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }

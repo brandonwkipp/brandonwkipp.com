@@ -1,5 +1,6 @@
 var blogContent;
 function activeSwitch(element) {
+    console.log('lit');
     var ul = document.getElementById('navTabs');
     var list = ul.getElementsByTagName('li');
 
