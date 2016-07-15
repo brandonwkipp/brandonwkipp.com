@@ -45,7 +45,7 @@ a:hover {
 }
 #blurb {
   position: relative;
-  width: 95%;
+  width: 99%;
   top: 50%;
   transform: translateY(-50%);
   margin: auto;
@@ -61,7 +61,7 @@ a:hover {
 #greeting {
   display: block;
   position: relative;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 #bio {
   display: block;
@@ -202,6 +202,19 @@ a:hover {
   background: #AF473C;
   color: #000 !important;
   border-style: none;
+}
+@media (max-width: 1285px) {
+  #bio {
+    font-size: .85em;
+  }
+}
+@media (max-width: 1285px) {
+  #greeting {
+    font-size: 2.25em;
+  }
+  #bio {
+    font-size: .75em;
+  }
 }
 @media (max-width: 768px) {
   body {
@@ -387,6 +400,9 @@ a:hover {
   width: 75%;
   height: 75%;
   margin: auto;
+}
+#resume-modal button {
+  width: 21px !important;
 }
 #resume-img {
   position: relative;

@@ -7,13 +7,13 @@ require_once 'security.php';
 $error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
 
 $servername = "localhost";
-$username = "soundsword_admin";
-$password = "Lemongrab80!";
-$db = "kipp_blog";
+//$username = "soundsword_admin";
+//$password = "Lemongrab80!";
+//$db = "kipp_blog";
 
-//$username = "root";
-//$password = "";
-//$db = "personal";
+$username = "root";
+$password = "";
+$db = "personal";
 
 $newArray = '';
 // Create connection
@@ -61,7 +61,6 @@ $conn->close();
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<link rel="stylesheet" href="../bootstrap-3.3.6-dist/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="styles/styles.css"/>
 
 <script src="https://platform.twitter.com/widgets.js"></script>
@@ -69,9 +68,9 @@ $conn->close();
 </head>
 <body>
     <div class="col-md-2 hidden-sm hidden-xs" style="height:100%;">
-        <div id="blurb" class="hidden-xs">
+        <div id="blurb">
             <p id="greeting">hello.</p>
-            <p id="bio">My name is Brandon and I’m an aspiring web developer from the great state of Wisconsin. My passions lie in
+            <p id="bio">My name is Brandon and who <3's the internet. I'm also and aspiring web developer with passions for
             web UI/UX design and music technology. My biggest goal with web design, right now, is to make peoples' lives
             easier through my intuitive web app: <a href="#">SoundSword</a>. Aside from all that, I love business, philosophy,
             finance, bots, reading, tea, rum, biking, and live music.</p>
@@ -156,8 +155,6 @@ $conn->close();
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-
-<script src="../bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 <!-- Scripts -->
 <script type="text/javascript" src="scripts/script.js"></script>
 
@@ -200,7 +197,6 @@ init('<?php echo json_encode($blogs, JSON_HEX_APOS) ?>');
 </div>
 </body>
 <?php
-
 
 if(!is_null($error))
 {
