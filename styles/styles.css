@@ -216,321 +216,6 @@ a:hover {
   color: #000 !important;
   border-style: none;
 }
-.panel-panel {
-  border-style: none;
-}
-.mobile-ul {
-  border-top: 1px solid #DDD;
-  border-bottom: 1px solid #DDD;
-}
-.mobile-list-item {
-  display: inline-block;
-  border-style: none;
-  padding: 10px;
-}
-/* Media Queries */
-/* ----------- iPad 1 and 2 ----------- */
-/* Landscape */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
-  #blurb {
-    height: 97%;
-    width: 99%;
-    padding: 0px 5px;
-    font-size: 1em;
-    text-align: center;
-  }
-  #greeting {
-    position: relative;
-    margin-top: 40%;
-  }
-  #navTabs {
-    width: 95%;
-    padding: 0px !important;
-  }
-  #navTabs > li {
-    display: inline-block !important;
-    width: 19%;
-  }
-}
-/* Portrait */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-  .panel-heading {
-    background: #AF473C !important;
-    color: #FFF !important;
-    text-align: center;
-  }
-}
-/* ----------- iPad 3 and 4 ----------- */
-/* Landscape */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  #blurb {
-    height: 97%;
-    width: 99%;
-    padding: 0px 5px;
-    font-size: 1em;
-    text-align: center;
-  }
-  #greeting {
-    position: relative;
-    margin-top: 40%;
-  }
-  #navTabs {
-    width: 95%;
-    padding: 0px !important;
-  }
-  #navTabs > li {
-    display: inline-block !important;
-    width: 19%;
-  }
-}
-/* Portrait */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .panel-heading {
-    background: #AF473C !important;
-    color: #FFF !important;
-    text-align: center;
-  }
-}
-/* ----------- iPhone 5 ----------- */
-/* Portrait */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-  body {
-    overflow: scroll;
-  }
-  #name-container {
-    height: 45px;
-  }
-  #name {
-    font-size: 1.75em;
-    left: -webkit-calc(50% - 30px);
-    left: -moz-calc(50% - 30px);
-  }
-  #portrait {
-    width: 45px;
-    height: 45px;
-    right: -webkit-calc(50% - 125px);
-    right: -moz-calc(50% - 125px);
-  }
-  .panel-group {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  #content-box {
-    margin-top: 10px;
-    padding: 5px 10px;
-    height: -webkit-calc(100% - 115px);
-    height: -moz-calc(100% - 115px);
-  }
-  .blog-title {
-    margin-top: 5px;
-    font-size: 1.5em;
-  }
-}
-/* Landscape */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-  #content {
-    padding: 0px 10px !important;
-  }
-  #name-container {
-    height: 62px !important;
-    margin: 2.5px auto;
-  }
-  #name {
-    font-size: 2.35em;
-  }
-  #portrait {
-    width: 62px !important;
-    height: 62px !important;
-    right: -webkit-calc(50% - 165px) !important;
-    right: -moz-calc(50% - 165px) !important;
-  }
-  .tabs-center {
-    margin-top: 2.5px;
-  }
-  #content-box {
-    margin-top: 1.5px !important;
-    height: -webkit-calc(100% - 110px) !important;
-    height: -moz-calc(100% - 110px) !important;
-  }
-  .blog-title {
-    margin-top: 0px !important;
-    font-size: 1.45em !important;
-  }
-  #contact-modal {
-    height: 100%;
-  }
-  .modal-dialog {
-    height: -webkit-calc(100% - 20px);
-    height: -moz-calc(100% - 20px);
-  }
-  .modal-body {
-    padding: 5px 0px 0px 0px;
-  }
-  .message {
-    height: -webkit-calc(100% - 50px);
-    height: -moz-calc(100% - 50px);
-  }
-}
-/* ----------- iPhone 6 ----------- */
-/* Portrait */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-  body {
-    overflow: scroll;
-  }
-  #name-container {
-    height: 50px;
-  }
-  #name {
-    font-size: 2em;
-    text-shadow: 1.5px 1.5px #AAA;
-  }
-  #portrait {
-    width: 50px;
-    height: 50px;
-    right: -webkit-calc(50% - 145px);
-    right: -moz-calc(50% - 145px);
-  }
-  .panel {
-    margin-top: 10px;
-  }
-  .blog-title {
-    margin-top: 5px;
-  }
-}
-/* Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-  body {
-    overflow: scroll;
-  }
-  #name-container {
-    height: 65px;
-    margin-bottom: 2.5px !important;
-  }
-  #name {
-    text-shadow: 1.5px 1.5px #AAA;
-  }
-  #portrait {
-    height: 65px;
-    width: 65px;
-    right: -webkit-calc(50% - 195px);
-    right: -moz-calc(50% - 195px);
-  }
-  .tabs-center {
-    margin-top: 2.5px !important;
-  }
-  #content-box {
-    margin-top: 5px;
-    height: -webkit-calc(100% - 124px);
-    height: -moz-calc(100% - 124px);
-    padding: 10px;
-  }
-  .blog-title {
-    margin-top: 5px;
-    font-size: 1.75em;
-  }
-}
-/* ----------- iPhone 6+ ----------- */
-/* Portrait */
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
-  body {
-    overflow: scroll;
-  }
-  #name-container {
-    height: 55px;
-  }
-  #name {
-    font-size: 2em;
-  }
-  #portrait {
-    width: 55px;
-    height: 55px;
-  }
-  #content-box {
-    margin-top: 5px !important;
-  }
-  .blog-title {
-    margin-top: 5px;
-  }
-}
-/* Landscape */
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
-  #name-container {
-    height: 65px;
-  }
-  #portrait {
-    width: 65px;
-    height: 65px;
-    right: -webkit-calc(50% - 195px);
-    right: -moz-calc(50% - 195px);
-  }
-  #content-box {
-    margin-top: 5px;
-    height: -webkit-calc(100% - 124px);
-    height: -moz-calc(100% - 124px);
-    padding: 10px;
-  }
-  .blog-title {
-    margin-top: 5px;
-  }
-}
-/* ----------- Galaxy S5 ----------- */
-/* Portrait */
-@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
-  #name {
-    left: -webkit-calc(50% - 30px);
-    left: -moz-calc(50% - 30px);
-  }
-  #portrait {
-    width: 45px;
-    height: 45px;
-    right: -webkit-calc(50% - 125px);
-    right: -moz-calc(50% - 125px);
-  }
-  #content-box {
-    padding: 0px 10px;
-  }
-  .blog-title {
-    margin-top: 5px;
-  }
-}
-/* Landscape */
-@media screen and (device-width: 640px) and (device-height: 360px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
-  #name-container {
-    height: 65px;
-    margin: 2.5px auto;
-  }
-  #name {
-    font-size: 2.5em;
-  }
-  #portrait {
-    width: 65px;
-    height: 65px;
-    right: -webkit-calc(50% - 180px);
-    right: -moz-calc(50% - 180px);
-  }
-  .tabs-center {
-    margin-top: 2.5px;
-  }
-  #content-box {
-    margin-top: 5px;
-    height: -webkit-calc(100% - 119px);
-    height: -moz-calc(100% - 119px);
-    padding: 5px;
-  }
-  .blog-title {
-    margin-top: 5px;
-    font-size: 1.5em;
-  }
-  #resume-img {
-    width: 540px;
-    height: 294px;
-  }
-  .resume-modal {
-    height: 21px;
-    padding: 0px;
-    border-style: none;
-  }
-}
 @media (max-width: 768px) {
   #navTabs {
     width: 95%;
@@ -554,7 +239,61 @@ a:hover {
     text-align: center;
   }
   #content-box {
+    margin-top: 5px;
     overflow-x: hidden;
+  }
+  .blog-title {
+    margin-top: 0px;
+    font-size: 1.25em;
+  }
+}
+@media screen and (max-width: 568px) {
+  #name-container {
+    height: 55px !important;
+  }
+  #name {
+    font-size: 1.85em;
+    left: -webkit-calc(50% - 25px) !important;
+  }
+  #portrait {
+    float: left;
+    right: 0;
+    width: 55px !important;
+    height: 55px !important;
+  }
+  #content-box {
+    height: -webkit-calc(100% - 114px);
+  }
+}
+@media screen and (max-width: 320px) {
+  #name-container {
+    height: 50px;
+  }
+  #name {
+    left: -webkit-calc(50% - 25px);
+  }
+  #portrait {
+    float: left;
+    right: 0;
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 736px) {
+  #name-container {
+    height: 65px;
+  }
+  #name {
+    font-size: 2.25em;
+    left: -webkit-calc(50% - 32.5px);
+  }
+  #portrait {
+    width: 65px;
+    height: 65px;
+    right: -webkit-calc(50% - 175px);
+  }
+  #content-box {
+    height: -webkit-calc(100% - 125px);
   }
 }
 .modal-dialog {

@@ -46,11 +46,7 @@
   and (max-device-width: 1024px)
   and (orientation: portrait)
   and (-webkit-min-device-pixel-ratio: 1) {
-      .panel-heading {
-          background: #AF473C !important;
-          color: #FFF !important;
-          text-align: center;
-      }
+
 }
 /* ----------- iPad 3 and 4 ----------- */
 /* Landscape */
@@ -85,11 +81,6 @@
   and (max-device-width: 1024px)
   and (orientation: portrait)
   and (-webkit-min-device-pixel-ratio: 2) {
-      .panel-heading {
-          background: #AF473C !important;
-          color: #FFF !important;
-          text-align: center;
-      }
 }
 /* ----------- iPhone 5 ----------- */
 /* Portrait */
@@ -126,7 +117,6 @@
           height: ~"-moz-calc(100% - 115px)";
       }
       .blog-title {
-          margin-top: 5px;
           font-size: 1.5em;
       }
 }
@@ -205,9 +195,6 @@
       .panel {
           margin-top: 10px;
       }
-      .blog-title {
-          margin-top: 5px;
-      }
 }
 /* Landscape */
 @media only screen
@@ -241,7 +228,6 @@
           padding: 10px;
       }
       .blog-title {
-          margin-top: 5px;
           font-size: 1.75em;
       }
 }
@@ -268,10 +254,6 @@
       #content-box {
           margin-top: 5px !important;
       }
-      .blog-title {
-          margin-top: 5px;
-      }
-
 }
 /* Landscape */
 @media only screen
@@ -294,9 +276,6 @@
           height: ~"-moz-calc(100% - 124px)";
           padding: 10px;
       }
-      .blog-title {
-          margin-top: 5px;
-      }
 }
 /* ----------- Galaxy S5 ----------- */
 /* Portrait */
@@ -317,9 +296,6 @@
       }
       #content-box {
           padding: 0px 10px;
-      }
-      .blog-title {
-          margin-top: 5px;
       }
 }
 /* Landscape */
@@ -351,17 +327,7 @@
           padding: 5px;
       }
       .blog-title {
-          margin-top: 5px;
           font-size: 1.5em;
-      }
-      #resume-img {
-          width: 540px;
-          height: 294px;
-      }
-      .resume-modal {
-          height: 21px;
-          padding: 0px;
-          border-style: none;
       }
 }
 @media (max-width: 768px) {
@@ -388,5 +354,8 @@
     }
     #content-box {
         overflow-x: hidden;
+    }
+    .blog-title {
+        margin-top: 5px;
     }
 }

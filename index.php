@@ -7,6 +7,10 @@ require_once 'security.php';
 $error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
 
 $servername = "localhost";
+//$username = "soundsword_admin";
+//$password = "Lemongrab80!";
+//$db = "kipp_blog";
+
 $username = "root";
 $password = "";
 $db = "personal";
