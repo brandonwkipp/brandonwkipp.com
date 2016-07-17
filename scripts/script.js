@@ -1,4 +1,5 @@
 var blogContent;
+var a = "<a href='http://www.google.com'>here</a>";
 function activeSwitch(element) {
     var ul = document.getElementById('navTabs');
     var list = ul.getElementsByTagName('li');
@@ -48,7 +49,8 @@ function init(array) {
         });
     }
     var blogs = JSON.parse(array);
-    for(var i = blogs.length; i != 0; i--)
+
+    for(var i = blogs[0].length; i != 0; i--)
     {
         var blog = document.createElement("div");
         blog.className = "blog-entry";
@@ -57,13 +59,29 @@ function init(array) {
 
         var title = document.createElement("h3");
         title.className = "blog-title";
-        title.innerHTML = blogs[i - 1].title;
+        title.innerHTML = blogs[0][i - 1].title;
 
         var date = document.createElement("p");
         date.className = "blog-date";
-        date.innerHTML = blogs[i - 1].date;
+        date.innerHTML = blogs[0][i - 1].date;
 
-        var text = document.createTextNode(blogs[i - 1].text);
+        var text = document.createElement("p");
+        text.innerHTML = blogs[0][i - 1].text;
+
+        var rawText = $(text)[0].innerHTML;
+
+        while(rawText.indexOf("[link]") != -1)
+        {
+            var link = "<a href='" + blogs[2][0].sources + "'>here</a>";
+            rawText = rawText.replace("[link]",link);
+            text.innerHTML = rawText;
+        }
+        while(rawText.indexOf("[image]") != -1)
+        {
+            var image = "<br/><img id='" + blogs[1][0].sources + "'></img><br/>";
+            rawText = rawText.replace("[image]",image);
+            text.innerHTML = rawText;
+        }
 
         blog.appendChild(title);
         blog.appendChild(date);

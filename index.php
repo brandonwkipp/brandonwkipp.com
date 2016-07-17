@@ -28,12 +28,20 @@ if ($conn->connect_error)
     mysqli_set_charset($conn,"utf8");
 
     $blogs = [];
-    $sql = "SELECT * FROM blogs";
-    $result = $conn->query($sql);
+    $images = [];
+    $links = [];
 
-    if($result->num_rows > 0)
+    $blogs_sql = "SELECT * FROM blogs";
+    $images_sql = "SELECT * FROM images";
+    $links_sql = "SELECT * FROM links";
+
+    $blogs_result = $conn->query($blogs_sql);
+    $images_result = $conn->query($images_sql);
+    $links_result = $conn->query($links_sql);
+
+    if($blogs_result->num_rows > 0)
     {
-        foreach($result as $row)
+        foreach($blogs_result as $row)
         {
             $date = $row['date'];
             $id = $row['id'];
@@ -43,8 +51,32 @@ if ($conn->connect_error)
             $row_array = array('date'=>$date,'id'=>$id,'text'=>$text,'title'=>$title);
             array_push($blogs, $row_array);
         }
-    } else {
-        echo "0 results";
+    }
+
+    if($images_result->num_rows > 0)
+    {
+        foreach($images_result as $row)
+        {
+            $id = $row['id'];
+            $blog_id = $row['blog_id'];
+            $sources = $row['sources'];
+
+            $row_array = array('id'=>$id,'blog_id'=>$blog_id,'sources'=>$sources);
+            array_push($images, $row_array);
+        }
+    }
+
+    if($links_result->num_rows > 0)
+    {
+        foreach($links_result as $row)
+        {
+            $id = $row['id'];
+            $blog_id = $row['blog_id'];
+            $sources = $row['sources'];
+
+            $row_array = array('id'=>$id,'blog_id'=>$blog_id,'sources'=>$sources);
+            array_push($links, $row_array);
+        }
     }
 
 $conn->close();
@@ -159,8 +191,15 @@ $conn->close();
 <script type="text/javascript" src="scripts/script.js"></script>
 
 <script>
+<?php
+$array = [$blogs, $images, $links];
 
-init('<?php echo json_encode($blogs, JSON_HEX_APOS) ?>');
+$encoded_blog = json_encode($blogs, JSON_HEX_APOS | JSON_HEX_QUOT);
+$encoded_image = json_encode($images);
+$encoded_link = json_encode($links);
+
+?>
+init('<?php echo json_encode($array, JSON_HEX_APOS | JSON_HEX_QUOT) ?>');
 
 </script>
 
