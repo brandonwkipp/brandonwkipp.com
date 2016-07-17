@@ -7,13 +7,13 @@ require_once 'security.php';
 $error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
 
 $servername = "localhost";
-$username = "kipp_admin";
-$password = "Lemongrab80!";
-$db = "kipp_blogs";
+//$username = "kipp_admin";
+//$password = "Lemongrab80!";
+//$db = "kipp_blogs";
 
-//$username = "root";
-//$password = "";
-//$db = "personal";
+$username = "root";
+$password = "";
+$db = "personal";
 
 $conn = new mysqli($servername, $username, $password, $db);
 if ($conn->connect_error)
@@ -64,10 +64,10 @@ $conn->close();
     <div class="col-md-2 hidden-sm hidden-xs" style="height:100%;">
         <div id="blurb">
             <p id="greeting">hello.</p>
-            <p id="bio">My name is Brandon and who <3's the internet. I'm also and aspiring web developer with passions for
-            web UI/UX design and music technology. My biggest goal with web design, right now, is to make peoples' lives
-            easier through my intuitive web app: <a href="#">SoundSword</a>. Aside from all that, I love business, philosophy,
-            finance, bots, reading, tea, rum, biking, and live music.</p>
+            <p id="bio">My name is Brandon and I &lt;3 the internet. I'm also an aspiring web developer with passions for
+            web UI/UX design and music technology. My biggest goal in web design right now, is to make peoples' lives
+            easier through my intuitive web app: <a class="links" href="#">SoundSword</a>. Aside from all that, I love
+            business, philosophy, finance, bots, reading, tea, rum, biking, and live music.</p>
         </div>
     </div>
     <div id="content" class="col-md-10 col-sm-12">
@@ -84,6 +84,7 @@ $conn->close();
                     <ul class="dropdown-menu">
                         <li><a href="../soundsword/index.php">SoundSword - a sound editing web app</a></li>
                         <li><a href="https://brandonwkipp.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
+                        <li><a href="ttps://brandonwkipp.github.io/drumduino">DRUMDUINO - an Arduino sketch for MIDI controllers</a></li>
                         <li><a id="bots" href="#">BotNet - my personal collection of Twitter Bots</a></li>
                     </ul>
                 </li>
@@ -116,6 +117,7 @@ $conn->close();
                                         <ul class="list-group mobile-ul">
                                             <li class="list-group-item mobile-list-item"><a href="../soundsword/index.php">SoundSword - a sound editing web app</a></li>
                                             <li class="list-group-item mobile-list-item"><a href="https://brandonwkipp.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
+                                            <li class="list-group-item mobile-list-item"><a href="ttps://brandonwkipp.github.io/drumduino">DRUMDUINO - an Arduino sketch for MIDI controllers</a></li>
                                             <li id="mobile-bots" class="list-group-item mobile-list-item"><a href="#">BotNet - my personal collection of Twitter Bots</a></li>
                                         </ul>
                                     </div>

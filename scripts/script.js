@@ -90,7 +90,7 @@ function init(array) {
             var links_array = blogs[i - 1].links.split(", ");
             for(var j = 0; j < links_array.length; j = j + 2)
             {
-                var link = "<a class='blog-links' href='" + links_array[j] + "'>" + links_array[j + 1] + "</a>";
+                var link = "<a class='links' href='" + links_array[j] + "'>" + links_array[j + 1] + "</a>";
                 rawText = rawText.replace("[link]",link);
                 text.innerHTML = rawText;
             }
