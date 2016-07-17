@@ -7,13 +7,13 @@ require_once 'security.php';
 $error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
 
 $servername = "localhost";
-//$username = "kipp_admin";
-//$password = "Lemongrab80!";
-//$db = "kipp_blogs";
+$username = "kipp_admin";
+$password = "Lemongrab80!";
+$db = "kipp_blogs";
 
-$username = "root";
-$password = "";
-$db = "personal";
+//$username = "root";
+//$password = "";
+//$db = "personal";
 
 $conn = new mysqli($servername, $username, $password, $db);
 if ($conn->connect_error)
