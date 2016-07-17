@@ -172,6 +172,9 @@ a:hover {
 .blog-date {
   text-align: right;
 }
+.blog-links {
+  color: #AF473C;
+}
 .icon {
   width: 25px;
   height: 25px;

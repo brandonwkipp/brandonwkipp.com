@@ -7,19 +7,15 @@ require_once 'security.php';
 $error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
 
 $servername = "localhost";
-//$username = "kipp_admin";
-//$password = "Lemongrab80!";
-//$db = "kipp_blogs";
+$username = "kipp_admin";
+$password = "Lemongrab80!";
+$db = "kipp_blogs";
 
-$username = "root";
-$password = "";
-$db = "personal";
+//$username = "root";
+//$password = "";
+//$db = "personal";
 
-$newArray = '';
-// Create connection
 $conn = new mysqli($servername, $username, $password, $db);
-
-// Check connection
 if ($conn->connect_error)
 {
     die("Connection failed: " . $conn->connect_error);
@@ -28,57 +24,23 @@ if ($conn->connect_error)
     mysqli_set_charset($conn,"utf8");
 
     $blogs = [];
-    $images = [];
-    $links = [];
+    $sql = "SELECT * FROM blogs";
 
-    $blogs_sql = "SELECT * FROM blogs";
-    $images_sql = "SELECT * FROM images";
-    $links_sql = "SELECT * FROM links";
-
-    $blogs_result = $conn->query($blogs_sql);
-    $images_result = $conn->query($images_sql);
-    $links_result = $conn->query($links_sql);
-
-    if($blogs_result->num_rows > 0)
+    $result = $conn->query($sql);
+    if($result->num_rows > 0)
     {
-        foreach($blogs_result as $row)
+        foreach($result as $row)
         {
             $date = $row['date'];
             $id = $row['id'];
+            $links = $row['links'];
             $text = $row['text'];
             $title = $row['title'];
 
-            $row_array = array('date'=>$date,'id'=>$id,'text'=>$text,'title'=>$title);
+            $row_array = array('date'=>$date,'id'=>$id,'links'=>$links,'text'=>$text,'title'=>$title);
             array_push($blogs, $row_array);
         }
     }
-
-    if($images_result->num_rows > 0)
-    {
-        foreach($images_result as $row)
-        {
-            $id = $row['id'];
-            $blog_id = $row['blog_id'];
-            $sources = $row['sources'];
-
-            $row_array = array('id'=>$id,'blog_id'=>$blog_id,'sources'=>$sources);
-            array_push($images, $row_array);
-        }
-    }
-
-    if($links_result->num_rows > 0)
-    {
-        foreach($links_result as $row)
-        {
-            $id = $row['id'];
-            $blog_id = $row['blog_id'];
-            $sources = $row['sources'];
-
-            $row_array = array('id'=>$id,'blog_id'=>$blog_id,'sources'=>$sources);
-            array_push($links, $row_array);
-        }
-    }
-
 $conn->close();
 }
 
@@ -191,16 +153,7 @@ $conn->close();
 <script type="text/javascript" src="scripts/script.js"></script>
 
 <script>
-<?php
-$array = [$blogs, $images, $links];
-
-$encoded_blog = json_encode($blogs, JSON_HEX_APOS | JSON_HEX_QUOT);
-$encoded_image = json_encode($images);
-$encoded_link = json_encode($links);
-
-?>
-init('<?php echo json_encode($array, JSON_HEX_APOS | JSON_HEX_QUOT) ?>');
-
+init('<?php echo json_encode($blogs, JSON_HEX_APOS | JSON_HEX_QUOT) ?>');
 </script>
 
 <div id="contact-modal" class="modal fade" role="dialog">
