@@ -69,12 +69,18 @@ function init(array) {
 
         var rawText = $(text)[0].innerHTML;
 
+        while(rawText.indexOf('[break]') != -1)
+        {
+            rawText = rawText.replace("[break]","<br/><br/>");
+            text.innerHTML = rawText;
+        }
+
         if(blogs[i - 1 ].images)
         {
             var images_array = blogs[i - 1].images.split(", ");
             for(var k = 0; k < images_array.length; k = k + 2)
             {
-                var image = "<br/><img id='" + images_array[k] + "'></img><br/>";
+                var image = "<br/><br/><img id='" + images_array[k] + "'></img><br/><br/>";
                 rawText = rawText.replace("[image]",image);
                 text.innerHTML = rawText;
             }
