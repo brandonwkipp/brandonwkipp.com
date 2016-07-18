@@ -49,12 +49,15 @@ function init(array) {
         });
     }
     var blogs = JSON.parse(array);
+    console.log(blogs);
     for(var i = blogs.length; i != 0; i--)
     {
         var blog = document.createElement("div");
         blog.className = "blog-entry";
 
         var divider = document.createElement("hr");
+        var headerDiv = document.createElement("div");
+        headerDiv.className = "blog-header";
 
         var title = document.createElement("h3");
         title.className = "blog-title";
@@ -74,18 +77,25 @@ function init(array) {
             rawText = rawText.replace("[break]","<br/><br/>");
             text.innerHTML = rawText;
         }
-
         if(blogs[i - 1 ].images)
         {
             var images_array = blogs[i - 1].images.split(", ");
-            for(var k = 0; k < images_array.length; k = k + 2)
+            for(var k = 0; k < images_array.length; k++)
             {
-                var image = "<br/><br/><img id='" + images_array[k] + "'></img><br/><br/>";
-                rawText = rawText.replace("[image]",image);
-                text.innerHTML = rawText;
+                if(k == 0)
+                {
+                    var header_image = document.createElement("img");
+                    header_image.src = "images/" + images_array[k] + ".png";
+                    header_image.className = "blog-image";
+                    header_image.align = "left";
+                }else {
+                    var image = "<img src='images/" + images_array[k] + ".png' class='blog-image' />";
+                    rawText = rawText.replace("[image]",image);
+                    text.innerHTML = rawText;
+                }
             }
         }
-        if(blogs[i - 1 ].links)
+        if(blogs[i - 1].links)
         {
             var links_array = blogs[i - 1].links.split(", ");
             for(var j = 0; j < links_array.length; j = j + 2)
@@ -96,14 +106,18 @@ function init(array) {
             }
         }
 
-        blog.appendChild(title);
-        blog.appendChild(date);
+        if(blogs[i - 1].images) { blog.appendChild(header_image); }
+        headerDiv.appendChild(title);
+        headerDiv.appendChild(date);
+        blog.appendChild(headerDiv);
         blog.appendChild(text);
         blog.appendChild(divider);
 
         document.getElementById('content-box').appendChild(blog);
-        blogContent = document.getElementById('content-box').innerHTML;
     }
+
+    blogContent = document.getElementById('content-box').innerHTML;
+
     document.getElementById('portrait').addEventListener('mouseover', function() {
         document.getElementById('portrait').src = 'images/2.png';
     });

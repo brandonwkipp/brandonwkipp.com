@@ -2,7 +2,6 @@
 @divBackgroundColor: #92BF7F;
 @modalBackgroundColor: #30415D;
 @navBackgroundColor: #AF473C;
-@image-path: "../images";
 
 .main-borders {
     border-color: #527F44;
@@ -15,11 +14,6 @@
 }
 .pointer {
     pointer-events: none;
-}
-#test {
-    width: 256px;
-    height: 256px;
-    background: ~"url('@{image-path}/test.jpg')";
 }
 @font-face {
     font-family: 'Montserrat';
@@ -92,18 +86,6 @@ a:hover {
     font-size: 2.75em;
     text-shadow: 2px 2px #AAA;
 }
-#portrait {
-    position: absolute;
-	display: inline-block;
-    right: ~"-webkit-calc(50% - 215px)";
-    right: ~"-moz-calc(50% - 215px)";
-	width: 85px;
-    height: 85px;
-	border: 2px solid #000;
-    border-radius: 100%;
-    background: ~"url('@{image-path}/1.png')";
-    background-size: contain;
-}
 .tabs-center {
     position: relative;
     width: 100%;
@@ -155,14 +137,18 @@ a:hover {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+.blog-header {
+    height: auto;
+}
 .blog-title {
-	margin-bottom: 5px;
-	font-size: 36px;
+    display: block;
+	margin: 0px;
+	font-size: 2.25;
 	font-family: 'Montserrat';
 	text-decoration: underline;
 }
 .blog-date {
-	text-align: right;
+    display: block;
 }
 .links {
     color: @navBackgroundColor;

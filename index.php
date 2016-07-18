@@ -33,11 +33,12 @@ if ($conn->connect_error)
         {
             $date = $row['date'];
             $id = $row['id'];
+            $images = $row['images'];
             $links = $row['links'];
             $text = $row['text'];
             $title = $row['title'];
 
-            $row_array = array('date'=>$date,'id'=>$id,'links'=>$links,'text'=>$text,'title'=>$title);
+            $row_array = array('date'=>$date,'id'=>$id,'images'=>$images,'links'=>$links,'text'=>$text,'title'=>$title);
             array_push($blogs, $row_array);
         }
     }
@@ -84,7 +85,7 @@ $conn->close();
                     <ul class="dropdown-menu">
                         <li><a href="../soundsword/index.php">SoundSword - a sound editing web app</a></li>
                         <li><a href="https://brandonwkipp.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
-                        <li><a href="ttps://brandonwkipp.github.io/drumduino">DRUMDUINO - an Arduino sketch for MIDI controllers</a></li>
+                        <li><a href="https://github.com/brandonwkipp/DrumDuino/blob/master/DRUMDUINO.ino">DRUMDUINO - an Arduino sketch for MIDI controllers</a></li>
                         <li><a id="bots" href="#">BotNet - my personal collection of Twitter Bots</a></li>
                     </ul>
                 </li>
@@ -117,7 +118,7 @@ $conn->close();
                                         <ul class="list-group mobile-ul">
                                             <li class="list-group-item mobile-list-item"><a href="../soundsword/index.php">SoundSword - a sound editing web app</a></li>
                                             <li class="list-group-item mobile-list-item"><a href="https://brandonwkipp.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
-                                            <li class="list-group-item mobile-list-item"><a href="ttps://brandonwkipp.github.io/drumduino">DRUMDUINO - an Arduino sketch for MIDI controllers</a></li>
+                                            <li class="list-group-item mobile-list-item"><a href="https://github.com/brandonwkipp/DrumDuino/blob/master/DRUMDUINO.ino">DRUMDUINO - an Arduino sketch for MIDI controllers</a></li>
                                             <li id="mobile-bots" class="list-group-item mobile-list-item"><a href="#">BotNet - my personal collection of Twitter Bots</a></li>
                                         </ul>
                                     </div>
