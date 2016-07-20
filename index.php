@@ -11,9 +11,9 @@ $username = "kipp_admin";
 $password = "Lemongrab80!";
 $db = "kipp_blogs";
 
-$username = "root";
-$password = "";
-$db = "personal";
+//$username = "root";
+//$password = "";
+//$db = "personal";
 
 $conn = new mysqli($servername, $username, $password, $db);
 if ($conn->connect_error)
@@ -58,6 +58,11 @@ $conn->close();
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link rel="stylesheet" href="styles/styles.css"/>
 
+<!-- Latest compiled and minified jQuery -->
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!-- Twitter -->
 <script src="https://platform.twitter.com/widgets.js"></script>
 
 </head>
@@ -67,7 +72,7 @@ $conn->close();
             <p id="greeting">hello.</p>
             <p id="bio">My name is Brandon and I &lt;3 the internet. I'm also an aspiring web developer with passions for
             web UI/UX design and music technology. My biggest goal in web design right now, is to make peoples' lives
-            easier through my intuitive web app: <a class="links" href="../soundsword/index.php" target="_blank">SoundSword</a>. Aside from all that, I love
+            easier through my intuitive web app: <a class="links" href="http://soundsword.brandonwkipp.com" target="_blank">SoundSword</a>. Aside from all that, I love
             business, philosophy, finance, bots, reading, tea, rum, biking, and live music.</p>
         </div>
     </div>
@@ -83,7 +88,7 @@ $conn->close();
                         Projects<span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="../soundsword/index.php" target="_blank">SoundSword - a sound editing web app</a></li>
+                        <li><a href="http://soundsword.brandonwkipp.com" target="_blank">SoundSword - a sound editing web app</a></li>
                         <li><a href="https://brandonwkipp.github.io/knobject-js" target="_blank">Knobject.js - a JavaScript Knob component</a></li>
                         <li><a href="https://github.com/brandonwkipp/DrumDuino/blob/master/DRUMDUINO.ino" target="_blank">DRUMDUINO - an Arduino sketch for MIDI controllers</a></li>
                         <li><a id="bots" href="#">BotNet - my personal collection of Twitter Bots</a></li>
@@ -107,16 +112,17 @@ $conn->close();
             </ul>
             <div class="panel-group hidden-sm hidden-md hidden-lg">
                 <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse" href="#mobile-menu">
-                        <h4 class="panel-title">Menu</h4>
-                    </div>
+                    <button type="button" class="btn btn-lg btn-block panel-button" data-toggle="collapse" data-target="#mobile-menu" href="#mobile-menu">Menu</button>
                     <div id="mobile-menu" class="panel-collapse collapse">
                         <ul class="list-group">
-                            <li id="mobile-projects" class="list-group-item panel-group" data-toggle="collapse" href="#mobile-projects-menu">
-                                <div class="panel panel-default panel-panel"><span class="pointer">Projects</span><span class="caret pointer"></span>
+                            <li id="mobile-projects" class="list-group-item panel-group li-button">
+                                <div class="panel panel-default panel-panel">
+                                    <button type="button" class="btn btn-block menu-button" data-toggle="collapse" data-target="#mobile-projects-menu" href="#mobile-projects-menu">
+                                        <span class="pointer">Projects</span><span class="caret pointer"></span>
+                                    </button>
                                     <div id="mobile-projects-menu" class="panel-collapse collapse">
                                         <ul class="list-group mobile-ul">
-                                            <li class="list-group-item mobile-list-item"><a href="../soundsword/index.php">SoundSword - a sound editing web app</a></li>
+                                            <li class="list-group-item mobile-list-item"><a href="http://soundsword.brandonwkipp.com">SoundSword - a sound editing web app</a></li>
                                             <li class="list-group-item mobile-list-item"><a href="https://brandonwkipp.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
                                             <li class="list-group-item mobile-list-item"><a href="https://github.com/brandonwkipp/DrumDuino/blob/master/DRUMDUINO.ino">DRUMDUINO - an Arduino sketch for MIDI controllers</a></li>
                                             <li id="mobile-bots" class="list-group-item mobile-list-item"><a href="#">BotNet - my personal collection of Twitter Bots</a></li>
@@ -124,10 +130,19 @@ $conn->close();
                                     </div>
                                 </div>
                             </li>
-                            <li id="mobile-blog" class="active list-group-item" data-toggle="collapse" data-target="#mobile-menu">Blog</li>
+                            <li id="mobile-blog" class="list-group-item panel-group li-button">
+                                <div class="panel panel-default panel-panel">
+                                    <button type="button" class="btn btn-block menu-button" data-toggle="collapse" data-target="#mobile-menu" href="#mobile-menu">
+                                        <span class="pointer">Blog</span>
+                                    </button>
+                                </div>
+                            </li>
                             <li id="mobile-resume" class="list-group-item" data-toggle="modal" data-target="#resume-modal">Resume</li>
-                            <li id="mobile-connect" class="list-group-item panel-group" data-toggle="collapse" href="#mobile-connect-menu">
-                                <div class="panel panel-default panel-panel">Connect<span class="caret"></span>
+                            <li id="mobile-connect" class="list-group-item panel-group li-button">
+                                <div class="panel panel-default panel-panel">
+                                    <button type="button" class="btn btn-block menu-button" data-toggle="collapse" data-target="#mobile-connect-menu" href="#mobile-connect-menu">
+                                        <span class="pointer">Connect</span><span class="caret pointer"></span>
+                                    </button>
                                     <div id="mobile-connect-menu" class="panel-collapse collapse">
                                         <ul class="list-group mobile-ul">
                                             <li class="list-group-item mobile-list-item"><a href="https://linkedin.com/in/brandonwkipp"><img class="icon" src="images/icons/linkedin-icon.png"/> LinkedIn</a></li>
@@ -147,11 +162,6 @@ $conn->close();
         </div>
         <div id="content-box"></div>
     </div>
-<!-- Latest compiled and minified jQuery -->
-<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
 <!-- Scripts -->
 <script type="text/javascript" src="scripts/script.js"></script>
 
@@ -190,6 +200,16 @@ init('<?php echo json_encode($blogs, JSON_HEX_APOS | JSON_HEX_QUOT) ?>');
         <div id="resume-img" draggable="false"></div>
     </div>
 </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-81048303-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 <?php
 
