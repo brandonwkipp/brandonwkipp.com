@@ -11,9 +11,9 @@ $username = "kipp_admin";
 $password = "Lemongrab80!";
 $db = "kipp_blogs";
 
-//$username = "root";
-//$password = "";
-//$db = "personal";
+$username = "root";
+$password = "";
+$db = "personal";
 
 $conn = new mysqli($servername, $username, $password, $db);
 if ($conn->connect_error)
@@ -67,7 +67,7 @@ $conn->close();
             <p id="greeting">hello.</p>
             <p id="bio">My name is Brandon and I &lt;3 the internet. I'm also an aspiring web developer with passions for
             web UI/UX design and music technology. My biggest goal in web design right now, is to make peoples' lives
-            easier through my intuitive web app: <a class="links" href="#">SoundSword</a>. Aside from all that, I love
+            easier through my intuitive web app: <a class="links" href="../soundsword/index.php" target="_blank">SoundSword</a>. Aside from all that, I love
             business, philosophy, finance, bots, reading, tea, rum, biking, and live music.</p>
         </div>
     </div>
@@ -83,9 +83,9 @@ $conn->close();
                         Projects<span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="../soundsword/index.php">SoundSword - a sound editing web app</a></li>
-                        <li><a href="https://brandonwkipp.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
-                        <li><a href="https://github.com/brandonwkipp/DrumDuino/blob/master/DRUMDUINO.ino">DRUMDUINO - an Arduino sketch for MIDI controllers</a></li>
+                        <li><a href="../soundsword/index.php" target="_blank">SoundSword - a sound editing web app</a></li>
+                        <li><a href="https://brandonwkipp.github.io/knobject-js" target="_blank">Knobject.js - a JavaScript Knob component</a></li>
+                        <li><a href="https://github.com/brandonwkipp/DrumDuino/blob/master/DRUMDUINO.ino" target="_blank">DRUMDUINO - an Arduino sketch for MIDI controllers</a></li>
                         <li><a id="bots" href="#">BotNet - my personal collection of Twitter Bots</a></li>
                     </ul>
                 </li>
@@ -96,11 +96,11 @@ $conn->close();
                         Connect<span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="https://twitter.com/brandonwkipp"><img class="icon" src="images/icons/twitter-icon.png"/> Twitter</a></li>
-                        <li><a href="https://linkedin.com/in/brandonwkipp"><img class="icon" src="images/icons/linkedin-icon.png"/> LinkedIn</a></li>
-                        <li><a href="https://soundcloud.com/brandonwkipp"><img class="icon" src="images/icons/soundcloud-icon.png"/> SoundCloud</a></li>
-                        <li><a href="https://reddit.com/user/BlackestNapkin"><img class="icon" src="images/icons/reddit-icon.png"/> Reddit</a></li>
-                        <li><a href="https://github.com/brandonwkipp"><img class="icon" src="images/icons/github-icon.png"/> Github</a></li>
+                        <li><a href="https://twitter.com/brandonwkipp" target="_blank"><img class="icon" src="images/icons/twitter-icon.png"/> Twitter</a></li>
+                        <li><a href="https://linkedin.com/in/brandonwkipp" target="_blank"><img class="icon" src="images/icons/linkedin-icon.png"/> LinkedIn</a></li>
+                        <li><a href="https://soundcloud.com/brandonwkipp" target="_blank"><img class="icon" src="images/icons/soundcloud-icon.png"/> SoundCloud</a></li>
+                        <li><a href="https://reddit.com/user/BlackestNapkin" target="_blank"><img class="icon" src="images/icons/reddit-icon.png"/> Reddit</a></li>
+                        <li><a href="https://github.com/brandonwkipp" target="_blank"><img class="icon" src="images/icons/github-icon.png"/> Github</a></li>
                     </ul>
                 </li>
                 <li id="contact"><a href="#" data-toggle="modal" data-target="#contact-modal">Contact</a></li>
