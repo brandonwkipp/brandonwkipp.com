@@ -88,8 +88,9 @@ $conn->close();
                         Projects<span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="http://soundsword.brandonwkipp.com" target="_blank">SoundSword - a sound editing web app</a></li>
+                        <li><a href="http://soundsword.brandonwkipp.com/about" target="_blank">SoundSword - a sound editing web app</a></li>
                         <li><a href="https://brandonwkipp.github.io/knobject-js" target="_blank">Knobject.js - a JavaScript Knob component</a></li>
+                        <li><a href="http://srhbrkr.com/" target="_blank">srhbrkr.com - a portfolio website designed for a client</a></li>
                         <li><a href="https://github.com/brandonwkipp/DrumDuino/blob/master/DRUMDUINO.ino" target="_blank">DRUMDUINO - an Arduino sketch for MIDI controllers</a></li>
                         <li><a id="bots" href="#">BotNet - my personal collection of Twitter Bots</a></li>
                     </ul>
@@ -101,11 +102,11 @@ $conn->close();
                         Connect<span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="https://twitter.com/brandonwkipp" target="_blank"><img class="icon" src="images/icons/twitter-icon.png"/> Twitter</a></li>
-                        <li><a href="https://linkedin.com/in/brandonwkipp" target="_blank"><img class="icon" src="images/icons/linkedin-icon.png"/> LinkedIn</a></li>
-                        <li><a href="https://soundcloud.com/brandonwkipp" target="_blank"><img class="icon" src="images/icons/soundcloud-icon.png"/> SoundCloud</a></li>
-                        <li><a href="https://reddit.com/user/BlackestNapkin" target="_blank"><img class="icon" src="images/icons/reddit-icon.png"/> Reddit</a></li>
                         <li><a href="https://github.com/brandonwkipp" target="_blank"><img class="icon" src="images/icons/github-icon.png"/> Github</a></li>
+                        <li><a href="https://linkedin.com/in/brandonwkipp" target="_blank"><img class="icon" src="images/icons/linkedin-icon.png"/> LinkedIn</a></li>
+                        <li><a href="https://twitter.com/blackestnapkin" target="_blank"><img class="icon" src="images/icons/twitter-icon.png"/> Twitter</a></li>
+                        <li><a href="https://soundcloud.com/blackestnapkin" target="_blank"><img class="icon" src="images/icons/soundcloud-icon.png"/> SoundCloud</a></li>
+                        <li><a href="https://reddit.com/user/blackestnapkin" target="_blank"><img class="icon" src="images/icons/reddit-icon.png"/> Reddit</a></li>
                     </ul>
                 </li>
                 <li id="contact"><a href="#" data-toggle="modal" data-target="#contact-modal">Contact</a></li>
@@ -124,6 +125,7 @@ $conn->close();
                                         <ul class="list-group mobile-ul">
                                             <li class="list-group-item mobile-list-item"><a href="http://soundsword.brandonwkipp.com">SoundSword - a sound editing web app</a></li>
                                             <li class="list-group-item mobile-list-item"><a href="https://brandonwkipp.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
+                                            <li class="list-group-item mobile-list-item"><a href="http://srhbrkr.com/" target="_blank">srhbrkr.com - a portfolio website designed for a client</a></li>
                                             <li class="list-group-item mobile-list-item"><a href="https://github.com/brandonwkipp/DrumDuino/blob/master/DRUMDUINO.ino">DRUMDUINO - an Arduino sketch for MIDI controllers</a></li>
                                             <li id="mobile-bots" class="list-group-item mobile-list-item"><a href="#">BotNet - my personal collection of Twitter Bots</a></li>
                                         </ul>
@@ -145,11 +147,11 @@ $conn->close();
                                     </button>
                                     <div id="mobile-connect-menu" class="panel-collapse collapse">
                                         <ul class="list-group mobile-ul">
-                                            <li class="list-group-item mobile-list-item"><a href="https://linkedin.com/in/brandonwkipp"><img class="icon" src="images/icons/linkedin-icon.png"/> LinkedIn</a></li>
                                             <li class="list-group-item mobile-list-item"><a href="https://github.com/brandonwkipp"><img class="icon" src="images/icons/github-icon.png"/> Github</a></li>
-                                            <li class="list-group-item mobile-list-item"><a href="https://twitter.com/brandonwkipp"><img class="icon" src="images/icons/twitter-icon.png"/> Twitter</a></li>
-                                            <li class="list-group-item mobile-list-item"><a href="https://soundcloud.com/brandonwkipp"><img class="icon" src="images/icons/soundcloud-icon.png"/> SoundCloud</a></li>
-                                            <li class="list-group-item mobile-list-item"><a href="https://reddit.com/user/BlackestNapkin"><img class="icon" src="images/icons/reddit-icon.png"/> Reddit</a></li>
+                                            <li class="list-group-item mobile-list-item"><a href="https://linkedin.com/in/brandonwkipp"><img class="icon" src="images/icons/linkedin-icon.png"/> LinkedIn</a></li>
+                                            <li class="list-group-item mobile-list-item"><a href="https://twitter.com/blackestnapkin"><img class="icon" src="images/icons/twitter-icon.png"/> Twitter</a></li>
+                                            <li class="list-group-item mobile-list-item"><a href="https://soundcloud.com/blackestnapkin"><img class="icon" src="images/icons/soundcloud-icon.png"/> SoundCloud</a></li>
+                                            <li class="list-group-item mobile-list-item"><a href="https://reddit.com/user/blackestnapkin"><img class="icon" src="images/icons/reddit-icon.png"/> Reddit</a></li>
                                         </ul>
                                     </div>
                                 </div>
