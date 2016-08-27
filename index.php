@@ -90,6 +90,7 @@ $conn->close();
                     <ul class="dropdown-menu">
                         <li><a href="http://soundsword.brandonwkipp.com/about" target="_blank">SoundSword - a sound editing web app</a></li>
                         <li><a href="https://brandonwkipp.github.io/knobject-js" target="_blank">Knobject.js - a JavaScript Knob component</a></li>
+                        <li><a href="http://brandonwkipp.com/precious-metals-calculator/" target="_blank">Precious Metal Calculator - a precious metals price data-scraper </a></li>
                         <li><a href="http://srhbrkr.com/" target="_blank">srhbrkr.com - a portfolio website designed for a client</a></li>
                         <li><a href="https://github.com/brandonwkipp/DrumDuino/blob/master/DRUMDUINO.ino" target="_blank">DRUMDUINO - an Arduino sketch for MIDI controllers</a></li>
                         <li><a id="bots" href="#">BotNet - my personal collection of Twitter Bots</a></li>
@@ -125,6 +126,7 @@ $conn->close();
                                         <ul class="list-group mobile-ul">
                                             <li class="list-group-item mobile-list-item"><a href="http://soundsword.brandonwkipp.com">SoundSword - a sound editing web app</a></li>
                                             <li class="list-group-item mobile-list-item"><a href="https://brandonwkipp.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
+                                            <li class="list-group-item mobile-list-item"><a href="http://brandonwkipp.com/precious-metals-calculator/" target="_blank">Precious Metal Calculator - a precious metals price data-scraper </a></li>
                                             <li class="list-group-item mobile-list-item"><a href="http://srhbrkr.com/" target="_blank">srhbrkr.com - a portfolio website designed for a client</a></li>
                                             <li class="list-group-item mobile-list-item"><a href="https://github.com/brandonwkipp/DrumDuino/blob/master/DRUMDUINO.ino">DRUMDUINO - an Arduino sketch for MIDI controllers</a></li>
                                             <li id="mobile-bots" class="list-group-item mobile-list-item"><a href="#">BotNet - my personal collection of Twitter Bots</a></li>
