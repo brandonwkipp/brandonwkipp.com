@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "moonflower";
+  src: url("../fonts/moon_flower/Moon Flower Bold.ttf");
+}
+body {
+  background: -webkit-radial-gradient(circle, #FEFEFE, #333);
+  /* Safari */
+  background: -o-radial-gradient(circle, #FEFEFE, #333);
+  /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, #FEFEFE, #333);
+  /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, #FEFEFE, #333);
+  /* Standard syntax */
+}
+.header {
+  font-size: 3em !important;
+}
+.moonflower {
+  font-family: "moonflower";
+  font-size: 2em;
+  color: #FFF;
+}
