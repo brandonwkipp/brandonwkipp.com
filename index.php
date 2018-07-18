@@ -7,8 +7,6 @@ session_start();
 
 require_once 'security.php';
 
-$error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
-
 $servername = "localhost";
 $username = "root";
 $password = '666**MY$QLPERSONAL**666';
@@ -74,9 +72,9 @@ $conn->close();
         <div id="blurb">
             <p id="greeting">hello.</p>
             <p id="bio">My name is Brandon and I &lt;3 the internet. I'm also an aspiring web developer with passions for
-            web UI/UX design and music technology. My biggest goal in web design right now, is to make peoples' lives
-            easier through my intuitive web app: <a class="links" href="http://soundsword.brandonwkipp.com" target="_blank">SoundSword</a>. Aside from all that, I love
-            business, philosophy, finance, bots, reading, tea, rum, biking, and live music.</p>
+            	web UI/UX design and music technology. I'm pretty busy between working full-time alongside non-profit organizations, producting/recording music, 
+		building a virtual drum set, and hacking around on a ridiculous amount of servers.
+	    </p>
         </div>
     </div>
     <div id="content" class="col-md-10 col-sm-12">
@@ -91,11 +89,10 @@ $conn->close();
                         Projects<span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="http://brandonwkipp.com/soundsword/about" target="_blank">SoundSword - a sound editing web app</a></li>
+			<li><a href="https://github.com/brandonwkipp/raspbeat/" target="_blank">Raspbeat - a really hacked together attempt at making a virtual drumset</a></li>
+                        <li><a href="http://soundsword.brandonwkipp.com/about" target="_blank">SoundSword - a sound editing web app</a></li>
                         <li><a href="https://brandonwkipp.github.io/knobject-js" target="_blank">Knobject.js - a JavaScript Knob component</a></li>
-                        <li><a href="http://brandonwkipp.com/markets/" target="_blank">Precious Metal Calculator - a precious metals price data-scraper </a></li>
-                        <li><a href="http://brandonwkipp.com/troyleft" target="_blank">"Left Messages" - a promotional website designed for a client</a></li>
-                        <li><a id="bots" href="#">BotNet - my personal collection of Twitter Bots</a></li>
+                        <li><a href="https://brandonwkipp.com/markets/" target="_blank">Precious Metal Calculator - a precious metals price data-scraper </a></li>
                     </ul>
                 </li>
                 <li id="blog" class="active"><a href="#">Blog</a></li>
@@ -111,7 +108,6 @@ $conn->close();
                         <li><a href="https://soundcloud.com/brandonwkipp" target="_blank"><img class="icon" src="images/icons/soundcloud-icon.png"/> SoundCloud</a></li>
                     </ul>
                 </li>
-                <li id="contact"><a href="#" data-toggle="modal" data-target="#contact-modal">Contact</a></li>
             </ul>
             <div class="panel-group hidden-sm hidden-md hidden-lg">
                 <div class="panel panel-default">
@@ -125,11 +121,12 @@ $conn->close();
                                     </button>
                                     <div id="mobile-projects-menu" class="panel-collapse collapse">
                                         <ul class="list-group mobile-ul">
-                                            <li class="list-group-item mobile-list-item"><a href="http://brandonwkipp.com/soundsword">SoundSword - a sound editing web app</a></li>
+                                            <li class="list-group-item mobile-list-item"><a href="https://github.com/brandonwkipp/raspbeat">DRUMDUINO - hacky virtual drumset</a></li>
+					    <li class="list-group-item mobile-list-item"><a href="http://soundsword.brandonwkipp.com">SoundSword - a sound editing web app</a></li>
                                             <li class="list-group-item mobile-list-item"><a href="https://brandonwkipp.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a></li>
-                                            <li class="list-group-item mobile-list-item"><a href="http://brandonwkipp.com/markets/" target="_blank">Precious Metal Calculator - a precious metals price data-scraper </a></li>
-                                            <li class="list-group-item mobile-list-item"><a href="http://brandonwkipp.com/troyleft" target="_blank">"Left Messages" - a promotional website designed for a client</a></li>
-                                            <li id="mobile-bots" class="list-group-item mobile-list-item"><a href="#">BotNet - my personal collection of Twitter Bots</a></li>
+                                            <li class="list-group-item mobile-list-item">
+						<a href="https://brandonwkipp.com/markets/" target="_blank">Precious Metal Calculator - a financial commodity data-scraper</a>
+					    </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -172,37 +169,6 @@ $conn->close();
 init('<?php echo json_encode($blogs, JSON_HEX_APOS | JSON_HEX_QUOT) ?>');
 </script>
 
-<div id="contact-modal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Contact</h4>
-        </div>
-        <div class="modal-body">
-            <?php
-                if(isset($error))
-                {
-                    ?><span class="error-row"><?= $error ?></span><?php
-                }
-            ?>
-            <form method="post" action="form.php">
-                <input class="form-input" type="text" name="name" placeholder="Your Name*" autocomplete="off" <?php echo isset($_SESSION['name']) ? ' value="' . e($_SESSION['name']) . '"' : '' ?>>
-                <input class="form-input" type="text" name="email" placeholder="Your Email Address*" autocomplete="off" <?php echo isset($_SESSION['email']) ? ' value="' . e($_SESSION['email']) . '"' : '' ?>>
-                <textarea class="form-input message" type="text" name="message" placeholder="Message*" autocomplete="off"><?php echo isset($_SESSION['message']) ? e($_SESSION['message']) : '' ?></textarea>
-                <span id="form-submit-container">
-                    <input class="form-submit" type="submit" name="submit" class="btn btn-info" value="Send Message"/>
-                </span>
-            </form>
-        </div>
-    </div>
-</div>
-<div id="resume-modal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <div id="resume-img" draggable="false"></div>
-    </div>
-</div>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -214,17 +180,4 @@ init('<?php echo json_encode($blogs, JSON_HEX_APOS | JSON_HEX_QUOT) ?>');
 
 </script>
 </body>
-<?php
-
-if(!is_null($error))
-{
-    echo '<script>$("#contact-modal").modal("show");</script>';
-}
-
-unset($_SESSION['error']);
-unset($_SESSION['name']);
-unset($_SESSION['email']);
-unset($_SESSION['message']);
-
-?>
 </html>
