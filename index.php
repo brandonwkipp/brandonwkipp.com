@@ -5,8 +5,6 @@
 
 session_start();
 
-require_once 'security.php';
-
 $servername = "localhost";
 $username = "root";
 $password = '666**MY$QLPERSONAL**666';
