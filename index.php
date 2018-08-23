@@ -71,7 +71,7 @@ $conn->close();
             <p id="greeting">hello.</p>
             <p id="bio">My name is Brandon and I &lt;3 music and internet technology. Lately, life has been pretty busy; right now, I'm working full-time
 		in Minneapolis, producing and recording music, building a virtual drum set, and hacking around on my ridiculous amount of servers at home.
-		This website is pretty out-of-date bu I've got some interesting plans coming within the next few months :)
+		This website is pretty out-of-date but I've got some interesting plans coming within the next few months :)
 	    </p>
         </div>
     </div>
