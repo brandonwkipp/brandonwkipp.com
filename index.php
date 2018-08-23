@@ -69,9 +69,9 @@ $conn->close();
     <div class="col-md-2 hidden-sm hidden-xs" style="height:100%;">
         <div id="blurb">
             <p id="greeting">hello.</p>
-            <p id="bio">My name is Brandon and I &lt;3 the internet. I'm also an aspiring web developer with passions for
-            	web UI/UX design and music technology. I'm pretty busy between working full-time alongside non-profit organizations, producting/recording music, 
-		building a virtual drum set, and hacking around on a ridiculous amount of servers.
+            <p id="bio">My name is Brandon and I &lt;3 music and internet technology. Lately, life has been pretty busy; right now, I'm working full-time
+		in Minneapolis, producing and recording music, building a virtual drum set, and hacking around on my ridiculous amount of servers at home.
+		This website is pretty out-of-date bu I've got some interesting plans coming within the next few months :)
 	    </p>
         </div>
     </div>
@@ -94,7 +94,6 @@ $conn->close();
                     </ul>
                 </li>
                 <li id="blog" class="active"><a href="#">Blog</a></li>
-                <li id="resume" data-toggle="modal" data-target="#resume-modal"><a href="#">Resume</a></li>
                 <li id="connect">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         Connect<span class="caret"></span>
@@ -136,7 +135,6 @@ $conn->close();
                                     </button>
                                 </div>
                             </li>
-                            <li id="mobile-resume" class="list-group-item" data-toggle="modal" data-target="#resume-modal">Resume</li>
                             <li id="mobile-connect" class="list-group-item panel-group li-button">
                                 <div class="panel panel-default panel-panel">
                                     <button type="button" class="btn btn-block menu-button" data-toggle="collapse" data-target="#mobile-connect-menu" href="#mobile-connect-menu">
