@@ -1,0 +1,149 @@
+{{ include('header.twig') }}
+
+<div class="col-md-2 hidden-sm hidden-xs" style="height:100%;">
+    <div id="blurb">
+        <p id="greeting">hello.</p>
+        <p id="bio">{{ language.bio }}</p>
+    </div>
+</div>
+<div id="content" class="col-md-10 col-sm-12">
+    <div id="name-container">
+        <div id="name">Brandon W. Kipp</div>
+        <img id="portrait" draggable="false"></img>
+    </div>
+    <div class="tabs-center">
+        <ul id="navTabs" class="nav nav-tabs nav-justified container hidden-xs">
+            <li id="projects">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    Projects<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="https://github.com/brandonwkipp/raspbeat/" target="_blank">Raspbeat - a really hacked together attempt at making a virtual drumset</a>
+                    </li>
+                    <!--<li>
+                        <a href="http://soundsword.brandonwkipp.com/about" target="_blank">SoundSword - a sound editing web app</a>
+                    </li>-->
+                    <li>
+                        <a href="https://brandonwkipp.github.io/knobject-js" target="_blank">Knobject.js - a JavaScript Knob component</a>
+                    </li>
+                    <!--<li>
+                        <a href="https://brandonwkipp.com/markets/" target="_blank">Precious Metal Calculator - a precious metals price data-scraper </a>
+                    </li>-->
+                </ul>
+            </li>
+            <li id="blog" class="active"><a href="#">Blog</a></li>
+            <!--<li id="resume" data-toggle="modal" data-target="#resume-modal"><a href="#">Resume</a></li>-->
+            <li id="connect">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    Connect<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="https://github.com/brandonwkipp" target="_blank">
+                            <img class="icon" src="/assets/images/icons/github-icon.png"/> Github
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/brandonwkipp" target="_blank">
+                            <img class="icon" src="/assets/images/icons/linkedin-icon.png"/> LinkedIn
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/brandonwkipp" target="_blank">
+                            <img class="icon" src="/assets/images/icons/twitter-icon.png"/> Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://soundcloud.com/brandonwkipp" target="_blank">
+                            <img class="icon" src="/assets/images/icons/soundcloud-icon.png"/> SoundCloud
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="panel-group hidden-sm hidden-md hidden-lg">
+            <div class="panel panel-default">
+                <button type="button" class="btn btn-lg btn-block panel-button" data-toggle="collapse" data-target="#mobile-menu" href="#mobile-menu">Menu</button>
+                <div id="mobile-menu" class="panel-collapse collapse">
+                    <ul class="list-group">
+                        <li id="mobile-projects" class="list-group-item panel-group li-button">
+                            <div class="panel panel-default panel-panel">
+                                <button type="button" class="btn btn-block menu-button" data-toggle="collapse" data-target="#mobile-projects-menu" href="#mobile-projects-menu">
+                                    <span class="pointer">Projects</span><span class="caret pointer"></span>
+                                </button>
+                                <div id="mobile-projects-menu" class="panel-collapse collapse">
+                                    <ul class="list-group mobile-ul">
+                                        <li class="list-group-item mobile-list-item">
+                                            <a href="https://github.com/brandonwkipp/raspbeat">DRUMDUINO - hacky virtual drumset</a>
+                                        </li>
+                                        <li class="list-group-item mobile-list-item">
+                                            <a href="http://soundsword.brandonwkipp.com">SoundSword - a sound editing web app</a>
+                                        </li>
+                                        <li class="list-group-item mobile-list-item">
+                                            <a href="https://brandonwkipp.github.io/knobject-js">Knobject.js - a JavaScript Knob component</a>
+                                        </li>
+                                        <li class="list-group-item mobile-list-item">
+                                            <a href="https://brandonwkipp.com/markets/" target="_blank">Precious Metal Calculator - a financial commodity data-scraper</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="mobile-blog" class="list-group-item panel-group li-button">
+                            <div class="panel panel-default panel-panel">
+                                <button type="button" class="btn btn-block menu-button" data-toggle="collapse" data-target="#mobile-menu" href="#mobile-menu">
+                                    <span class="pointer">Blog</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li id="mobile-resume" class="list-group-item" data-toggle="modal" data-target="#resume-modal">Resume</li>
+                        <li id="mobile-connect" class="list-group-item panel-group li-button">
+                            <div class="panel panel-default panel-panel">
+                                <button type="button" class="btn btn-block menu-button" data-toggle="collapse" data-target="#mobile-connect-menu" href="#mobile-connect-menu">
+                                    <span class="pointer">Connect</span><span class="caret pointer"></span>
+                                </button>
+                                <div id="mobile-connect-menu" class="panel-collapse collapse">
+                                    <ul class="list-group mobile-ul">
+                                        <li class="list-group-item mobile-list-item">
+                                            <a href="https://github.com/brandonwkipp">
+                                                <img class="icon" src="/assets/images/icons/github-icon.png"/> Github
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item mobile-list-item">
+                                            <a href="https://linkedin.com/in/brandonwkipp">
+                                                <img class="icon" src="/assets/images/icons/linkedin-icon.png"/> LinkedIn
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item mobile-list-item">
+                                            <a href="https://twitter.com/brandonwkipp">
+                                                <img class="icon" src="/assets/images/icons/twitter-icon.png"/> Twitter
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item mobile-list-item">
+                                            <a href="https://soundcloud.com/brandonwkipp">
+                                                <img class="icon" src="/assets/images/icons/soundcloud-icon.png"/> SoundCloud
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="mobile-contact" class="list-group-item" data-toggle="modal" data-target="#contact-modal">Contact</li>
+                    </ul>
+                </div>
+            </div></a>
+        </div>
+    </div>
+    <div id="content-box"></div>
+</div>
+
+<script type="text/javascript" src="/assets/scripts/script.js"></script>
+
+{% if blogs|length > 0 %}
+    <script>
+        init('{{ blogs }}');
+    </script>
+{% endif %}
+
+{{ include('footer.twig') }}

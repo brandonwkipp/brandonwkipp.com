@@ -1,0 +1,45 @@
+version: '3.5'
+
+services:
+
+  personal-app:
+    container_name: personal-app
+    build:
+      context: .
+    volumes:
+      - '.:/var/www'
+    ports:
+      - '8090:80'
+    depends_on:
+      - personal-db
+
+  personal-db:
+    container_name: personal-db
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: app
+    volumes:
+      - db-data:/var/lib/mysql
+
+  personal-phpmyadmin:
+    container_name: personal-phpmyadmin
+    image: phpmyadmin/phpmyadmin:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USERNAME: root
+      PMA_HOST: personal-db
+    ports:
+      - '8089:80'
+    depends_on:
+      - personal-db
+
+  composer:
+    restart: 'no'
+    image: composer
+    command: install
+    volumes:
+      - .:/app
+
+volumes:
+  db-data:
