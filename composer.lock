@@ -165,16 +165,16 @@
         },
         {
             "name": "hidalgo-rides/intersect-web",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HidalgoRides/intersect-web.git",
-                "reference": "ce5552e1cd37af69274a86729d0b0c3fc644a1b9"
+                "reference": "c3d14ab46d56bbde61d3f50cf253f038a6b5c9cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HidalgoRides/intersect-web/zipball/ce5552e1cd37af69274a86729d0b0c3fc644a1b9",
-                "reference": "ce5552e1cd37af69274a86729d0b0c3fc644a1b9",
+                "url": "https://api.github.com/repos/HidalgoRides/intersect-web/zipball/c3d14ab46d56bbde61d3f50cf253f038a6b5c9cc",
+                "reference": "c3d14ab46d56bbde61d3f50cf253f038a6b5c9cc",
                 "shasum": ""
             },
             "require": {
@@ -201,7 +201,7 @@
                 }
             ],
             "description": "Web layer built to provide easy integration with Intersect libraries.",
-            "time": "2019-01-29T04:16:33+00:00"
+            "time": "2019-02-16T20:44:00+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
