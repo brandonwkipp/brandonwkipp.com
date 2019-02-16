@@ -12,7 +12,7 @@ class CommodityController extends AbstractController {
     public function index()
     {
         return new TwigResponse('commodities.twig', [
-
+            "commodities" => Commodity::getPrices(),
         ]);
     }
 }

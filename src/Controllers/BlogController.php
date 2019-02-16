@@ -34,6 +34,13 @@ class BlogController extends AbstractController {
         ]);
     }
 
+    public function editor()
+    {
+        return new TwigResponse('blog-editor.twig', [
+            
+        ]);
+    }
+
     public function postDetailsById($id)
     {
         $post = $this->blogService->getPostById($id);

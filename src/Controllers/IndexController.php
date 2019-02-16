@@ -41,16 +41,6 @@ class IndexController extends AbstractController {
         ]);
     }
 
-    public function product()
-    {
-        $language['bio'] = SiteLanguage::BIO;
-
-        return new TwigResponse('product.twig', [
-            'blogs' => array(),
-            'language' => $language
-        ]);
-    }
-
     public function getRepo($repo)
     {
         if (isset($repo) && !empty(trim($repo)))
