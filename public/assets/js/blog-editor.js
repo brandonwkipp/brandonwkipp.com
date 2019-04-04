@@ -1,66 +1,32 @@
-function loadPost()
+function clearEditor()
 {
-    let postSelect = document.getElementById('blog-editor-select');
-    let value = postSelect.options[postSelect.selectedIndex].value;
-
-    if (value === "0")
-    {
-        return;
-    }
-
-    $.ajax({
-        data: {
-            "postId": value,
-        },
-        type: "get",
-        url: "/blog/posts/id/" + value,
-    }).done(function(data) {
-        let parsedData = JSON.parse(data);
-
-        let id = document.getElementById('blog-editor-id');
-        let title = document.getElementById('title');
-        let body = document.getElementById('body');
-        let preview = document.getElementById('preview');
-        let tags = document.getElementById('tags');
-        let publishToMedium = document.getElementById('publish-to-medium');
-
-        id.value = value;
-        title.value = parsedData['title'];
-        body.value = parsedData['body'];
-        preview.value = parsedData['preview'];
-        tags.value = parsedData['tags'];
-        publishToMedium.checked = parsedData['publishToMedium'];
-
-        if (parsedData['publishToMedium'])
-        {
-            publishToMedium.disabled = true;
-        }
-
-    }).fail(function(error) {
-        console.log(error);
-    });
+    document.getElementById('title').value = '';
+    document.getElementById('body').value = '';
+    document.getElementById('preview').value = '';
+    document.getElementById('tags').value = '';
 }
 
-function submitBlogPost()
+function createPost()
 {
     let postSelect = document.getElementById('blog-editor-select');
     let value = postSelect.options[postSelect.selectedIndex].value;
 
-    $.ajax({
-        data: {
-            "id": value,
-            "title": document.getElementById('title').value,
-            "body": document.getElementById('body').value,
-            "preview": document.getElementById('preview').value,
-            "publishToMedium": document.getElementById('publish-to-medium').checked,
-            "tags": document.getElementById('tags').value,
-        },
-        type: "post",
-        url: "/admin/blog-editor/submit",
-    }).done(function(data) {
-        submitBlogSnackbar();
-    }).fail(function(error) {
-        console.log(error);
+    let params = new FormData();
+    params.append('id', value);
+    params.append('title', document.getElementById('title').value);
+    params.append('body', document.getElementById('body').value);
+    params.append('preview', document.getElementById('preview').value);
+    params.append('tags', document.getElementById('tags').value);
+
+    axios.post('/create-post', params)
+    .then(function (response) {
+        if (response.data.success)
+        {
+            clearEditor();
+        }
+    })
+    .catch(function (error) {
+        console.log(error)
     });
 }
 
