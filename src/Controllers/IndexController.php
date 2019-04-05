@@ -12,27 +12,6 @@ class IndexController extends AbstractController {
 
     public function index()
     {
-        // require_once 'security.php';
-        //
-        // $blogs = [];
-        // $sql = "SELECT * FROM blogs";
-        //
-        // if ($result->num_rows > 0)
-        // {
-        //     foreach($result as $row)
-        //     {
-        //         $date = $row['date'];
-        //         $id = $row['id'];
-        //         $images = $row['images'];
-        //         $links = $row['links'];
-        //         $text = $row['text'];
-        //         $title = $row['title'];
-        //
-        //         $row_array = array('date'=>$date,'id'=>$id,'images'=>$images,'links'=>$links,'text'=>$text,'title'=>$title);
-        //         array_push($blogs, $row_array);
-        //     }
-        // }
-
         $language['bio'] = SiteLanguage::BIO;
 
         return new TwigResponse('index.twig', [
