@@ -53,20 +53,13 @@ class BlogController extends AbstractController {
         $post->author_id = 1;
         $post->addMetaData('preview', $preview);
 
-        if ($id === '0')
+        $operation = ($id === '0') ? $this->blogService->createPost($post, array()) : $this->blogService->updatePost($post, $id);
+        if (is_null($operation) || $operation instanceof Post)
         {
-            $createdPost = $this->blogService->createPost($post, array());
-            if (is_null($createdPost) || $createdPost instanceof Post)
-            {
-                return new JsonResponse([
-                    'error' => false,
-                    'success' => true,
-                ]);
-            }
-        }
-        else
-        {
-            //$this->blogService->updatePost($post, $id);
+            return new JsonResponse([
+                'error' => false,
+                'success' => true,
+            ]);
         }
     }
 
