@@ -1,22 +1,17 @@
 {% include ('header.twig') %}
 
-<div id="blog-container">
-    <div class="col-sm-12">
-        {% if posts|length == 0 %}
-            <div class="blog-post" style="padding: 35px 0;">No posts written yet.</div>
-        {% else %}
-            {% for post in posts %}
-                <div class="blog-post">
-                    <h2 class="post-title">{{ post.title }}</h2>
-                    <p class="post-date">Posted on: {{ post.date_created|date("F jS, Y") }}</p>
-                    <hr/>
-                    <div class="post-body">
-                        {{ post.body|raw }}
-                    </div>
-                </div>
-            {% endfor %}
-        {% endif %}
-    </div>
+<div id="blog-container" class="col-12">
+    {% if posts|length == 0 %}
+        <div class="blog-post" style="padding: 35px 0;">No posts written yet.</div>
+    {% else %}
+        {% for post in posts %}
+            <div class="post-body card">
+                <h2 class="post-title">{{ post.title }}</h2>
+                <p class="post-date">{{ post.date_created|date("F jS, Y") }}</p>
+                <p>{{ post.body|raw }}</p>
+            </div>
+        {% endfor %}
+    {% endif %}
 </div>
 
 {% include ('footer.twig') %}
