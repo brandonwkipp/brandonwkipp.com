@@ -19,7 +19,53 @@ class BlogController extends AbstractController {
         $this->blogService = $blogService;
     }
 
-    public function createPost()
+    public function display()
+    {
+        $queryParameters = new QueryParameters();
+        $queryParameters->setOrder('date_created DESC');
+        $posts = Post::find($queryParameters);
+
+        return new TwigResponse('blog.twig', [
+            'posts' => $posts,
+        ]);
+    }
+
+    public function editor()
+    {
+        return new TwigResponse('blog-editor.twig', [
+            'posts' => $this->blogService->getAllPosts(),
+        ]);
+    }
+
+    public function postById($id)
+    {
+        $id = filter_var(trim($id), FILTER_SANITIZE_NUMBER_INT);
+        if (is_null($id))
+        {
+            return new JsonResponse([
+                'error' => 'Id required',
+                'success' => false,
+            ]);
+        }
+
+        $post = $this->blogService->getPostById($id);
+        $tags = $this->blogService->getAllTagsForPostId($post->getPrimaryKeyValue());
+
+        $attributes = [
+            'body' => $post->body,
+            'preview' => $post->getMetaDataByKey('preview'),
+            'tags' => implode(' ', $tags),
+            'title' => $post->title,
+        ];
+
+        return new JsonResponse([
+            'error' => '',
+            'payload' => $attributes,
+            'success' => true,
+        ]);
+    }
+
+    public function submitPost()
     {
         $request = $this->getRequest();
 
@@ -61,23 +107,5 @@ class BlogController extends AbstractController {
                 'success' => true,
             ]);
         }
-    }
-
-    public function display()
-    {
-        $queryParameters = new QueryParameters();
-        $queryParameters->setOrder('date_created DESC');
-        $posts = Post::find($queryParameters);
-
-        return new TwigResponse('blog.twig', [
-            'posts' => $posts,
-        ]);
-    }
-
-    public function editor()
-    {
-        return new TwigResponse('blog-editor.twig', [
-
-        ]);
     }
 }

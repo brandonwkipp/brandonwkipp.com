@@ -6,23 +6,30 @@ function clearEditor()
     document.getElementById('tags').value = '';
 }
 
-function createPost()
+function loadPost()
 {
     let postSelect = document.getElementById('blog-editor-select');
     let value = postSelect.options[postSelect.selectedIndex].value;
 
-    let params = new FormData();
-    params.append('id', value);
-    params.append('title', document.getElementById('title').value);
-    params.append('body', document.getElementById('body').value);
-    params.append('preview', document.getElementById('preview').value);
-    params.append('tags', document.getElementById('tags').value);
+    if (value === "0")
+    {
+        return;
+    }
 
-    axios.post('/create-post', params)
+    axios.get('/blog/posts/id/' + value)
     .then(function (response) {
         if (response.data.success)
         {
-            clearEditor();
+            let parsedData = response.data.payload;
+            let title = document.getElementById('title');
+            let body = document.getElementById('body');
+            let preview = document.getElementById('preview');
+            let tags = document.getElementById('tags');
+
+            title.value = parsedData['title'];
+            body.value = parsedData['body'];
+            preview.value = parsedData['preview'];
+            tags.value = parsedData['tags'];
         }
     })
     .catch(function (error) {
@@ -38,4 +45,28 @@ function submitBlogSnackbar()
     {
         sb.classList.remove('show');
     }, 3000);
+}
+
+function submitPost()
+{
+    let postSelect = document.getElementById('blog-editor-select');
+    let value = postSelect.options[postSelect.selectedIndex].value;
+
+    let params = new FormData();
+    params.append('id', value);
+    params.append('title', document.getElementById('title').value);
+    params.append('body', document.getElementById('body').value);
+    params.append('preview', document.getElementById('preview').value);
+    params.append('tags', document.getElementById('tags').value);
+
+    axios.post('/submit-post', params)
+    .then(function (response) {
+        if (response.data.success)
+        {
+            clearEditor();
+        }
+    })
+    .catch(function (error) {
+        console.log(error)
+    });
 }
