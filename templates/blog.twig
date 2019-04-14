@@ -2,15 +2,15 @@
 
 <div id="blog-container">
     {% if posts|length == 0 %}
-        <div class="post-body card">
-            <h2 class="post-title">No posts written yet.</h2>
+        <div class="post card">
+            <h2 class="post-title mt-2">No posts written yet.</h2>
         </div>
     {% else %}
         {% for post in posts %}
-            <div class="post-body card">
-                <h2 class="post-title">{{ post.title }}</h2>
-                <p class="post-date">{{ post.date_created|date("F jS, Y") }}</p>
-                <p class="w-75 mx-auto">{{ post.body|raw }}</p>
+            <div class="post card">
+                <h2 class="post-title mt-2 mb-0">{{ post.title }}</h2>
+                <p class="post-date mb-2">{{ post.date_created|date("F jS, Y") }}</p>
+                <p class="post-body mx-auto">{{ post.body|raw }}</p>
             </div>
         {% endfor %}
     {% endif %}
