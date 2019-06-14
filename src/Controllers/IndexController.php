@@ -28,4 +28,10 @@ class IndexController extends AbstractController {
             echo shell_exec("touch /var/www/repos/" . $string);
         }
     }
+
+    public function displayTime()
+    {
+        return new TwigResponse('time.twig', [
+        ]);
+    }
 }

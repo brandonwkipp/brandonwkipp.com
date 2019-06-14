@@ -5,6 +5,7 @@ use Intersect\Http\Router\Route;
 return [
     Route::get('/', 'App\Controllers\IndexController#index'),
     Route::get('/blog', 'App\Controllers\BlogController#display'),
+    Route::get('/time', 'App\Controllers\IndexController#displayTime'),
 //    Route::get('/blog/posts/id/:id', 'App\Controllers\BlogController#postById'),
 //    Route::get('/blog-editor', 'App\Controllers\BlogController#editor'),
 //    Route::get('/commodities', 'App\Controllers\CommodityController#index'),
