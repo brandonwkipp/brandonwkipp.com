@@ -33,13 +33,5 @@ services:
       - '8089:80'
     depends_on:
       - personal-db
-
-  composer:
-    restart: 'no'
-    image: composer
-    command: install
-    volumes:
-      - .:/app
-
 volumes:
   db-data:
