@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use Intersect\AbstractController;
+use Intersect\Controllers\AbstractController;
 use Intersect\Blog\Models\Post;
 use Intersect\Blog\Services\BlogService;
 use Intersect\Database\Model\Model;

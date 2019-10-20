@@ -1,0 +1,20 @@
+.project-image-container {
+  width: 80%;
+  height: 300px;
+  border-radius: 21px 21px 0 0;
+}
+
+#knobjectLogo {
+  margin-top: 50px;
+  height: 200px;
+}
+
+#radiumTreeImageContainer {
+  width: 80%;
+  border-radius: 21px 21px 0 0;
+}
+
+#raspbeatLogo {
+  margin-top: 20px;
+  height: 250px;
+}

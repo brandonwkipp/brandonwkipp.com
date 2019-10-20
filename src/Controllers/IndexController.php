@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use Intersect\AbstractController;
+use Intersect\Controllers\AbstractController;
 use Intersect\Database\Model\Model;
 use Intersect\Http\Response\TwigResponse;
 

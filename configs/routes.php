@@ -1,6 +1,9 @@
 <?php
 
-use Intersect\Http\Router\Route;
+use Intersect\Application;
+use Intersect\Core\Http\Router\RouteGroup;
+use Intersect\Core\Http\Router\Route;
+use Intersect\Http\Response\XmlResponse;
 
 return [
     Route::get('/', 'App\Controllers\IndexController#index'),
