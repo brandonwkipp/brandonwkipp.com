@@ -19,10 +19,11 @@
     }
   },
   "require": {
-    "hidalgo-rides/intersect-web" : "^1.0",
-    "hidalgo-rides/intersect-blog" : "^1.0",
     "php": "^7.1.3",
-    "twig/twig": "^2.0"
+    "hidalgo-rides/intersect-blog": "^1.0",
+    "hidalgo-rides/intersect-web": "^1.0",
+    "twig/twig": "^2.0",
+    "webonyx/graphql-php": "^0.13.8"
   },
   "require-dev": {
     "phpunit/phpunit": "^7.0"
