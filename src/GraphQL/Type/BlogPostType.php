@@ -22,6 +22,7 @@ class BlogPostType extends ObjectType {
                     }
                 ],
                 'body' => Type::string(),
+                'date_created' => Type::string(),
                 'id' => Type::id(),
                 'meta_data' => [
                     'type' => Type::string(),
