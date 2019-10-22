@@ -4,11 +4,11 @@ import {
   Collapse, DropdownMenu, DropdownToggle, Nav, NavItem, Navbar, NavbarToggler, UncontrolledDropdown,
 } from 'reactstrap';
 import './index.css';
-import HomeLogo from '../../assets/images/piano.png';
-import GithubLogo from '../../assets/images/icons/github-icon.png';
-import LinkedInLogo from '../../assets/images/icons/linkedin-icon.png';
-import SoundCloudLogo from '../../assets/images/icons/soundcloud-icon.png';
-import TwitterLogo from '../../assets/images/icons/twitter-icon.png';
+import HomeLogo from '../../images/piano.png';
+import GithubLogo from '../../images/icons/github-icon.png';
+import LinkedInLogo from '../../images/icons/linkedin-icon.png';
+import SoundCloudLogo from '../../images/icons/soundcloud-icon.png';
+import TwitterLogo from '../../images/icons/twitter-icon.png';
 
 const Header = () => (
   <>

@@ -1,8 +1,8 @@
 import React from 'react';
 import './index.css';
-import KnobjectLogo from '../../assets/images/knobject-js.png';
-import RaspbeatLogo from '../../assets/images/raspbeat.png';
-import RadiumTreeBanner from '../../assets/images/rt-banner-modified.jpg';
+import KnobjectLogo from '../../images/knobject-js.png';
+import RaspbeatLogo from '../../images/raspbeat.png';
+import RadiumTreeBanner from '../../images/rt-banner-modified.jpg';
 
 const LandingPage = () => (
   <>

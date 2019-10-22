@@ -3,7 +3,7 @@ import {
   Col, Row,
 } from 'reactstrap';
 import moment from 'moment';
-import Headshot from '../../assets/images/1.png';
+import Headshot from '../../images/1.png';
 import './index.css';
 
 const Footer = () => (
