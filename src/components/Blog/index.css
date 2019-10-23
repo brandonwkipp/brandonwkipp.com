@@ -1,47 +1,29 @@
-#blogContainer {
-  background: #E2FFD8;
+.blog-post {
+  font-size: 1.35em;
 }
 
-.post.card {
+.blog-post.card {
   background-color: transparent;
-  border-top: none;
-  border-left: none;
-  border-right: none;
 }
 
-.post.card:nth-child(odd) {
+.blog-post.card:nth-child(odd) {
   background-color: #C9E6BF;
 }
 
-.post.card:nth-child(even) {
+.blog-post.card:nth-child(even) {
   background-color: #AFCCA5;
 }
 
-.post h2,
-.post p.post-date {
-  text-align: center;
-}
-
-.post p.post-date {
-  margin-bottom: 5px;
-}
-
-.post p.post-body {
-  width: 75%;
-}
-
-.post a {
+.blog-post a {
   color: red;
 }
 
-.post img {
-  max-width: 300px;
-  width: 40%;
-  margin-right: 5px;
+.individual-blog-post {
+  min-height: 650px;
 }
 
 @media (max-width: 768px) {
-  .post p.post-body {
+  .blog-post p.post-body {
     width: 90%;
   }
 }

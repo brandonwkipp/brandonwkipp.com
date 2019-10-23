@@ -24,19 +24,17 @@ export const PAGE_QUERY = graphql`
 export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
+
   return (
     <Layout>
       <Header />
-      <div id="blog-container">
-        <Card className="post">
-          <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </Card>
-      </div>
+      <Card className="blog-post border-0 individual-blog-post rounded-0">
+        <h1 className="mt-3 text-center">{frontmatter.title}</h1>
+        <h6 className="text-center">{frontmatter.date}</h6>
+        <div className="mx-auto w-75">
+          <p dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
+      </Card>
       <Footer />
     </Layout>
   );
