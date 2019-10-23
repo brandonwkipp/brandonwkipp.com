@@ -6,11 +6,11 @@
   background-color: transparent;
 }
 
-.blog-post.card:nth-child(odd) {
+.blog-post.card:nth-of-type(odd) {
   background-color: #C9E6BF;
 }
 
-.blog-post.card:nth-child(even) {
+.blog-post.card:nth-of-type(even) {
   background-color: #AFCCA5;
 }
 

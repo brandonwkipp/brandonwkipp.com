@@ -51,14 +51,6 @@ module.exports = {
         icon: 'src/images/puzzle.png',
       },
     },
-    {
-      resolve: 'gatsby-source-graphql',
-      options: {
-        typeName: 'Intersect',
-        fieldName: 'intersect',
-        url: 'http://localhost:8090/graphql',
-      },
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

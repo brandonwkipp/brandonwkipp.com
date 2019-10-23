@@ -1,15 +1,20 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import { Card } from 'reactstrap';
 import './index.css';
 
 const BLOG_POSTS = graphql`
   query {
-    intersect {
-      posts {
-        id
-        date_created
-        title
-        body
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            date(formatString: "MMMM Do, YYYY")
+            title
+          }
+          html
+        }
       }
     }
   }
@@ -19,17 +24,31 @@ const Blog = () => (
   <StaticQuery
     query={BLOG_POSTS}
     render={(data) => (
-      <div id="blog-container">
-        {data.intersect.posts.map((post) => (
-          <div className="post card" key={post.id}>
-            <h2 className="post-title mt-2 mb-0">{post.title}</h2>
-            <p className="post-date mb-2">{post.date_created}</p>
-            <p className="post-body mx-auto">{post.body}</p>
-          </div>
+      <>
+        {data.allMarkdownRemark.edges.map((post) => (
+          <Card className="blog-post border-0 rounded-0">
+            <h1 className="mt-3 text-center">{post.node.frontmatter.title}</h1>
+            <h6 className="text-center">{post.node.frontmatter.date}</h6>
+            <div className="mx-auto w-75">
+              <p dangerouslySetInnerHTML={{ __html: post.node.html }} />
+            </div>
+          </Card>
         ))}
-      </div>
+      </>
     )}
   />
 );
 
 export default Blog;
+
+// const IndexPage = ({
+//   data: {
+//     allMarkdownRemark: { edges },
+//   },
+// }) => {
+//   const Posts = edges
+//     .filter(edge => !!edge.node.frontmatter.date)
+// You can filter your posts based on some criteria
+//     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+//   return <div>{Posts}</div>
+// }
