@@ -9,18 +9,18 @@ import './index.css';
 const Footer = () => (
   <footer className="col-12 col-md py-4 text-white">
     <Row>
-      <Col md={3}>
+      <Col className="mb-4 mb-0-md" md={3} sm={12} xs={12}>
         <img alt="Headshot" id="portrait" src={Headshot} />
         <h5>Brandon W. Kipp</h5>
         <h6 className="mb-0">
-          Copyright ©
+          ©
           {' '}
           {moment().format('YYYY')}
           {' '}
           All rights reserved.
         </h6>
       </Col>
-      <Col md={3}>
+      <Col className="text-center" md={3} sm={4} xs={4}>
         <h5>Social</h5>
         <ul className="list-unstyled text-small">
           <li><a className="text-muted" href="https://twitter.com/brandonwkipp">Twitter</a></li>
@@ -28,14 +28,14 @@ const Footer = () => (
           <li><a className="text-muted" href="mailto:brandonwkipp@gmail.com">Email</a></li>
         </ul>
       </Col>
-      <Col md={3}>
+      <Col className="text-center" md={3} sm={4} xs={4}>
         <h5>Portfolio</h5>
         <ul className="list-unstyled text-small">
           <li><a className="text-muted" href="https://github.com/brandonwkipp">GitHub</a></li>
           <li><a className="text-muted" href="https://soundcloud.com/brandonwkipp">SoundCloud</a></li>
         </ul>
       </Col>
-      <Col md={3}>
+      <Col className="text-center" md={3} sm={4} xs={4}>
         <h5>Related</h5>
         <ul className="list-unstyled text-small">
           <li><a className="text-muted" href="https://radiumtr.ee">RadiumTree</a></li>

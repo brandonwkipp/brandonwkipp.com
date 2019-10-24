@@ -21,3 +21,7 @@
   margin-top: 20px;
   height: 250px;
 }
+
+#name {
+  font-size: calc(2em + 1vw);
+}

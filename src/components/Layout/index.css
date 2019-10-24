@@ -15,14 +15,15 @@ body {
 	font-family: 'Montserrat';
   padding: 0;
   margin: 0;
-  background: #000 !important;
+  background: #272a37 !important;
 }
 
 a,
 a:focus,
-a:hover {
+a:hover,
+.navbar-dark .navbar-nav .nav-link:hover {
 	text-decoration: none;
-	color: #000000;
+	color: #fff;
   outline: none;
 }
 
@@ -46,7 +47,7 @@ a:hover {
 
 nav,
 footer {
-  background-color: #000 !important;
+  background-color: #272a37 !important;
 }
 
 nav a,
@@ -113,10 +114,6 @@ footer a {
   #portrait {
     width: 65px;
     height: 65px;
-  }
-
-  #site-header {
-    text-align: right;
   }
 }
 

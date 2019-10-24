@@ -1,7 +1,12 @@
-#pianoButton {
-  height: 25px;
+.navbar-brand {
+  line-height: 40px;
 }
 
-#toggler {
-  color: #fff;
+.navbar-brand h2 {
+  font-size: calc(0.8em + 1vw);
+  vertical-align: middle;
+}
+
+.navbar-brand img {
+  height: 40px;
 }

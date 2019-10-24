@@ -1,4 +1,5 @@
 import React from 'react';
+import { Col } from 'reactstrap';
 import './index.css';
 import KnobjectLogo from '../../images/knobject-js.png';
 import RaspbeatLogo from '../../images/raspbeat.png';
@@ -8,14 +9,14 @@ const LandingPage = () => (
   <>
     <div id="landing">
       <div className="position-relative overflow-hidden p-3 p-md-5 text-center bg-light">
-        <div className="col-md-6 p-lg-5 mx-auto my-5">
-          <h1 className="display-4">
+        <Col className="mx-auto my-0 my-md-5 p-lg-5" md={6}>
+          <h1 className="d-none d-md-block" id="name">
             Brandon W. Kipp
           </h1>
-          <p className="lead font-weight-normal">
+          <p className="font-weight-normal lead mb-0">
             Full-stack Web Developer. Producer/Musician.
           </p>
-        </div>
+        </Col>
         <div className="product-device shadow-sm d-none d-md-block" />
         <div className="product-device product-device-2 shadow-sm d-none d-md-block" />
       </div>
