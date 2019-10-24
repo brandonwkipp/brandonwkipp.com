@@ -32,7 +32,7 @@ export default function Template({ data }) {
         <h1 className="mt-3 text-center">{frontmatter.title}</h1>
         <h6 className="text-center">{frontmatter.date}</h6>
         <div className="mx-auto w-75">
-          <p dangerouslySetInnerHTML={{ __html: html }} />
+          <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </Card>
       <Footer />

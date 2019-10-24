@@ -30,7 +30,7 @@ const Blog = () => (
             <h1 className="mt-3 text-center">{post.node.frontmatter.title}</h1>
             <h6 className="text-center">{post.node.frontmatter.date}</h6>
             <div className="mx-auto w-75">
-              <p dangerouslySetInnerHTML={{ __html: post.node.html }} />
+              <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
             </div>
           </Card>
         ))}
