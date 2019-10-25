@@ -3,7 +3,7 @@ import moment from 'moment';
 import 'moment-countdown';
 import './index.css';
 
-class Time extends Component {
+class TimeLeft extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -28,13 +28,12 @@ class Time extends Component {
   render() {
     const { time } = this.state;
     return (
-      <div id="timeContainer">
-        <div id="time" className="mt-5 text-center">
-          {time}
-        </div>
+      <div id="time" className="p-5 text-center">
+        <h1 className="mt-5">Alleged Time left</h1>
+        {time}
       </div>
     );
   }
 }
 
-export default Time;
+export default TimeLeft;

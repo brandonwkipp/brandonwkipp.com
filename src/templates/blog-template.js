@@ -31,7 +31,7 @@ export default function Template({ data }) {
       <Card className="blog-post border-0 individual-blog-post rounded-0">
         <h1 className="mt-3 text-center">{frontmatter.title}</h1>
         <h6 className="text-center">{frontmatter.date}</h6>
-        <div className="mx-auto w-75">
+        <div className="mb-3 mx-auto w-75">
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </Card>
