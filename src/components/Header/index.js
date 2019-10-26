@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
+import { Helmet } from 'react-helmet';
 import {
   DropdownMenu, DropdownToggle, Nav, NavItem,
   Navbar, NavbarBrand, UncontrolledDropdown,
@@ -24,6 +25,14 @@ class Header extends Component {
   render() {
     return (
       <>
+        <Helmet>
+          <title>Brandon W. Kipp</title>
+          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="#e2ffd8" />
+          <meta name="Description" content="Full-stack Web Developer. Producer/Musician." />
+          <meta name="theme-color" content="#e2ffd8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Helmet>
         <Sidebar />
         <Navbar className="navbar-dark sticky-top" expand="md">
           <NavbarBrand>
