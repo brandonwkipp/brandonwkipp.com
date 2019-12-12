@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  Col, Row,
-} from 'reactstrap';
+import { Col, Row } from 'reactstrap';
 import moment from 'moment';
 import Headshot from '../../images/1.png';
 import './index.css';
@@ -29,10 +27,15 @@ const Footer = () => (
         </ul>
       </Col>
       <Col className="text-center" md={3} sm={4} xs={4}>
-        <h5>Portfolio</h5>
+        <h5>CV</h5>
         <ul className="list-unstyled text-small">
           <li><a className="text-muted" href="https://github.com/brandonwkipp">GitHub</a></li>
           <li><a className="text-muted" href="https://soundcloud.com/brandonwkipp">SoundCloud</a></li>
+          <li>
+            <a className="text-muted" href="https://www.youtube.com/channel/UCu-opBYVbs5Gdr9QeW83OPw">
+              YouTube
+            </a>
+          </li>
         </ul>
       </Col>
       <Col className="text-center" md={3} sm={4} xs={4}>

@@ -8,7 +8,7 @@ import {
 import Sidebar from '../Sidebar';
 
 import './index.css';
-import HomeLogo from '../../images/piano.png';
+import HomeLogo from '../../images/noun_Music_1952166.svg';
 import GithubLogo from '../../images/icons/github-icon.png';
 import LinkedInLogo from '../../images/icons/linkedin-icon.png';
 import SoundCloudLogo from '../../images/icons/soundcloud-icon.png';

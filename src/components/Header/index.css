@@ -8,5 +8,8 @@
 }
 
 .navbar-brand img {
+  background: cornsilk;
+  border-radius: 3px;
   height: 40px;
+  width: 62px;
 }
