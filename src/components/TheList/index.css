@@ -1,0 +1,11 @@
+#theList {
+  background: #E2FFD8;
+}
+
+#theList .list-group-item-heading {
+  margin-bottom: 0px;
+}
+
+#theList .list-group-item a {
+  color: blue;
+}

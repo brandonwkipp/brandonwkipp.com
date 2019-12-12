@@ -52,6 +52,9 @@ class Header extends Component {
             <NavItem>
               <Link className="px-4 py-2 d-inline-block" to="/blog">Blog</Link>
             </NavItem>
+            <NavItem>
+              <Link className="px-4 py-2 d-inline-block" to="/the-list">The List</Link>
+            </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle className="px-4 py-2 d-inline-block" nav caret>
                  Connect
