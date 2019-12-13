@@ -69,7 +69,9 @@ const TheList = () => (
                 <ListGroupItem>
                   <ListGroupItemHeading>2017/12/29 - Armory (Janesville, WI)</ListGroupItemHeading>
                   <ListGroupItemText>
-                    Played guitar on Pupils of the Pupil & ran sound with Frank McKearn IV
+                    Played guitar on &quot;Pupils of the Pupil&quot;
+                    {' '}
+                    & ran sound with Frank McKearn IV
                   </ListGroupItemText>
                 </ListGroupItem>
               </ListGroup>

@@ -19,7 +19,7 @@ const Footer = () => (
         </h6>
       </Col>
       <Col className="text-center" md={3} sm={4} xs={4}>
-        <h5>Social</h5>
+        <h5><u>Social</u></h5>
         <ul className="list-unstyled text-small">
           <li><a className="text-muted" href="https://twitter.com/brandonwkipp">Twitter</a></li>
           <li><a className="text-muted" href="https://linkedin.com/in/brandonwkipp">LinkedIn</a></li>
@@ -27,7 +27,7 @@ const Footer = () => (
         </ul>
       </Col>
       <Col className="text-center" md={3} sm={4} xs={4}>
-        <h5>CV</h5>
+        <h5><u>CV</u></h5>
         <ul className="list-unstyled text-small">
           <li><a className="text-muted" href="https://github.com/brandonwkipp">GitHub</a></li>
           <li><a className="text-muted" href="https://soundcloud.com/brandonwkipp">SoundCloud</a></li>
@@ -39,7 +39,7 @@ const Footer = () => (
         </ul>
       </Col>
       <Col className="text-center" md={3} sm={4} xs={4}>
-        <h5>Related</h5>
+        <h5><u>Related</u></h5>
         <ul className="list-unstyled text-small">
           <li><a className="text-muted" href="https://radiumtr.ee">RadiumTree</a></li>
         </ul>

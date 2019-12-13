@@ -22,6 +22,9 @@ class Sidebar extends React.Component {
         <Link className="menu-item" to="/blog">
           <h4>Blog</h4>
         </Link>
+        <Link className="menu-item" to="/the-list">
+          <h4>The List</h4>
+        </Link>
         <Link className="menu-item" to="/blog">
           <h4>Contact</h4>
         </Link>
