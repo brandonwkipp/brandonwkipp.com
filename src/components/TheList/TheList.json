@@ -1,0 +1,83 @@
+{
+  "bands": [
+    {
+      "name": "Anti Matter",
+      "order": 0,
+      "shows": [
+        {
+          "date": "2011/11/18",
+          "description": "",
+          "link": "https://www.youtube.com/watch?v=iJd5nfkb1uk",
+          "venue": "Bushel & Peck’s (Beloit, WI)"
+        },
+        {
+          "date": "2012/01/28?",
+          "description": "All I remember from this show is that Jonah forgot his cue during the breakdown in our cover of \"Welcome to Paradise.\" I hear this place isn't that great anymore...",
+          "link": "",
+          "venue": "Mike's Road House (Beloit, WI)"
+        }
+      ]
+    },
+    {
+      "name": "Ashkar Room",
+      "order": 2,
+      "shows": [
+        {
+          "date": "2014/04/19",
+          "description": "",
+          "link": "",
+          "venue": "CHaus (Beloit, WI)"
+        }
+      ]
+    },
+    {
+      "name": "Esperé Eckard-Lee",
+      "order": 3,
+      "shows": [
+        {
+          "date": "2014/04/19",
+          "description": "",
+          "link": "",
+          "venue": "CHaus (Beloit, WI)"
+        }
+      ]
+    },
+    {
+      "name": "troy & eli",
+      "order": 4,
+      "shows": [
+        {
+          "date": "2014/04/24",
+          "description": "Eli and I played a rendition of ordinary people.",
+          "link": "",
+          "venue": "CHaus (Beloit, WI)"
+        }
+      ]
+    },
+    {
+      "name": "troyleft",
+      "order": 5,
+      "shows": [
+        {
+          "date": "2017/12/29",
+          "description": "Played guitar on \"Pupils of the Pupil\" & ran sound with Frank McKearn IV",
+          "link": "",
+          "venue": "Armory (Janesville, WI)"
+        }
+      ]
+
+    },
+    {
+      "name": "Solo",
+      "order": 1,
+      "shows": [
+        {
+          "date": "2012?",
+          "description": "Covered \"Dumb\" by Nirvana, \"Bound to pack it up\" by the White Stripes on acoustic guitar.",
+          "link": "",
+          "venue": "Bushel & Peck's (Beloit, WI)"
+        }
+      ]
+    }
+  ]
+}

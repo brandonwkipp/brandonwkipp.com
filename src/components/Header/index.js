@@ -35,14 +35,12 @@ class Header extends Component {
         </Helmet>
         <Sidebar />
         <Navbar className="navbar-dark sticky-top" expand="md">
-          <NavbarBrand>
-            <Link to="/">
-              <img
-                alt="Home Button"
-                className="mr-3"
-                src={HomeLogo}
-              />
-            </Link>
+          <NavbarBrand href="/">
+            <img
+              alt="Home Button"
+              className="mr-3"
+              src={HomeLogo}
+            />
             <h2 className="d-inline-block mb-0 text-light">Brandon W. Kipp</h2>
           </NavbarBrand>
           <Nav className="d-none d-md-flex d-lg-flex ml-auto" navbar>
