@@ -43,8 +43,20 @@
       ]
     },
     {
-      "name": "troy & eli",
+      "name": "Okayt98",
       "order": 4,
+      "shows": [
+        {
+          "date": "2019/12/21",
+          "description": "I had a blast a this show. No monitors, very hard to hear what I was playing, but people tell me we sounded good!",
+          "link": "",
+          "venue": "Tin Dog Records (Beloit, WI)"
+        }
+      ]
+    },
+    {
+      "name": "troy & eli",
+      "order": 5,
       "shows": [
         {
           "date": "2014/04/24",
@@ -56,7 +68,7 @@
     },
     {
       "name": "troyleft",
-      "order": 5,
+      "order": 6,
       "shows": [
         {
           "date": "2017/12/29",
@@ -69,7 +81,7 @@
     },
     {
       "name": "Solo",
-      "order": 1,
+      "order": 7,
       "shows": [
         {
           "date": "2012?",

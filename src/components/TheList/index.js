@@ -40,7 +40,7 @@ const TheList = () => {
                 <ListGroupItemHeading>
                   {link}
                 </ListGroupItemHeading>
-                <ListGroupItemText>
+                <ListGroupItemText className="mb-0">
                   {show.description}
                 </ListGroupItemText>
               </ListGroupItem>
