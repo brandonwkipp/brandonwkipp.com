@@ -5,16 +5,20 @@
       "order": 0,
       "shows": [
         {
+          "city": "Beloit",
           "date": "2011/11/18",
           "description": "",
           "link": "https://www.youtube.com/watch?v=iJd5nfkb1uk",
-          "venue": "Bushel & Peck’s (Beloit, WI)"
+          "state": "WI",
+          "venue": "Bushel & Peck’s"
         },
         {
+          "city": "Beloit",
           "date": "2012/01/28?",
-          "description": "All I remember from this show is that Jonah forgot his cue during the breakdown in our cover of \"Welcome to Paradise.\" I hear this place isn't that great anymore...",
+          "description": "All I remember from this show is that Jonah forgot his cue during the breakdown in our cover of \"Welcome to Paradise.\" I hear this place doesn't play nice with the \"left\"...",
           "link": "",
-          "venue": "Mike's Road House (Beloit, WI)"
+          "state": "WI",
+          "venue": "Mike's Road House"
         }
       ]
     },
@@ -23,10 +27,12 @@
       "order": 2,
       "shows": [
         {
+          "city": "Beloit",
           "date": "2014/04/19",
           "description": "",
           "link": "",
-          "venue": "CHaus (Beloit, WI)"
+          "state": "WI",
+          "venue": "CHaus"
         }
       ]
     },
@@ -35,10 +41,12 @@
       "order": 3,
       "shows": [
         {
+          "city": "Beloit",
           "date": "2014/04/19",
           "description": "",
           "link": "",
-          "venue": "CHaus (Beloit, WI)"
+          "state": "WI",
+          "venue": "CHaus"
         }
       ]
     },
@@ -47,10 +55,12 @@
       "order": 4,
       "shows": [
         {
+          "city": "Beloit",
           "date": "2019/12/21",
-          "description": "I had a blast a this show. No monitors, very hard to hear what I was playing, but people tell me we sounded good!",
+          "description": "I had a blast at this show. Of course, as I was playing, I stepped on my fuzz box and broke a lead. No monitors, very hard to hear what I was playing, but people tell me we sounded good!",
           "link": "",
-          "venue": "Tin Dog Records (Beloit, WI)"
+          "state": "WI",
+          "venue": "Tin Dog Records"
         }
       ]
     },
@@ -59,10 +69,12 @@
       "order": 5,
       "shows": [
         {
+          "city": "Beloit",
           "date": "2014/04/24",
           "description": "Eli and I played a rendition of ordinary people.",
           "link": "",
-          "venue": "CHaus (Beloit, WI)"
+          "state": "WI",
+          "venue": "CHaus"
         }
       ]
     },
@@ -71,10 +83,12 @@
       "order": 6,
       "shows": [
         {
+          "city": "Janesville",
           "date": "2017/12/29",
-          "description": "Played guitar on \"Pupils of the Pupil\" & ran sound with Frank McKearn IV",
+          "description": "Played guitar on \"Pupils of the Pupil\" & ran sound with Frank McKearn IV.",
           "link": "",
-          "venue": "Armory (Janesville, WI)"
+          "state": "WI",
+          "venue": "The Armory"
         }
       ]
 
@@ -84,10 +98,12 @@
       "order": 7,
       "shows": [
         {
+          "city": "Beloit",
           "date": "2012?",
           "description": "Covered \"Dumb\" by Nirvana, \"Bound to pack it up\" by the White Stripes on acoustic guitar.",
           "link": "",
-          "venue": "Bushel & Peck's (Beloit, WI)"
+          "state": "WI",
+          "venue": "Bushel & Peck's"
         }
       ]
     }

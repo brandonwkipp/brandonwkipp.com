@@ -4,7 +4,7 @@ import {
   ListGroupItem, ListGroupItemText, Row,
 } from 'reactstrap';
 
-import JSONData from './TheList';
+import JSONData from './content/shows';
 import './index.css';
 
 const TheList = () => {
@@ -18,20 +18,40 @@ const TheList = () => {
           {band.shows.map((show) => {
             const link = (show.link)
               ? (
-                <a href="https://www.youtube.com/watch?v=iJd5nfkb1uk">
-                  {show.date}
-                  {' '}
-                  -
-                  {' '}
-                  {show.venue}
-                </a>
+                <>
+                  <span className="d-inline-block w-100">
+                    <a href="https://www.youtube.com/watch?v=iJd5nfkb1uk">
+                      {show.date}
+                    </a>
+                  </span>
+                  <span className="d-inline-block w-100">
+                    {' '}
+                    {show.venue}
+                  </span>
+                  <span className="d-inline-block w-100">
+                    <small>
+                      {show.city}
+                      ,
+                      {' '}
+                      {show.state}
+                    </small>
+                  </span>
+                </>
               ) : (
                 <>
-                  {show.date}
-                  {' '}
-                  -
-                  {' '}
-                  {show.venue}
+                  <span className="d-inline-block w-100">{show.date}</span>
+                  <span className="d-inline-block w-100">
+                    {' '}
+                    {show.venue}
+                  </span>
+                  <span className="d-inline-block w-100">
+                    <small>
+                      {show.city}
+                      ,
+                      {' '}
+                      {show.state}
+                    </small>
+                  </span>
                 </>
               );
 
@@ -40,6 +60,7 @@ const TheList = () => {
                 <ListGroupItemHeading>
                   {link}
                 </ListGroupItemHeading>
+                <hr />
                 <ListGroupItemText className="mb-0">
                   {show.description}
                 </ListGroupItemText>
@@ -57,7 +78,7 @@ const TheList = () => {
     <>
       <div className="p-3" id="theList">
         <Row>
-          <Col md={6}>
+          <Col md={5}>
             <Card className="p-3">
               {shows}
             </Card>

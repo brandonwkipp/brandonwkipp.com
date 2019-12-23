@@ -1,0 +1,213 @@
+{
+  "projects": [
+    {
+      "name": "troy & eli",
+      "order": 0,
+      "projects": [
+        {
+          "description": "",
+          "name": "Square One",
+          "link": "https://soundcloud.com/troyleft/sets/square-one",
+          "personnel": [
+            {
+              "alias": "troyleft",
+              "name": "Nathan Brault",
+              "position": "recording, mixing, & mastering engineer"
+            },
+            {
+              "alias": "eli",
+              "name": "Joshua Evans",
+              "position": "recording, mixing, & mastering engineer"
+            },
+            {
+              "alias": "RadiumTree",
+              "name": "Brandon W. Kipp",
+              "position": "recording, mixing, & mastering engineer"
+            },
+            {
+              "alias": "",
+              "name": "Kyle Burt",
+              "position": "recording, mixing, & mastering engineer"
+            },
+            {
+              "alias": "",
+              "name": "Ricky Cotter",
+              "position": "recording, mixing, & mastering engineer"
+            },
+            {
+              "alias": "",
+              "name": "Cory Foxen",
+              "position": "recording, mixing, & mastering engineer"
+            }
+          ],
+          "releaseDate": "2013/10/08",
+          "studio": "Maple Tree",
+          "trackCount": 19,
+          "trackList": [
+            {
+              "description": "",
+              "length": "0:41",
+              "name": "Intro",
+              "performers": "troyleft, eli",
+              "trackOrder": 1
+            },
+            {
+              "description": "",
+              "length": "2:42",
+              "name": "Famous Pt. II",
+              "performers": "troyleft, eli",
+              "trackOrder": 2
+            },
+            {
+              "description": "",
+              "length": "3:00",
+              "name": "Go",
+              "performers": "troyleft",
+              "trackOrder": 3
+            },
+            {
+              "description": "",
+              "length": "",
+              "name": "On Another One",
+              "performers": "troyleft, eli",
+              "trackOrder": 4
+            },
+            {
+              "description": "",
+              "length": "3:05",
+              "name": "Big $pender",
+              "performers": "troyleft, eli",
+              "trackOrder": 5
+            },
+            {
+              "description": "",
+              "length": "3:33",
+              "name": "Thinking About You",
+              "performers": "troyleft, eli",
+              "trackOrder": 6
+            },
+            {
+              "description": "",
+              "length": "0:35",
+              "name": "Limitless (Interlude)",
+              "performers": "",
+              "trackOrder": 7
+            },
+            {
+              "description": "",
+              "length": "3:03",
+              "name": "'93 To Infinity",
+              "performers": "troyleft, eli",
+              "trackOrder": 8
+            },
+            {
+              "description": "",
+              "length": "3:47",
+              "name": "Show My Soul",
+              "performers": "troyleft, eli",
+              "trackOrder": 9
+            },
+            {
+              "description": "",
+              "length": "0:45",
+              "name": "We're Here For You (Interlude)",
+              "performers": "troyleft",
+              "trackOrder": 10
+            },
+            {
+              "description": "",
+              "length": "4:20",
+              "name": "Sideline Story",
+              "performers": "troyleft, eli",
+              "trackOrder": 11
+            },
+            {
+              "description": "",
+              "length": "4:02",
+              "name": "Lifesaver",
+              "performers": "troyleft, eli, radiumtree",
+              "trackOrder": 12
+            },
+            {
+              "description": "",
+              "length": "4:19",
+              "name": "That Way",
+              "performers": "troyleft, eli",
+              "trackOrder": 13
+            },
+            {
+              "description": "",
+              "length": "1:53",
+              "name": "The Letterman Show",
+              "performers": "troyleft",
+              "trackOrder": 14
+            },
+            {
+              "description": "",
+              "length": "2:01",
+              "name": "Cypher",
+              "performers": "troyleft",
+              "trackOrder": 15
+            },
+            {
+              "description": "",
+              "length": "",
+              "name": "Work",
+              "performers": "troyleft, eli",
+              "trackOrder": 16
+            },
+            {
+              "description": "",
+              "length": "1:37",
+              "name": "All Me",
+              "performers": "troyleft",
+              "trackOrder": 17
+            },
+            {
+              "description": "",
+              "length": "1:48",
+              "name": "Over My Dead Body",
+              "performers": "troyleft",
+              "trackOrder": 18
+            },
+            {
+              "description": "",
+              "length": "3:44",
+              "name": "Show My Soul (Chicago Recording Company Version)",
+              "performers": "troyleft, eli",
+              "trackOrder": 19
+            }
+          ]
+        },
+        {
+          "description": "",
+          "name": "PDF",
+          "link": "",
+          "releaseDate": "",
+          "studio": "Maple Tree"
+        },
+        {
+          "description": "",
+          "name": "The 4 & A Quarter EP",
+          "link": "https://soundcloud.com/troyleft/sets/4andaquarter-w-jaysocreative",
+          "releaseDate": "2018/03/23",
+          "studio": ""
+        },
+        {
+          "description": "",
+          "name": "GREEN EXITS",
+          "link": "",
+          "releaseDate": "",
+          "studio": "Maple Tree"
+        },
+        {
+          "description": "",
+          "name": "The Notarized EP",
+          "link": "",
+          "releaseDate": "",
+          "studio": "Maple Tree"
+        }
+      ]
+    }
+  ]
+}

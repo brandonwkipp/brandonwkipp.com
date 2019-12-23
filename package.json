@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "brandonwkipp.com",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "A website by Brandon W. Kipp",
+  "version": "1.0.0",
+  "author": "Brandon W. Kipp <brandonwkipp@gmail.com>",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "countdown": "^2.6.0",
@@ -48,11 +48,11 @@
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
-    "dev": "gatsby develop",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop --port 4000",
+    "develop": "gatsby develop --port 4000",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve --port 4000",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
   "repository": {
