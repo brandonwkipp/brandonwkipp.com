@@ -13,6 +13,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           node {
             frontmatter {
               path
+              type
             }
           }
         }
@@ -27,10 +28,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.path,
-      component: blogPostTemplate,
-      context: {},
-    });
+    if (node.frontmatter.type === 'blog') {
+      createPage({
+        path: node.frontmatter.path,
+        component: blogPostTemplate,
+        context: {},
+      });
+    }
   });
 };
