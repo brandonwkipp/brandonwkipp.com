@@ -35,7 +35,7 @@ const TheList = () => (
       <>
         <div className="p-3" id="theList">
           <Row>
-            <Col md={5}>
+            <Col className="mx-auto" md={6}>
               <Card className="p-3">
                 {data.allMarkdownRemark.edges.map((show) => (
                   <Show node={show.node} />

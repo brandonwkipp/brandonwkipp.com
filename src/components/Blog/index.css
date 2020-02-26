@@ -1,3 +1,7 @@
+.blog-emphasis {
+  font-weight: bolder !important;
+}
+
 .blog-post {
   font-size: 1.35em;
 }
