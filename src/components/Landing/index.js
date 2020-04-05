@@ -77,7 +77,7 @@ const LandingPage = () => (
                 RadiumTree
               </h2>
               <p className="lead">
-                Music Production
+                Music
               </p>
             </div>
             <div className="bg-white mx-auto shadow-sm mx-auto" id="radiumTreeImageContainer">
