@@ -1,9 +1,11 @@
 import { graphql, StaticQuery } from 'gatsby';
 import React from 'react';
-import { Card, Col, Row } from 'reactstrap';
+import {
+  Card, Col, Container, Row,
+} from 'reactstrap';
 
-import './index.css';
 import Show from './Show';
+import './index.scss';
 
 const SHOWS = graphql`
   query {
@@ -32,19 +34,17 @@ const TheList = () => (
   <StaticQuery
     query={SHOWS}
     render={(data) => (
-      <>
-        <div className="p-3" id="theList">
-          <Row>
-            <Col className="mx-auto" md={6}>
-              <Card className="p-3">
-                {data.allMarkdownRemark.edges.map((show) => (
-                  <Show node={show.node} />
-                ))}
-              </Card>
-            </Col>
-          </Row>
-        </div>
-      </>
+      <Container className="px-3" fluid id="theList">
+        <Row>
+          <Col className="mx-auto" md={6}>
+            <Card className="p-3">
+              {data.allMarkdownRemark.edges.map((show) => (
+                <Show node={show.node} />
+              ))}
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     )}
   />
 );

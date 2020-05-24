@@ -1,24 +1,26 @@
 import React from 'react';
 import { Col } from 'reactstrap';
-import './index.css';
+
 import KnobjectLogo from '../../images/knobject-js.png';
 import RaspbeatLogo from '../../images/raspbeat.png';
 import RadiumTreeBanner from '../../images/rt-banner-modified.jpg';
 
-const LandingPage = () => (
+import './index.scss';
+
+const Landing = () => (
   <>
     <div id="landing">
-      <div className="position-relative overflow-hidden p-3 p-md-5 text-center bg-light">
+      <div className="bg-light position-relative overflow-hidden p-3 p-md-5 text-center">
         <Col className="mx-auto my-0 my-md-5 p-lg-5" md={6}>
           <h1 className="d-none d-md-block" id="name">
             Brandon W. Kipp
           </h1>
           <p className="font-weight-normal lead mb-0">
-            Full-stack Web Developer. Producer/Musician.
+            Web Developer. Musician.
           </p>
         </Col>
-        <div className="product-device shadow-sm d-none d-md-block" />
-        <div className="product-device product-device-2 shadow-sm d-none d-md-block" />
+        <div className="d-md-block d-none product-device shadow-sm" />
+        <div className="d-md-block d-none product-device product-device-2 shadow-sm" />
       </div>
       <div id="projects" className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
         <div className="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
@@ -73,12 +75,8 @@ const LandingPage = () => (
             target="_blank"
           >
             <div className="my-3 p-3">
-              <h2 className="display-5">
-                RadiumTree
-              </h2>
-              <p className="lead">
-                Music
-              </p>
+              <h2 className="display-5">RadiumTree</h2>
+              <p className="lead">Music</p>
             </div>
             <div className="bg-white mx-auto shadow-sm mx-auto" id="radiumTreeImageContainer">
               <img
@@ -94,4 +92,4 @@ const LandingPage = () => (
   </>
 );
 
-export default LandingPage;
+export default Landing;

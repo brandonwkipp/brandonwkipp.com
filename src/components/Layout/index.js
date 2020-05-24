@@ -1,7 +1,5 @@
-import React from 'react';
 import propTypes from 'prop-types';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
+import React from 'react';
 
 const Layout = ({ children }) => (
   <div>{children}</div>

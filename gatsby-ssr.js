@@ -1,7 +1,17 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+import propTypes from 'prop-types';
+import React from 'react';
 
-// You can delete this file if you're not using it
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './src/styles/base.scss';
+
+export const wrapRootElement = ({ element }) => (
+  <div id="wrapper">
+    {element}
+  </div>
+);
+
+wrapRootElement.propTypes = {
+  element: propTypes.element.isRequired,
+};
+
+export default wrapRootElement;

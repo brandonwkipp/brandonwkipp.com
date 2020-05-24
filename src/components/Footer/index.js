@@ -1,11 +1,13 @@
-import React from 'react';
-import { Col, Row } from 'reactstrap';
+import { Link } from 'gatsby';
 import moment from 'moment';
+import React from 'react';
+import { Col, Container, Row } from 'reactstrap';
+
 import Headshot from '../../images/1.png';
-import './index.css';
+import './index.scss';
 
 const Footer = () => (
-  <footer className="col-12 col-md py-4 text-white">
+  <Container className="p-4 text-white" fluid id="footerContainer">
     <Row>
       <Col className="mb-4 mb-0-md" md={3} sm={12} xs={12}>
         <img alt="Headshot" id="portrait" src={Headshot} />
@@ -20,32 +22,36 @@ const Footer = () => (
       </Col>
       <Col className="text-center" md={3} sm={4} xs={4}>
         <h5><u>Social</u></h5>
-        <ul className="list-unstyled text-small">
-          <li><a className="text-muted" href="https://twitter.com/brandonwkipp">Twitter</a></li>
-          <li><a className="text-muted" href="https://linkedin.com/in/brandonwkipp">LinkedIn</a></li>
-          <li><a className="text-muted" href="mailto:brandonwkipp@gmail.com">Email</a></li>
-        </ul>
+        <p className="mb-1">
+          <a className="text-muted" href="https://twitter.com/brandonwkipp">Twitter</a>
+        </p>
+        <p className="mb-1">
+          <a className="text-muted" href="https://linkedin.com/in/brandonwkipp">LinkedIn</a>
+        </p>
+        <p className="mb-1">
+          <a className="text-muted" href="mailto:brandonwkipp@gmail.com">Email</a>
+        </p>
       </Col>
       <Col className="text-center" md={3} sm={4} xs={4}>
         <h5><u>CV</u></h5>
-        <ul className="list-unstyled text-small">
-          <li><a className="text-muted" href="https://github.com/brandonwkipp">GitHub</a></li>
-          <li><a className="text-muted" href="https://soundcloud.com/brandonwkipp">SoundCloud</a></li>
-          <li>
-            <a className="text-muted" href="https://www.youtube.com/channel/UCu-opBYVbs5Gdr9QeW83OPw">
-              YouTube
-            </a>
-          </li>
-        </ul>
+        {/* <p className="mb-1">
+          <Link className="text-muted" to="/resume">Resume</Link>
+        </p> */}
+        <p className="mb-1">
+          <a className="text-muted" href="https://github.com/brandonwkipp">GitHub</a>
+        </p>
+        <p>
+          <a className="text-muted" href="https://soundcloud.com/brandonwkipp">SoundCloud</a>
+        </p>
       </Col>
       <Col className="text-center" md={3} sm={4} xs={4}>
         <h5><u>Related</u></h5>
-        <ul className="list-unstyled text-small">
-          <li><a className="text-muted" href="https://radiumtr.ee">RadiumTree</a></li>
-        </ul>
+        <p className="mb-1">
+          <a className="text-muted" href="https://radiumtr.ee">RadiumTree</a>
+        </p>
       </Col>
     </Row>
-  </footer>
+  </Container>
 );
 
 export default Footer;

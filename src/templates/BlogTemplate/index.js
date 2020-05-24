@@ -1,12 +1,14 @@
-import React from 'react';
 import { graphql } from 'gatsby';
+import Markdown from 'markdown-to-jsx';
 import propTypes from 'prop-types';
+import React from 'react';
 import { Card } from 'reactstrap';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import Layout from '../components/Layout';
 
-import '../components/Blog/index.css';
+import Footer from '@components/Footer';
+import Header from '@components/Header';
+import Layout from '@components/Layout';
+
+import '@components/Blog/index.scss';
 
 export const PAGE_QUERY = graphql`
   query($path: String!) {
@@ -28,11 +30,11 @@ export default function Template({ data }) {
   return (
     <Layout>
       <Header />
-      <Card className="blog-post border-0 individual-blog-post rounded-0">
+      <Card className="blog-post border-0 rounded-0">
         <h1 className="mt-3 text-center">{frontmatter.title}</h1>
         <h6 className="text-center">{frontmatter.date}</h6>
         <div className="mb-3 mx-auto w-75">
-          <div dangerouslySetInnerHTML={{ __html: html }} />
+          <Markdown>{html}</Markdown>
         </div>
       </Card>
       <Footer />

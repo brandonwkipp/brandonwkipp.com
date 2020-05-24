@@ -58,6 +58,15 @@ module.exports = {
         icon: 'src/images/puzzle.png',
       },
     },
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        data: `@import "${__dirname}/src/styles/variables";`,
+        includePaths: [
+          'src/components',
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

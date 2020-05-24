@@ -1,8 +1,0 @@
-#portrait {
-	width: 85px;
-  height: 85px;
-  margin: auto;
-	border: 2px solid #000;
-  border-radius: 100%;
-  background-size: contain;
-}

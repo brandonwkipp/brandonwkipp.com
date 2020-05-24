@@ -1,39 +1,26 @@
-import React, { Component } from 'react';
 import moment from 'moment';
 import 'moment-countdown';
-import './index.css';
+import React, { useEffect, useState } from 'react';
+import { Spinner } from 'reactstrap';
 
-class TimeLeft extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      time: null,
-    };
+import './index.scss';
 
-    this.getTime = this.getTime.bind(this);
-  }
+const TimeLeft = () => {
+  const [time, setTime] = useState(null);
 
-  componentDidMount() {
-    this.getTime();
-  }
-
-  getTime() {
-    setInterval(() => {
-      this.setState({
-        time: moment('2071-04-24 13:17:00').countdown().toString(),
-      });
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(moment('2071-04-24 13:17:00').countdown().toString());
     }, 1000);
-  }
+    return () => clearInterval(interval);
+  }, []);
 
-  render() {
-    const { time } = this.state;
-    return (
-      <div id="time" className="p-5 text-center">
-        <h1 className="mt-5">Alleged Time left</h1>
-        {time}
-      </div>
-    );
-  }
-}
+  return (
+    <div id="time" className="p-5 text-center">
+      <h1 className="mt-5">Alleged Time left</h1>
+      {(time === null) ? <Spinner /> : time}
+    </div>
+  );
+};
 
 export default TimeLeft;

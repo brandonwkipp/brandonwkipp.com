@@ -1,0 +1,31 @@
+.blog-post {
+  font-size: 1em;
+
+  &:nth-of-type(odd) {
+    background-color: $white;//$pale-green;
+  }
+
+  &:nth-of-type(even) {
+    background-color: aliceblue;//$pale-dark-green;
+  }
+
+  a {
+    color: mediumvioletred;
+
+    &:hover {
+      color: mediumvioletred;
+    }
+  }
+}
+
+.blog-emphasis {
+  font-weight: bolder !important;
+}
+
+@media (max-width: 768px) {
+  .blog-post {
+    .post-body {
+      width: 90%;
+    }
+  }
+}

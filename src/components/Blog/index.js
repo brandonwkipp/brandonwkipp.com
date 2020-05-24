@@ -1,7 +1,9 @@
-import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import Markdown from 'markdown-to-jsx';
+import React from 'react';
 import { Card } from 'reactstrap';
-import './index.css';
+
+import './index.scss';
 
 const BLOG_POSTS = graphql`
   query {
@@ -31,9 +33,9 @@ const Blog = () => (
         {data.allMarkdownRemark.edges.map((post) => (
           <Card className="blog-post border-0 rounded-0">
             <h1 className="mt-3 text-center">{post.node.frontmatter.title}</h1>
-            <h6 className="text-center">{post.node.frontmatter.date}</h6>
+            <h5 className="text-center">{post.node.frontmatter.date}</h5>
             <div className="mb-3 mx-auto w-75">
-              <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
+              <Markdown>{post.node.html}</Markdown>
             </div>
           </Card>
         ))}
@@ -43,15 +45,3 @@ const Blog = () => (
 );
 
 export default Blog;
-
-// const IndexPage = ({
-//   data: {
-//     allMarkdownRemark: { edges },
-//   },
-// }) => {
-//   const Posts = edges
-//     .filter(edge => !!edge.node.frontmatter.date)
-// You can filter your posts based on some criteria
-//     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
-//   return <div>{Posts}</div>
-// }

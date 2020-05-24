@@ -13,5 +13,13 @@
         ]
       }
     ]
+  },
+  'settings': {
+    'import/resolver': {
+      'alias': [
+        ['@components', './src/components'],
+        ['@content', './src/content'],
+      ]
+    }
   }
 };
