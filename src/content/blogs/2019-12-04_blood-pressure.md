@@ -10,18 +10,16 @@ type: blog
   <div class="col-md-6">
     <img src="../../images/blogs/2019-12-04/IMG_20191204_095303.jpg" />
     <center>
-      <small class="blog-emphasis">Taken at 09:53</small>
+      <p class="blog-emphasis">Taken at 09:53</p>
     </center>
   </div>
   <div class="col-md-6">
     <img src="../../images/blogs/2019-12-04/IMG_20191204_153523.jpg" />
     <center>
-      <small class="blog-emphasis">Taken at 15:35</small>
+      <p class="blog-emphasis">Taken at 15:35</p>
     </center>
   </div>
 </div>
-<br />
-<br />
 
 Well, that's not great; although, not surprising since I'm a relatively sedentary person. I'm pretty stressed
 these days with the amount of things on my plate. My body is pretty clearly telling me to walk more. The exercise
