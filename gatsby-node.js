@@ -1,3 +1,4 @@
+// const fs = require('fs');
 const path = require('path');
 
 exports.onCreateWebpackConfig = ({ actions }) => {
@@ -13,36 +14,43 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
-  const blogTemplate = path.resolve('src/templates/BlogTemplate/index.js');
-  const result = await graphql(`
+
+  const { data: { blogs } } = await graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-      ) {
+      blogs: allContentfulBlogPost {
         edges {
           node {
-            frontmatter {
-              path
-              type
-            }
+            slug
+            title
           }
         }
       }
     }
   `);
 
-  // Handle errors
-  if (result.errors) {
+  if (blogs.errors) {
     reporter.panicOnBuild('Error while running GraphQL query.');
     return;
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    if (node.frontmatter.type === 'blog') {
-      createPage({
-        component: blogTemplate,
-        path: node.frontmatter.path,
-      });
-    }
+  // Blog posts
+  blogs.edges.forEach(({ node }) => {
+    createPage({
+      component: path.resolve('./src/templates/Blog/index.js'),
+      context: {
+        slug: node.slug,
+      },
+      path: `/blogs/${node.slug}`,
+    });
   });
+
+  // // Generate cypress text fixture for Blog pages
+  // fs.writeFile(
+  //   `${__dirname}/cypress/fixtures/dynamic-pages/blog-pages.json`,
+  //   JSON.stringify(blogs.edges),
+  //   (err) => {
+  //     if (err) console.error(err);
+  //     else console.log('Blog page cypress fixtures have been created.');
+  //   },
+  // );
 };
