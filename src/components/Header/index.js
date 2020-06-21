@@ -41,6 +41,14 @@ const Header = () => (
         <NavItem className="px-4 py-2">
           <Link to="/the-list">The List</Link>
         </NavItem>
+        {
+          (process.env.RESUME === true)
+            ? (
+              <NavItem className="px-4 py-2">
+                <Link to="/resume">Resume</Link>
+              </NavItem>
+            ) : (null)
+        }
         <UncontrolledDropdown className="px-4 py-2" nav inNavbar>
           <DropdownToggle caret className="p-0 text-light" nav>Connect</DropdownToggle>
           <DropdownMenu right>

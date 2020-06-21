@@ -2,6 +2,8 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const excludedPages = () => ((process.env.RESUME === true) ? [] : ['/resume/']);
+
 module.exports = {
   siteMetadata: {
     title: 'Brandon W. Kipp',
@@ -27,6 +29,10 @@ module.exports = {
           },
         ],
       },
+    },
+    {
+      resolve: 'gatsby-plugin-exclude',
+      options: { paths: excludedPages() },
     },
     {
       resolve: 'gatsby-source-contentful',

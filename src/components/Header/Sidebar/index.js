@@ -18,6 +18,14 @@ const Sidebar = () => (
     <Link className="menu-item" to="/the-list">
       <h4>The List</h4>
     </Link>
+    {
+      (process.env.RESUME === true)
+        ? (
+          <Link className="menu-item" to="/resume">
+            <h4>Resume</h4>
+          </Link>
+        ) : (null)
+    }
     <Link className="menu-item" to="/blog">
       <h4>Contact</h4>
     </Link>
