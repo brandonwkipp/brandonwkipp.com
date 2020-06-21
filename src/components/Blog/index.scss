@@ -1,5 +1,5 @@
 .blog-post {
-  font-size: 1em;
+  font-size: 1.2em;
 
   &:nth-of-type(odd) {
     background-color: $white;//$pale-green;
@@ -16,6 +16,10 @@
       color: mediumvioletred;
     }
   }
+
+  .body {
+    width: 75%;
+  }
 }
 
 .blog-emphasis {
@@ -24,7 +28,7 @@
 
 @media (max-width: 768px) {
   .blog-post {
-    .post-body {
+    .body {
       width: 90%;
     }
   }

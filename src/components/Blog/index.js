@@ -62,7 +62,7 @@ const Blog = () => (
             <Card className="blog-post border-0 rounded-0" key={blog.node.title}>
               <h1 className="mt-3 text-center">{blog.node.title}</h1>
               <h5 className="text-center">{blog.node.date}</h5>
-              <div className="mb-3 mx-auto w-75">
+              <div className="body mb-1 mb-md-3 mx-auto">
                 {documentToReactComponents(blog.node.body.json, options)}
               </div>
             </Card>

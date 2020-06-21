@@ -34,7 +34,7 @@ const Header = () => (
           <h2 className="d-inline-block mb-0 text-light">Brandon W. Kipp</h2>
         </Link>
       </NavbarBrand>
-      <Nav className="ml-auto" navbar>
+      <Nav className="d-none d-md-flex ml-auto" navbar>
         <NavItem className="px-4 py-2">
           <Link to="/blog">Blog</Link>
         </NavItem>
