@@ -10,7 +10,6 @@ import HomeLogo from '../../images/noun_Music_1952166.svg';
 import GithubLogo from '../../images/icons/github-icon.png';
 import LinkedInLogo from '../../images/icons/linkedin-icon.png';
 import SoundCloudLogo from '../../images/icons/soundcloud-icon.png';
-import TwitterLogo from '../../images/icons/twitter-icon.png';
 
 import Sidebar from './Sidebar';
 
@@ -79,20 +78,6 @@ const Header = () => (
               />
               {' '}
               LinkedIn
-            </a>
-            <a
-              className="dropdown-item"
-              href="https://twitter.com/brandonwkipp"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <img
-                alt="Twitter Logo"
-                className="icon"
-                src={TwitterLogo}
-              />
-              {' '}
-              Twitter
             </a>
             <a
               className="dropdown-item"
