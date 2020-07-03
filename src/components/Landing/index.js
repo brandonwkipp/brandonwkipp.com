@@ -3,7 +3,6 @@ import { Col } from 'reactstrap';
 
 import KnobjectLogo from '../../images/knobject-js.png';
 import RaspbeatLogo from '../../images/raspbeat.png';
-import RadiumTreeBanner from '../../images/rt-banner-modified.jpg';
 
 import './index.scss';
 
@@ -61,28 +60,6 @@ const Landing = () => (
                 alt="Knobject"
                 id="knobjectLogo"
                 src={KnobjectLogo}
-              />
-            </div>
-          </a>
-        </div>
-      </div>
-      <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-        <div className="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-          <a
-            className="text-white"
-            href="https://radiumtr.ee"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <div className="my-3 p-3">
-              <h2 className="display-5">RadiumTree</h2>
-              <p className="lead">Music</p>
-            </div>
-            <div className="bg-white mx-auto shadow-sm mx-auto" id="radiumTreeImageContainer">
-              <img
-                alt="RT"
-                className="w-100"
-                src={RadiumTreeBanner}
               />
             </div>
           </a>
