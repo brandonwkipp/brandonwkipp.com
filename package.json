@@ -1,9 +1,7 @@
 {
+  "author": "Brandon W. Kipp <brandonwkipp@gmail.com>",
   "name": "brandonwkipp.com",
   "private": true,
-  "description": "A website by Brandon W. Kipp",
-  "version": "1.0.0",
-  "author": "Brandon W. Kipp <brandonwkipp@gmail.com>",
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "@contentful/rich-text-types": "^14.1.0",
@@ -19,7 +17,6 @@
     "gatsby": "^2.20.4",
     "gatsby-image": "^2.2.29",
     "gatsby-plugin-exclude": "^1.0.2",
-    "gatsby-plugin-less": "^3.0.12",
     "gatsby-plugin-manifest": "^2.2.23",
     "gatsby-plugin-offline": "^3.0.16",
     "gatsby-plugin-react-helmet": "^3.1.13",
@@ -33,7 +30,6 @@
     "gatsby-source-graphql": "^2.1.20",
     "gatsby-transformer-remark": "^2.6.30",
     "gatsby-transformer-sharp": "^2.2.23",
-    "less": "^3.10.3",
     "markdown-to-jsx": "^6.11.1",
     "moment": "^2.24.0",
     "moment-countdown": "^0.0.3",
@@ -49,30 +45,15 @@
   "devDependencies": {
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-react-app": "^5.0.2",
-    "prettier": "^1.18.2",
     "stylelint": "^13.3.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.0.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
-    "dev": "gatsby develop --port 4000",
     "develop": "gatsby develop --port 4000",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
-    "serve": "gatsby serve --port 4000",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "serve": "gatsby serve --port 4000"
   }
 }
