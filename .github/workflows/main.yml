@@ -1,2 +1,0 @@
-name: Contentful Migration Action
-  uses: contentful/contentful-action@v1
