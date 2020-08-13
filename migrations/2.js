@@ -1,5 +1,5 @@
 module.exports = function runMigration(migration) {
-  const dog = migration.editContentType('dog');
+  const dog = migration.addContentType('dog');
 
   dog
     .name('Friendly dog')

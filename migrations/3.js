@@ -1,5 +1,5 @@
 module.exports = function runMigration(migration) {
-  const neighbor = migration.editContentType('neighbor');
+  const neighbor = migration.addContentType('neighbor');
 
   neighbor
     .name('Loud machine')
