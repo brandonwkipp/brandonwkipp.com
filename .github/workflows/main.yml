@@ -28,3 +28,7 @@ jobs:
     
     - name: Contentful Migration Action
       uses: contentful/contentful-action@v1
+      env: # Set the secret as an input
+        SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+        MANAGEMENT_API_KEY: ${{ secrets.CONTENTFUL_MANAGEMENT_KEY }}
+        # MIGRATIONS_DIR: ${{ secrets.MIGRATIONS_DIR }}
