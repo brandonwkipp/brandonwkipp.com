@@ -72,10 +72,10 @@ const Resume = () => (
               <Col md={12}>
                 <h4>About Me</h4>
                 <p className="text-left">
-                  Experienced, self-taught, software engineer that is passionate about improving
-                  the lives of other people. I
-                  love overcoming technical hurdles. When I’m not changing the world through code, I
-                  am usually tinkering with Commodore 64 hardware, playing guitar, or building new
+                  Experienced, self-taught, software engineer that is passionate about
+                  improving the lives of other people. I love overcoming technical
+                  hurdles. When I’m not changing the world through code, I am usually
+                  tinkering with Commodore 64 hardware, playing guitar, or building new
                   things to help musicians in whatever way I can.
                 </p>
               </Col>
