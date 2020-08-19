@@ -9,18 +9,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Use Node.js 14
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
         with:
           node-version: 14.4.0
-
-      - name: Install yarn dependencies
-        uses: borales/actions-yarn@v2.0.0
+      - uses: borales/actions-yarn@v2.0.0
         with:
-          cmd: install # will run `yarn install` command
+          cmd: install
 
       - name: Build Gatsby site
         env:
