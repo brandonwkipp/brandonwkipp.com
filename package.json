@@ -6,7 +6,9 @@
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "@contentful/rich-text-types": "^14.1.0",
     "bootstrap": "^4.3.1",
+    "chalk": "^4.1.0",
     "countdown": "^2.6.0",
+    "depcheck": "^1.2.0",
     "dotenv": "^8.2.0",
     "eslint": "^6.5.1",
     "eslint-import-resolver-alias": "^1.1.2",
@@ -26,6 +28,7 @@
     "gatsby-source-filesystem": "^2.1.33",
     "gatsby-source-graphql": "^2.1.20",
     "gatsby-transformer-sharp": "^2.2.23",
+    "lodash": "^4.17.20",
     "moment": "^2.24.0",
     "moment-countdown": "^0.0.3",
     "node-sass": "^4.13.1",
@@ -38,17 +41,19 @@
     "reactstrap": "^8.0.1"
   },
   "devDependencies": {
+    "@babel/register": "^7.10.5",
     "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-react-app": "^5.0.2",
     "stylelint": "^13.3.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.0.0"
   },
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby clean && gatsby build",
+    "checkyarn": "echo \"$npm_execpath\" | grep -q \"yarn\\.js$\" || (echo '⚠️ Please use yarn instead of npm! ⚠️ ' && echo && exit 1)",
     "clean": "gatsby clean",
+    "depcheck": "node -r @babel/register scripts/depcheck.js",
     "develop": "gatsby develop --port 4000",
-    "start": "npm run develop",
+    "preinstall": "$npm_execpath --silent run checkyarn",
     "serve": "gatsby serve --port 4000"
   }
 }
