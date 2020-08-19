@@ -14,23 +14,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          // .. rest of the plugins
-          'gatsby-remark-copy-linked-files',
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 300,
-              quality: 90,
-              withWebp: true,
-            },
-          },
-        ],
-      },
-    },
-    {
       resolve: 'gatsby-plugin-exclude',
       options: { paths: excludedPages() },
     },

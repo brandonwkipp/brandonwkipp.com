@@ -1,4 +1,4 @@
-// const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
 
 exports.onCreateWebpackConfig = ({ actions }) => {
@@ -44,13 +44,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     });
   });
 
-  // // Generate cypress text fixture for Blog pages
-  // fs.writeFile(
-  //   `${__dirname}/cypress/fixtures/dynamic-pages/blog-pages.json`,
-  //   JSON.stringify(blogs.edges),
-  //   (err) => {
-  //     if (err) console.error(err);
-  //     else console.log('Blog page cypress fixtures have been created.');
-  //   },
-  // );
+  // Generate cypress text fixture for Blog pages
+  fs.writeFile(
+    `${__dirname}/cypress/fixtures/dynamic-pages/blogs.json`,
+    JSON.stringify(blogs.edges),
+    (err) => {
+      if (err) console.error(err);
+      else console.log('Blog page cypress fixtures have been created.');
+    },
+  );
 };
