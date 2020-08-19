@@ -15,7 +15,7 @@ jobs:
       - name: Use Node.js 12
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 12.0.0
 
       - name: Install yarn dependencies
         uses: borales/actions-yarn@v2.0.0
