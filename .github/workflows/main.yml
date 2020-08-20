@@ -25,9 +25,6 @@ jobs:
           CONTENTFUL_ENVIRONMENT: ${{ secrets.CONTENTFUL_ENVIRONMENT }}
           CONTENTFUL_HOST: ${{ secrets.CONTENTFUL_HOST }}
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: build # will run `yarn build` command
 
       - name: Validate AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
