@@ -17,12 +17,9 @@ jobs:
         with:
           node-version: '12.x'
 
-      - name: Install Yarn dependencies
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install
-
-      - name: Build Gatsby site
+      - run: yarn install
+      
+      - run: yarn build
         env:
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
           CONTENTFUL_ENVIRONMENT: ${{ secrets.CONTENTFUL_ENVIRONMENT }}
