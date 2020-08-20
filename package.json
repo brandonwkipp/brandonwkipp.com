@@ -5,6 +5,11 @@
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^14.1.1",
     "@contentful/rich-text-types": "^14.1.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-regular-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "bootstrap": "^4.3.1",
     "chalk": "^4.1.0",
     "countdown": "^2.6.0",
@@ -35,6 +40,8 @@
   },
   "devDependencies": {
     "@babel/register": "^7.10.5",
+    "cypress": "^5.0.0",
+    "cypress-axe": "^0.8.1",
     "eslint": "^6.5.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-import-resolver-alias": "^1.1.2",
@@ -42,16 +49,26 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
-    "node-sass": "^4.13.1"
+    "node-sass": "^4.13.1",
+    "yamljs": "^0.3.0"
   },
   "scripts": {
     "build": "gatsby clean && gatsby build",
     "checkyarn": "echo \"$npm_execpath\" | grep -q \"yarn\\.js$\" || (echo '⚠️ Please use yarn instead of npm! ⚠️ ' && echo && exit 1)",
     "clean": "gatsby clean",
+    "cy:gui-develop": "cypress open",
+    "cy:gui-deploy": "cypress open --env environment=deployment",
+    "cy:run-develop": "cypress run --env environment=development",
+    "cy:run-deploy": "cypress run --env environment=deployment",
     "depcheck": "node -r @babel/register scripts/depcheck.js",
     "develop": "gatsby develop --port 4000",
     "preinstall": "$npm_execpath --silent run checkyarn",
     "serve": "gatsby serve --port 4000",
-    "start": "gatsby develop"
+    "setup": "npm-run-all setup:*",
+    "setup:development": "cp -n env.example .env.development || true",
+    "setup:production": "cp -n env.example .env.production || true",
+    "start": "gatsby develop",
+    "test:develop": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test develop http://localhost:8000 cy:run-develop",
+    "test:deploy": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test serve http://localhost:9000 cy:run-deploy"
   }
 }

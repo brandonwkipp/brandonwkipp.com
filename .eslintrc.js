@@ -1,8 +1,12 @@
-  module.exports = {
+module.exports = {
   'extends': 'airbnb',
   'env': {
-    'browser': true
+    'browser': true,
+    'cypress/globals': true
   },
+  'plugins': [
+    'cypress'
+  ],
   'rules': {
     'react/jsx-filename-extension': [
       1,
@@ -18,7 +22,6 @@
     'import/resolver': {
       'alias': [
         ['@components', './src/components'],
-        ['@content', './src/content'],
       ]
     }
   }

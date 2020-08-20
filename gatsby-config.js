@@ -20,9 +20,9 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         host: process.env.CONTENTFUL_HOST,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
       },
     },
     {
@@ -30,20 +30,6 @@ module.exports = {
       options: {
         name: 'images',
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/content/blogs`,
-        name: 'blogs',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/content/shows`,
-        name: 'shows',
       },
     },
     'gatsby-plugin-react-helmet',
