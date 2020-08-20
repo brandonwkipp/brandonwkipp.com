@@ -1,4 +1,4 @@
-name: Deploy to AWS
+name: Deploy brandonwkipp.com to AWS
 
 on:
   push:
@@ -12,14 +12,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Use Node.js 14
+      - name: Use Node.js 12
         uses: actions/setup-node@v2.1.0
         with:
           node-version: '12.x'
 
-      - run: yarn install
+      - name: Install yarn dependencies
+        run: yarn install
       
-      - run: yarn build
+      - name: Build the Gatsby site
+        run: yarn build
         env:
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
           CONTENTFUL_ENVIRONMENT: ${{ secrets.CONTENTFUL_ENVIRONMENT }}
