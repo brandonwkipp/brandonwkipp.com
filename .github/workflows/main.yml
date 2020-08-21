@@ -1,4 +1,4 @@
-name: Deploy brandonwkipp.com to AWS
+name: Deploy brandonwkipp.com
 
 on:
   push:
