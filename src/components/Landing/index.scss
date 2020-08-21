@@ -1,21 +1,19 @@
 #landing {
   background: #E2FFD8;
+  text-align: center;
 }
 
 .project-image-container {
-  width: 80%;
-  height: 300px;
+  background: $white;
   border-radius: 21px 21px 0 0;
+  height: 300px;
+  margin: auto;
+  width: 80%;
 }
 
 #knobjectLogo {
   margin-top: 50px;
   height: 200px;
-}
-
-#radiumTreeImageContainer {
-  width: 80%;
-  border-radius: 21px 21px 0 0;
 }
 
 #raspbeatLogo {

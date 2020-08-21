@@ -10,16 +10,15 @@ const Show = (props) => {
     <div className="mb-3">
       <ListGroup>
         <ListGroupItem>
-          <ListGroupItemHeading>{node.artist}</ListGroupItemHeading>
-          <span className="d-inline-block w-100">{node.date}</span>
-          <span className="d-inline-block w-100">
-            {' '}
+          <h2>{node.artist}</h2>
+          <h3>{node.date}</h3>
+          <h3>
             {node.venue.name}
             {' '}
             (
             {node.venue.cityState}
             )
-          </span>
+          </h3>
           <hr />
           <span className="mb-0">
             {(node.description) ? documentToReactComponents(node.description.json) : null}

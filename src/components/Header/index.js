@@ -71,8 +71,11 @@ const Header = () => (
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <FontAwesomeIcon className="d-inline-block mr-3" icon={['fab', 'github']} />
-                  {' '}
+                  <FontAwesomeIcon
+                    aria-hidden
+                    className="d-inline-block mr-3"
+                    icon={['fab', 'github']}
+                  />
                   GitHub
                 </a>
                 <a
@@ -81,8 +84,11 @@ const Header = () => (
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <FontAwesomeIcon className="d-inline-block mr-3" icon={['fab', 'linkedin']} />
-                  {' '}
+                  <FontAwesomeIcon
+                    aria-hidden
+                    className="d-inline-block mr-3"
+                    icon={['fab', 'linkedin']}
+                  />
                   LinkedIn
                 </a>
                 <a
@@ -91,8 +97,11 @@ const Header = () => (
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <FontAwesomeIcon className="d-inline-block mr-3" icon={['fab', 'soundcloud']} />
-                  {' '}
+                  <FontAwesomeIcon
+                    aria-hidden
+                    className="d-inline-block mr-3"
+                    icon={['fab', 'soundcloud']}
+                  />
                   SoundCloud
                 </a>
               </DropdownMenu>

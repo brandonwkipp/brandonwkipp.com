@@ -24,14 +24,14 @@ const Footer = () => (
           <Col className="mb-0">
             <div className="mx-auto text-center">
               <img alt="Headshot" id="portrait" src={data.contentfulAsset.file.url} />
-              <h5>Brandon W. Kipp</h5>
-              <h6 className="mb-0">
+              <h4>Brandon W. Kipp</h4>
+              <h5 className="mb-0">
                 ©
                 {' '}
                 {moment().format('YYYY')}
                 {' '}
                 All rights reserved.
-              </h6>
+              </h5>
             </div>
           </Col>
         </Row>

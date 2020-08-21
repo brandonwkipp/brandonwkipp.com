@@ -35,7 +35,7 @@ const TheList = () => (
       <Container className="px-3" fluid id="theList">
         <Row>
           <Col className="mx-auto" md={6}>
-            <Card className="p-3">
+            <Card className="border-0 p-3 rounded-0">
               {data.allContentfulShow.edges.map((show) => (
                 <Show node={show.node} />
               ))}

@@ -1,4 +1,6 @@
 .blog-post {
+  border: 0;
+  border-radius: 0;
   font-size: 1.2em;
 
   &:nth-of-type(odd) {

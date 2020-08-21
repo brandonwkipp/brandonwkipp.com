@@ -12,6 +12,10 @@ body {
 body {
   background: $black;
 
+  h3 {
+    font-size: 1.1em;
+  }
+
   #___gatsby {
     height: 100%;
 
@@ -36,20 +40,6 @@ body {
   .icon {
     height: 25px;
     width: 25px;
-  }
-
-  .links {
-    color: $pale-red;
-    text-shadow: 1px 1px #888;
-  }
-
-  .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
   }
 
   .product-device {
@@ -99,10 +89,6 @@ body {
 }
 
 @media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-
   .flex-md-equal > * {
     -ms-flex: 1;
     flex: 1;

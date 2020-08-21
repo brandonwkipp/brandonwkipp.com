@@ -39,10 +39,7 @@ const Blog = () => (
               <Container className="my-5" fluid>
                 <Row>
                   <Col className="text-center">
-                    <img
-                      alt={title}
-                      src={url}
-                    />
+                    <img alt={title} src={url} />
                   </Col>
                 </Row>
                 <Row>
@@ -59,9 +56,9 @@ const Blog = () => (
       return (
         <>
           {data.allContentfulBlogPost.edges.map((blog) => (
-            <Card className="blog-post border-0 rounded-0" key={blog.node.title}>
-              <h1 className="mt-3 text-center">{blog.node.title}</h1>
-              <h5 className="text-center">{blog.node.date}</h5>
+            <Card className="blog-post" key={blog.node.title}>
+              <h2 className="mt-3 text-center">{blog.node.title}</h2>
+              <h3 className="text-center">{blog.node.date}</h3>
               <div className="body mb-1 mb-md-3 mx-auto">
                 {documentToReactComponents(blog.node.body.json, options)}
               </div>
