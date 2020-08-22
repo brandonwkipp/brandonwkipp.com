@@ -36,7 +36,7 @@ jobs:
           aws-region: us-east-1
 
       - name: Sync Gatsby build to S3
-        run: aws s3 sync ./build s3://${{ secrets.AWS_S3_BUCKET }}
+        run: aws s3 sync ./public/ s3://${{ secrets.AWS_S3_BUCKET }}
 
       - name: Invalidate Cloudfront
         run: |
