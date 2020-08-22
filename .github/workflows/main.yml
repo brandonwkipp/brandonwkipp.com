@@ -35,8 +35,12 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: Deploy to S3 Bucket
-        uses: jonelantha/gatsby-s3-action@v1
-        with:
-          dest-s3-bucket: ${{ secrets.AWS_S3_BUCKET }}
-          cloudfront-id-to-invalidate: ${{ secrets.AWS_CLOUDFRONT_ID }}
+      - name: Sync Gatsby build to S3
+        run: aws s3 sync ./build s3://${{ secrets.AWS_S3_BUCKET }}
+
+      - name: Invalidate Cloudfront
+        run: |
+          aws cloudfront
+          --create-invalidation
+          --distribution-id ${{ secrets.AWS_CLOUDFRONT_ID}}
+          --paths "/*"
