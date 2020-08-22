@@ -3,7 +3,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { StaticQuery, graphql } from 'gatsby';
 import React from 'react';
 import {
-  Card, Col, Container, Row,
+  Card, CardBody, CardTitle, Col, Container, Row,
 } from 'reactstrap';
 
 import './index.scss';
@@ -57,11 +57,13 @@ const Blog = () => (
         <>
           {data.allContentfulBlogPost.edges.map((blog) => (
             <Card className="blog-post" key={blog.node.title}>
-              <h2 className="mt-3 text-center">{blog.node.title}</h2>
-              <h3 className="text-center">{blog.node.date}</h3>
-              <div className="body mb-1 mb-md-3 mx-auto">
+              <CardTitle className="text-center">
+                <h2 className="mt-3">{blog.node.title}</h2>
+                <h3>{blog.node.date}</h3>
+              </CardTitle>
+              <CardBody className="mb-1 mb-md-3 mx-auto">
                 {documentToReactComponents(blog.node.body.json, options)}
-              </div>
+              </CardBody>
             </Card>
           ))}
         </>

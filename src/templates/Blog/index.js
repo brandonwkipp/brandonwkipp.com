@@ -28,9 +28,9 @@ export default function Template({ data }) {
   return (
     <Layout>
       <Header />
-      <Card className="blog-post border-0 rounded-0">
-        <h1 className="mt-3 text-center">{contentfulBlogPost.title}</h1>
-        <h6 className="text-center">{contentfulBlogPost.date}</h6>
+      <Card className="blog-post">
+        <h2 className="mt-3">{contentfulBlogPost.title}</h2>
+        <h3>{contentfulBlogPost.date}</h3>
         <div className="mb-3 mx-auto w-75">
           {documentToReactComponents(contentfulBlogPost.body.json)}
         </div>

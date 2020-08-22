@@ -1,10 +1,6 @@
 .navbar {
   background: $funeral-black;
 
-  .navbar-brand {
-    line-height: 48px;
-  }
-
   .navbar-brand h1 {
     vertical-align: middle;
   }
@@ -14,5 +10,16 @@
     border-radius: 4px;
     height: 48px;
     width: 74px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    .navbar-brand img {
+      background: cornsilk;
+      border-radius: 3px;
+      height: 30px;
+      width: 46px;
+    }
   }
 }

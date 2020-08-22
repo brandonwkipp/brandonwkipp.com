@@ -5,8 +5,8 @@ import { graphql, Link, StaticQuery } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import {
-  DropdownMenu, DropdownToggle, Nav, NavItem,
-  Navbar, UncontrolledDropdown,
+  DropdownMenu, DropdownToggle,
+  Nav, NavItem, Navbar, UncontrolledDropdown,
 } from 'reactstrap';
 
 import Sidebar from './Sidebar';
@@ -44,7 +44,12 @@ const Header = () => (
         <Sidebar />
         <Navbar className="navbar-dark sticky-top" expand="md">
           <Link className="navbar-brand" to="/">
-            <img alt="Home Button" className="mr-3" src={data.logo.file.url} />
+            <img
+              alt="Home Button"
+              aria-hidden
+              className="d-none d-md-inline-block mr-3"
+              src={data.logo.file.url}
+            />
             <h1 className="d-inline-block mb-0 text-light">Brandon W. Kipp</h1>
           </Link>
           <Nav className="d-none d-md-flex ml-auto" navbar>

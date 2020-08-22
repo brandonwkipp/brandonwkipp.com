@@ -1,7 +1,6 @@
 .blog-post {
   border: 0;
   border-radius: 0;
-  font-size: 1.2em;
 
   &:nth-of-type(odd) {
     background-color: $white;//$pale-green;
@@ -19,19 +18,19 @@
     }
   }
 
-  .body {
-    width: 75%;
+  .card-body {
+    font-family: Inter var, sans-serif;
+    font-size: 1rem;
+    line-height: 1.9;
+    width: 30%;
   }
-}
-
-.blog-emphasis {
-  font-weight: bolder !important;
 }
 
 @media (max-width: 768px) {
   .blog-post {
-    .body {
-      width: 90%;
+    .card-body {
+      padding: 0 2em;
+      width: 100%;
     }
   }
 }

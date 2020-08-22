@@ -10,3 +10,13 @@
     width: 85px;
   }
 }
+
+@media (max-width: 768px) {
+  #footerContainer {
+    #portrait {
+      height: 65px;
+      width: 65px;
+    }
+  }
+}
+

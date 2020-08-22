@@ -10,8 +10,6 @@ body {
 }
 
 body {
-  background: $black;
-
   h3 {
     font-size: 1.1em;
   }
@@ -74,17 +72,25 @@ body {
   }
 }
 
-.component-wrapper {
-  width: calc(100% - 150px);
-}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.45em;
+  }
 
-.default-cursor {
-  cursor: default;
-}
+  h2 {
+    font-size: 1.35em;
+  }
 
-@media (max-width: 991px) {
-  .component-wrapper {
-    width: 100%;
+  h3 {
+    font-size: .9em;
+  }
+
+  h4 {
+    font-size: .9em;
+  }
+
+  h5 {
+    font-size: .85em;
   }
 }
 
@@ -92,24 +98,5 @@ body {
   .flex-md-equal > * {
     -ms-flex: 1;
     flex: 1;
-  }
-
-  #portrait {
-    height: 65px;
-    width: 65px;
-  }
-}
-
-@media only screen and (max-width: 568px) and (orientation: landscape) {
-  #portrait {
-    height: 55px !important;
-    width: 55px !important;
-  }
-}
-
-@media only screen and (max-width: 360px) and (orientation: portrait) {
-  #portrait {
-    height: 55px !important;
-    width: 55px !important;
   }
 }
