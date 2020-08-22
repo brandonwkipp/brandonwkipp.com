@@ -22,6 +22,7 @@ module.exports = {
     'import/resolver': {
       'alias': [
         ['@components', './src/components'],
+        ['@utils', './src/utils'],
       ]
     }
   }
