@@ -1,4 +1,4 @@
-name: Deploy brandonwkipp.com
+name: Deploy
 
 on:
   push:
@@ -12,10 +12,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Use Node.js 12
-        uses: actions/setup-node@v2.1.0
+      - name: Use Node.js 14
+        uses: actions/setup-node@v1.4.4
         with:
-          node-version: '12.x'
+          node-version: '14.x'
 
       - name: Install yarn dependencies
         run: yarn install
@@ -24,8 +24,8 @@ jobs:
         run: yarn build
         env:
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
-          CONTENTFUL_ENVIRONMENT: ${{ secrets.CONTENTFUL_ENVIRONMENT }}
-          CONTENTFUL_HOST: ${{ secrets.CONTENTFUL_HOST }}
+          CONTENTFUL_ENVIRONMENT: master
+          CONTENTFUL_HOST: cdn.contentful.com
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
 
       - name: Validate AWS Credentials
@@ -36,7 +36,7 @@ jobs:
           aws-region: us-east-1
 
       - name: Sync Gatsby build to S3
-        run: aws s3 sync ./public/ s3://${{ secrets.AWS_S3_BUCKET }}
+        run: aws s3 sync ./public/ s3://brandonwkipp.com
 
       - name: Invalidate Cloudfront
         run: |
