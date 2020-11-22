@@ -54,7 +54,7 @@ const Landing = () => (
           </Col>
           <Col className="bg-dark mr-md-3 px-3 px-md-5">
             <a
-              href="https://brandonwkipp.github.io/knobject-js"
+              href="https://brandonwkipp.github.io/knobject/"
               rel="noopener noreferrer"
               target="_blank"
             >
