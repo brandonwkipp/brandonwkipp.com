@@ -12,10 +12,34 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   });
 };
 
-exports.createPages = async ({ actions, graphql, reporter }) => {
+exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  const { data: { blogs } } = await graphql(`
+  const createFromTemplate = (entries, prefix, template, type) => {
+    entries.forEach(({ node }) => {
+      if (node.slug) {
+        createPage({
+          component: path.resolve(template),
+          context: {
+            slug: node.slug,
+          },
+          path: `${prefix}/${node.slug}`,
+        });
+
+        // Generate cypress text fixture for Blog pages
+        fs.writeFile(
+          `${__dirname}/cypress/fixtures/dynamic-pages/${type}.json`,
+          JSON.stringify(entries),
+          (err) => {
+            if (err) console.error(err);
+            else console.log(`${type} cypress fixtures have been created.`);
+          },
+        );
+      }
+    });
+  };
+
+  const { data: { blogs, pages } } = await graphql(`
     {
       blogs: allContentfulBlogPost {
         edges {
@@ -25,32 +49,30 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
+
+      pages: allContentfulPage {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
     }
   `);
 
-  if (blogs.errors) {
-    reporter.panicOnBuild('Error while running GraphQL query.');
-    return;
-  }
-
   // Blog posts
-  blogs.edges.forEach(({ node }) => {
-    createPage({
-      component: path.resolve('./src/templates/Blog/index.js'),
-      context: {
-        slug: node.slug,
-      },
-      path: `/blogs/${node.slug}`,
-    });
-  });
+  createFromTemplate(
+    blogs.edges,
+    '/blog',
+    './src/templates/Blog/index.js',
+    'blogPost',
+  );
 
-  // Generate cypress text fixture for Blog pages
-  fs.writeFile(
-    `${__dirname}/cypress/fixtures/dynamic-pages/blogs.json`,
-    JSON.stringify(blogs.edges),
-    (err) => {
-      if (err) console.error(err);
-      else console.log('Blog page cypress fixtures have been created.');
-    },
+  // Pages
+  createFromTemplate(
+    pages.edges,
+    '',
+    './src/templates/Page/index.js',
+    'page',
   );
 };

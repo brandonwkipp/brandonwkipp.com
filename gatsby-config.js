@@ -2,7 +2,10 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const excludedPages = () => ((process.env.RESUME === true) ? [] : ['/resume/']);
+const excludedPages = () => (
+  (Boolean(process.env.SHOW_RESUME) === true)
+    ? ['/time/', '/the-list/'] : ['/resume/']
+);
 
 module.exports = {
   siteMetadata: {
@@ -23,6 +26,12 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         host: process.env.CONTENTFUL_HOST,
         spaceId: process.env.CONTENTFUL_SPACE_ID,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: 'src/utils/typography',
       },
     },
     'gatsby-plugin-react-helmet',
@@ -47,8 +56,5 @@ module.exports = {
         ],
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 };
