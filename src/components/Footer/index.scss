@@ -1,22 +1,18 @@
-#footerContainer {
+.footer {
   background: $funeral-black;
+  color: $white;
+  height: $footer-height-md;
 
-  #portrait {
-    background-size: contain;
-    border: 2px solid #000;
-    border-radius: 100%;
-    height: 85px;
-    margin: auto;
-    width: 85px;
+  h4 {
+    color: $white;
   }
+
+  p {
+    margin-bottom: 0;
+  }
+
 }
 
 @media (max-width: 768px) {
-  #footerContainer {
-    #portrait {
-      height: 65px;
-      width: 65px;
-    }
-  }
 }
 

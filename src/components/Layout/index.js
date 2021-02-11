@@ -1,12 +1,21 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import React from 'react';
 
-const Layout = ({ children }) => (
-  <div>{children}</div>
+import './index.scss';
+
+const Layout = ({ bg, children }) => (
+  <div className={`layout ${bg}`}>
+    {children}
+  </div>
 );
 
+Layout.defaultProps = {
+  bg: '',
+};
+
 Layout.propTypes = {
-  children: propTypes.arrayOf(propTypes.element).isRequired,
+  bg: PropTypes.string,
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };
 
 export default Layout;

@@ -1,8 +1,4 @@
-main.landing {
+main.page {
   height: calc(100% - #{$navbar-height-md} - #{$footer-height-md});
   text-align: center;
-
-  .jumbotron {
-    background: transparent;
-  }
 }

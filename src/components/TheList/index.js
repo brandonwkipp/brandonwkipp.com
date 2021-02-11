@@ -16,7 +16,7 @@ const SHOWS = graphql`
           artist
           date(formatString: "MMMM Do, YYYY")
           description {
-            json
+            raw
           }
           venue {
             cityState

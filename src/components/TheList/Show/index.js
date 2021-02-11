@@ -1,27 +1,30 @@
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import propTypes from 'prop-types';
+import { renderRichText } from 'gatsby-source-contentful/rich-text';
+import PropTypes from 'prop-types';
 import React from 'react';
-import { ListGroup, ListGroupItem, ListGroupItemHeading } from 'reactstrap';
+import { ListGroup, ListGroupItem } from 'reactstrap';
 
 const Show = (props) => {
   const { node } = props;
+  const {
+    artist, date, description, venue,
+  } = node;
 
   return (
     <div className="mb-3">
       <ListGroup>
         <ListGroupItem>
-          <h2>{node.artist}</h2>
-          <h3>{node.date}</h3>
+          <h2>{artist}</h2>
+          <h3>{date}</h3>
           <h3>
-            {node.venue.name}
+            {venue.name}
             {' '}
             (
-            {node.venue.cityState}
+            {venue.cityState}
             )
           </h3>
           <hr />
           <span className="mb-0">
-            {(node.description) ? documentToReactComponents(node.description.json) : null}
+            {(description) ? renderRichText(description) : null}
           </span>
         </ListGroupItem>
       </ListGroup>
@@ -30,7 +33,7 @@ const Show = (props) => {
 };
 
 Show.propTypes = {
-  node: propTypes.objectOf(propTypes.any).isRequired,
+  node: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 export default Show;
