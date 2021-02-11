@@ -1,20 +1,24 @@
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { graphql } from 'gatsby';
-import propTypes from 'prop-types';
+import { renderRichText } from 'gatsby-source-contentful/rich-text';
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Card } from 'reactstrap';
 
 import Footer from '@components/Footer';
 import Header from '@components/Header';
 import Layout from '@components/Layout';
+import rendererOptions from '@utils/renderer-options';
 
 import '@components/Blog/index.scss';
 
 export const PAGE_QUERY = graphql`
   query($slug: String!) {
-    contentfulBlogPost(slug: { eq: $slug } ) {
+    blog: contentfulBlogPost(slug: { eq: $slug } ) {
       body {
-        json
+        raw
+        references {
+          ...BlogMediaAsset
+        }
       }
       date(formatString: "MMMM Do, YYYY")
       title
@@ -23,16 +27,17 @@ export const PAGE_QUERY = graphql`
 `;
 
 export default function Template({ data }) {
-  const { contentfulBlogPost } = data;
+  const { blog } = data;
+  const { body, date, title } = blog;
 
   return (
     <Layout>
       <Header />
       <Card className="blog-post">
-        <h2 className="mt-3">{contentfulBlogPost.title}</h2>
-        <h3>{contentfulBlogPost.date}</h3>
+        <h2 className="mt-3">{title}</h2>
+        <h3>{date}</h3>
         <div className="mb-3 mx-auto w-75">
-          {documentToReactComponents(contentfulBlogPost.body.json)}
+          {renderRichText(body, rendererOptions)}
         </div>
       </Card>
       <Footer />
@@ -41,5 +46,5 @@ export default function Template({ data }) {
 }
 
 Template.propTypes = {
-  data: propTypes.objectOf(propTypes.object).isRequired,
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
 };

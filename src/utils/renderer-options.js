@@ -2,12 +2,30 @@ import { BLOCKS, INLINES } from '@contentful/rich-text-types';
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
 
-// Options object to pass into documentToReactComponents
 const rendererOptions = {
-  // Ensure line breaks are converted to html.
-  renderText: (text1) => text1.split('\n').flatMap((text2, i) => [i > 0 && <br />, text2]),
   renderNode: {
-    // Render embedded images from richText fields
+    // Render embedded images from RichText fields
+    [BLOCKS.EMBEDDED_ENTRY]: (node) => {
+      const { data: { target: { caption, media } } } = node;
+
+      return (
+        <Container className="text-center" fluid>
+          <Row>
+            <Col>
+              <img
+                alt={media.title}
+                className="w-100"
+                src={media.file.url}
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col>{caption}</Col>
+          </Row>
+        </Container>
+      );
+    },
+    // Render embedded images within RichText fields
     [INLINES.HYPERLINK]: (node) => {
       if (node.data.uri.indexOf('youtube.com') !== -1) {
         return (
@@ -29,28 +47,9 @@ const rendererOptions = {
         <a href={node.data.uri}>{node.content[0].value}</a>
       );
     },
-    // Render embedded images from richText fields
-    [BLOCKS.EMBEDDED_ENTRY]: (node) => {
-      const { data: { target } } = node;
-
-      const { caption, media } = target.fields;
-      const alt = media['en-US'].fields.title['en-US'];
-      const { url } = media['en-US'].fields.file['en-US'];
-
-      return (
-        <Container className="text-center" fluid>
-          <Row>
-            <Col>
-              <img alt className="w-100" src={url} />
-            </Col>
-          </Row>
-          <Row>
-            <Col>{caption['en-US']}</Col>
-          </Row>
-        </Container>
-      );
-    },
   },
+  // Ensure line breaks are converted to html
+  renderText: (text1) => text1.split('\n').flatMap((text2, i) => [i > 0 && <br />, text2]),
 };
 
 export default rendererOptions;

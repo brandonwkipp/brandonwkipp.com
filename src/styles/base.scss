@@ -1,7 +1,6 @@
 html,
 body {
   background: $funeral-black;
-  font-family: lucida console, lucida-console-w01, monospace;
   font-size: 1em;
   height: 100%;
   margin: 0;
@@ -38,37 +37,6 @@ body {
   .icon {
     height: 25px;
     width: 25px;
-  }
-
-  .product-device {
-    background-color: #333;
-    border-radius: 21px;
-    bottom: -30%;
-    height: 540px;
-    position: absolute;
-    right: 10%;
-    -webkit-transform: rotate(30deg);
-    transform: rotate(30deg);
-    width: 300px;
-
-    &::before {
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 5px;
-      bottom: 10%;
-      content: "";
-      left: 10px;
-      position: absolute;
-      right: 10px;
-      top: 10%;
-    }
-  }
-
-  .product-device-2 {
-    background-color: #e5e5e5;
-    bottom: 0;
-    left: 5%;
-    right: auto;
-    top: -25%;
   }
 }
 
