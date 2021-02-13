@@ -17,12 +17,12 @@ export const PAGE_QUERY = graphql`
   }
 `;
 
-export default function PageTemplate({ data }) {
+export default function PageTemplate({ data, location }) {
   const { page } = data;
 
   return (
     <Layout bg="bg-landing">
-      <Header />
+      <Header location={location} />
       <Page data={page} />
       <Footer />
     </Layout>
@@ -31,4 +31,7 @@ export default function PageTemplate({ data }) {
 
 PageTemplate.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
 };

@@ -20,7 +20,7 @@ const Footer = () => (
                   Brandon W. Kipp
                 </p>
                 <p>
-                  To get in touch, please send an email to
+                  To get in touch, please send me an email at
                   {' '}
                   <u>
                     <a href="mailto:brandonwkipp@gmail.com">brandonwkipp@gmail.com</a>
