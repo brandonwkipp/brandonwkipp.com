@@ -22,7 +22,7 @@ const Header = (props) => {
         <meta name="theme-color" content="#e2ffd8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Helmet>
-      <Sidebar />
+      <Sidebar pathname={pathname} />
       <nav>
         <Navbar className="navbar-dark sticky-top" expand="md">
           <Link className="navbar-brand" to="/">

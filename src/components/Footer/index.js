@@ -6,7 +6,7 @@ import './index.scss';
 
 const Footer = () => (
   <footer role="contentinfo">
-    <Container className="footer py-5" fluid>
+    <Container className="footer py-md-5 py-3" fluid>
       <Row>
         <Col>
           <Container className="p-0">
@@ -28,8 +28,8 @@ const Footer = () => (
                 </p>
               </Col>
               <Col md={1} />
-              <Col>
-                <Container>
+              <Col md={6} xs={12}>
+                <Container className="mt-3 px-0" fluid>
                   <Row>
                     <Col>
                       <h4>Music</h4>

@@ -6,3 +6,25 @@ main.landing {
     background: transparent;
   }
 }
+
+@media screen and (max-width: 991px) {
+  main.landing {  
+    .container {
+      max-width: 95%;
+
+      .jumbotron {
+        margin-bottom: 0;
+        padding-bottom: 15px;
+        padding-top: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+  main.landing {  
+    .jumbotron {
+      margin-bottom: 0;
+    }
+  }
+}

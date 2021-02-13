@@ -1,8 +1,8 @@
 .bm-burger-button {
-  height: 30px;
+  color: $white;
+  height: $navbar-height-md;
   position: fixed;
   right: 12px;
-  top: 12px;
   visibility: hidden;
   width: 36px;
   z-index: 1030 !important;
@@ -19,15 +19,14 @@
 }
 
 .bm-cross-button {
-  height: 24px;
-  width: 24px;
+  display: none;
 }
 
 .bm-item-list {
   padding: 0.8em;
 
   .menu-item {
-    color: #fff;
+    color: $white;
     outline: none;
 
     &:hover {

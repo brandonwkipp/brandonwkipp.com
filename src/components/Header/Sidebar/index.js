@@ -1,35 +1,27 @@
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
 
 import './index.scss';
 
-const Sidebar = () => (
-  <Menu className="text-light" width={280}>
-    <Link className="menu-item" to="/#">
-      <h4>Home</h4>
-    </Link>
-    <Link className="menu-item" to="/#projects">
-      <h4>Projects</h4>
-    </Link>
-    <Link className="menu-item" to="/blog">
-      <h4>Blog</h4>
-    </Link>
-    <Link className="menu-item" to="/the-list">
-      <h4>The List</h4>
-    </Link>
-    {
-      (process.env.RESUME === true)
-        ? (
-          <Link className="menu-item" to="/resume">
-            <h4>Resume</h4>
-          </Link>
-        ) : (null)
-    }
-    <Link className="menu-item" to="/blog">
-      <h4>Contact</h4>
-    </Link>
+const Sidebar = ({ pathname }) => (
+  <Menu
+    customBurgerIcon={(
+      <FontAwesomeIcon icon={faBars} />
+    )}
+    width={280}
+  >
+    {(pathname !== '/') ? <Link to="/">Home</Link> : null}
+    {(pathname !== '/blog') ? <Link to="/blog">Blog</Link> : null}
+    {(pathname !== '/about') ? <Link to="/about">About</Link> : null}
   </Menu>
 );
+
+Sidebar.propTypes = {
+  pathname: PropTypes.string.isRequired,
+};
 
 export default Sidebar;

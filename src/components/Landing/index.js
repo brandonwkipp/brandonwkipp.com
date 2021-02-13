@@ -15,8 +15,8 @@ const Landing = () => (
       <Jumbotron className="d-flex align-items-center justify-content-center">
         <h2 className="mb-0">Web Developer | Musician</h2>
       </Jumbotron>
-      <Row id="projects" className="d-md-flex flex-md-equal no-gutters mt-md-3 pl-md-3">
-        <Col>
+      <Row className="mt-md-3 no-gutters">
+        <Col md={4} sm={4} xs={6}>
           <LandingCard
             icon={<FontAwesomeIcon icon={faBookOpen} />}
             title="Blog"
@@ -24,7 +24,7 @@ const Landing = () => (
             url="/blog"
           />
         </Col>
-        <Col>
+        <Col md={4} sm={4} xs={6}>
           <LandingCard
             icon={<FontAwesomeIcon icon={faCode} />}
             title="Code"
@@ -32,7 +32,7 @@ const Landing = () => (
             url="https://github.com/brandonwkipp"
           />
         </Col>
-        <Col>
+        <Col md={4} sm={4} xs={6}>
           <LandingCard
             icon={<FontAwesomeIcon icon={faIdCard} />}
             title="Resume"

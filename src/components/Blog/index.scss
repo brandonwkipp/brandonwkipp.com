@@ -1,36 +1,33 @@
-.blog-post {
-  border: 0;
-  border-radius: 0;
+.blog {
+  .card {
+    background-color: aliceblue;
+    border: 0;
+    border-radius: 0;
 
-  &:nth-of-type(odd) {
-    background-color: $white;//$pale-green;
-  }
+    .card-body {
+      font-size: 1rem;
+      letter-spacing: 0.4px;
+      line-height: 1.8;
+      width: 55%;
 
-  &:nth-of-type(even) {
-    background-color: aliceblue;//$pale-dark-green;
-  }
-
-  a {
-    color: mediumvioletred;
-
-    &:hover {
-      color: mediumvioletred;
+      a {
+        color: mediumvioletred;
+    
+        &:hover {
+          color: mediumvioletred;
+        }
+      }
     }
-  }
-
-  .card-body {
-    font-size: 1rem;
-    letter-spacing: 0.4px;
-    line-height: 1.8;
-    width: 45%;
   }
 }
 
 @media (max-width: 768px) {
-  .blog-post {
-    .card-body {
-      padding: 0 2em;
-      width: 100%;
+  .blog {
+    .card {
+      .card-body {
+        padding: 0 2em;
+        width: 100%;
+      }
     }
   }
 }

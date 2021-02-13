@@ -1,7 +1,10 @@
 import { StaticQuery, graphql } from 'gatsby';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
 import React from 'react';
-import { Card, CardBody, CardTitle } from 'reactstrap';
+import {
+  Card, CardBody, CardTitle,
+  Col, Container, Row,
+} from 'reactstrap';
 import { v4 as uuidv4 } from 'uuid';
 
 import rendererOptions from '@utils/renderer-options';
@@ -31,23 +34,27 @@ const Blog = () => (
   <StaticQuery
     query={BLOG_POSTS}
     render={(data) => (
-      <>
-        {data.blogs.edges.map(({ node }) => {
-          const { body, date, title } = node;
+      <Container className="blog">
+        <Row>
+          <Col>
+            {data.blogs.edges.map(({ node }) => {
+              const { body, date, title } = node;
 
-          return (
-            <Card className="blog-post" key={uuidv4()}>
-              <CardTitle className="text-center">
-                <h2 className="mt-3">{title}</h2>
-                <h3>{date}</h3>
-              </CardTitle>
-              <CardBody className="mb-1 mb-md-3 mx-auto">
-                {renderRichText(body, rendererOptions)}
-              </CardBody>
-            </Card>
-          );
-        })}
-      </>
+              return (
+                <Card key={uuidv4()}>
+                  <CardTitle className="text-center">
+                    <h2 className="mt-3">{title}</h2>
+                    <h3>{date}</h3>
+                  </CardTitle>
+                  <CardBody className="mb-1 mb-md-3 mx-auto">
+                    {renderRichText(body, rendererOptions)}
+                  </CardBody>
+                </Card>
+              );
+            })}
+          </Col>
+        </Row>
+      </Container>
     )}
   />
 );
