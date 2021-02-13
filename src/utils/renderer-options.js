@@ -14,7 +14,7 @@ const rendererOptions = {
             <Col>
               <img
                 alt={media.title}
-                className="w-100"
+                className="mb-0 w-100"
                 src={media.file.url}
               />
             </Col>
