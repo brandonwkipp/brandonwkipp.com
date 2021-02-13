@@ -38,18 +38,18 @@ exports.createPages = async ({ actions, graphql }) => {
           },
           path: `${prefix}/${node.slug}`,
         });
-
-        // Generate cypress text fixture for Blog pages
-        fs.writeFile(
-          `${__dirname}/cypress/fixtures/dynamic-pages/${type}.json`,
-          JSON.stringify(entries),
-          (err) => {
-            if (err) console.error(err);
-            else console.log(`${type} cypress fixtures have been created.`);
-          },
-        );
       }
     });
+
+    // Generate cypress text fixture for Blog pages
+    fs.writeFile(
+      `${__dirname}/cypress/fixtures/dynamic-pages/${type}.json`,
+      JSON.stringify(entries),
+      (err) => {
+        if (err) console.error(err);
+        else console.log(`${type} cypress fixtures have been created.`);
+      },
+    );
   };
 
   const { data: { blogs, pages } } = await graphql(`
