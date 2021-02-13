@@ -26,14 +26,14 @@ export const PAGE_QUERY = graphql`
   }
 `;
 
-export default function Template({ data }) {
+export default function Template({ data, location }) {
   const { blog } = data;
   const { body, date, title } = blog;
 
   return (
     <Layout>
-      <Header />
-      <Card className="blog-post">
+      <Header location={location} />
+      <Card>
         <h2 className="mt-3">{title}</h2>
         <h3>{date}</h3>
         <div className="mb-3 mx-auto w-75">
@@ -47,4 +47,7 @@ export default function Template({ data }) {
 
 Template.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
 };

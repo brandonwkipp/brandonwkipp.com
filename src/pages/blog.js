@@ -7,7 +7,7 @@ import Header from '@components/Header';
 import Layout from '@components/Layout';
 
 const BlogPage = ({ location }) => (
-  <Layout>
+  <Layout bg="bg-resume">
     <Header location={location} />
     <Blog />
     <Footer />
