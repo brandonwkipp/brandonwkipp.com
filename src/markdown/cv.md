@@ -9,9 +9,9 @@ A place for everyone to turn on the science, inspire learning, inform policy, an
   - Managed and monitored uptime on AWS and GCP cloud-based infrastructure
   - Collaborated with shop on interactive exhibits with multiple departments
   
-  **_Technologies used:_** React, Gatsby, GraphQL, Cypress, Electron, Express.js, Github Actions, AWS, GCP, Terraform, REST, Ansible, C++
+**_Technologies used:_** React, Gatsby, GraphQL, Cypress, Electron, Express.js, Github Actions, AWS, GCP, Terraform, REST, Ansible, C++
 
-  **_Selected open-source work:_**
+**_Selected open-source work:_**
   - [app-template](https://github.com/scimusmn/app-template), boilerplate template for creating new exhibit apps
   - [arduino-base](https://github.com/scimusmn/arduino-base), a curated Arduino library for use in exhibit microcontrollers
   - [stele](https://github.com/scimusmn/stele), an exhibit kiosk browser built for museum environments
@@ -22,7 +22,7 @@ Professional event management service helping nonprofits raise millions for thos
   - Refactored internal codebases, helping to serve both external clients and internal teams
   - Produced hundreds of customized templates, including website themes, PDFs, and event-related materials
   
-  **_Technologies used:_** PHP, Java, PSQL, Swagger, GWT, REST, HTML, CSS, JavaScript
+**_Technologies used:_** PHP, Java, PSQL, Swagger, GWT, REST, HTML, CSS, JavaScript
 
 ## 🎧 Audio Engineering Experience
 
