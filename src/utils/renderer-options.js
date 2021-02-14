@@ -1,9 +1,23 @@
 import { BLOCKS, INLINES } from '@contentful/rich-text-types';
+import Img from 'gatsby-image';
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
 
 const rendererOptions = {
   renderNode: {
+    [BLOCKS.EMBEDDED_ASSET]: (node) => {
+      const { data: { target } } = node;
+
+      if (target) {
+        // eslint-disable-next-line
+        const { contentful_id, fluid, __typename } = target;
+
+        // eslint-disable-next-line
+        return <Img className={`${__typename}${contentful_id}`} fluid={fluid} />;
+      }
+
+      return null;
+    },
     // Render embedded images from RichText fields
     [BLOCKS.EMBEDDED_ENTRY]: (node) => {
       const { data: { target: { caption, media } } } = node;

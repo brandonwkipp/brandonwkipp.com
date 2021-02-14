@@ -12,6 +12,9 @@ export const PAGE_QUERY = graphql`
     page: contentfulPage(slug: { eq: $slug }) {
       body {
         raw
+        references {
+          ...ProfilePhoto
+        }
       }
     }
   }
@@ -21,7 +24,7 @@ export default function PageTemplate({ data, location }) {
   const { page } = data;
 
   return (
-    <Layout bg="bg-landing">
+    <Layout bg="bg-resume">
       <Header location={location} />
       <Page data={page} />
       <Footer />

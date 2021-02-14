@@ -1,4 +1,15 @@
 main.page {
   height: calc(100% - #{$navbar-height-md} - #{$footer-height-md});
   text-align: center;
+
+  .container {
+    background: aliceblue;
+    min-height: 650px;
+
+    .ContentfulAsset5SvfDx2D4zYjaxUxQt8oKI {
+      border-radius: 100%;
+      margin: 0 auto 15px;
+      width: 250px;
+    }
+  }
 }

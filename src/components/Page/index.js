@@ -14,7 +14,7 @@ const Page = (props) => {
     <main className="page">
       <Container className="py-5">
         <Row>
-          <Col>
+          <Col className="mx-5 px-5 text-left">
             {renderRichText(body, rendererOptions)}
           </Col>
         </Row>
