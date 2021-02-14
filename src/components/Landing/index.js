@@ -20,7 +20,7 @@ const Landing = () => (
           <LandingCard
             icon={<FontAwesomeIcon icon={faBookOpen} />}
             title="Blog"
-            tagline="My latest thoughts"
+            tagline="My thoughts"
             url="/blog"
           />
         </Col>
@@ -28,7 +28,7 @@ const Landing = () => (
           <LandingCard
             icon={<FontAwesomeIcon icon={faCode} />}
             title="Code"
-            tagline="Hacking all the way to a virtual"
+            tagline="My work"
             url="https://github.com/brandonwkipp"
           />
         </Col>
@@ -36,7 +36,7 @@ const Landing = () => (
           <LandingCard
             icon={<FontAwesomeIcon icon={faIdCard} />}
             title="Resume"
-            tagline="adfsd"
+            tagline="My trajectory"
             url="/resume"
           />
         </Col>
