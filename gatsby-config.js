@@ -2,7 +2,7 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const excludedPages = ['/time/', '/the-list/'];
+const excludedPages = ['/the-list/', '/time/'];
 
 module.exports = {
   siteMetadata: {
