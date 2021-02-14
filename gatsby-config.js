@@ -2,10 +2,7 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const excludedPages = () => (
-  (Boolean(process.env.SHOW_RESUME) === true)
-    ? ['/time/', '/the-list/'] : ['/resume/']
-);
+const excludedPages = ['/time/', '/the-list/'];
 
 module.exports = {
   siteMetadata: {
@@ -18,7 +15,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-exclude',
-      options: { paths: excludedPages() },
+      options: { paths: excludedPages },
     },
     {
       resolve: 'gatsby-source-contentful',
