@@ -1,11 +1,14 @@
-.blog {
-  .card {
+main.blog {
+  .container {
     background-color: aliceblue;
+  }
+
+  .card {
+    background: transparent;
     border: 0;
     border-radius: 0;
 
     .card-body {
-      font-size: 1rem;
       letter-spacing: 0.4px;
       line-height: 1.8;
       width: 55%;
@@ -22,7 +25,7 @@
 }
 
 @media (max-width: 768px) {
-  .blog {
+  main.blog {
     .card {
       .card-body {
         padding: 0 2em;

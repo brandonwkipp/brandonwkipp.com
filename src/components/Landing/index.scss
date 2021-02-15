@@ -23,6 +23,8 @@ main.landing {
 
 @media screen and (max-width: 736px) {
   main.landing {  
+    height: auto;
+    
     .jumbotron {
       margin-bottom: 0;
     }

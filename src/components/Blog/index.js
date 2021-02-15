@@ -41,27 +41,31 @@ const Blog = () => (
   <StaticQuery
     query={BLOG_POSTS}
     render={(data) => (
-      <Container className="blog">
-        <Row>
-          <Col>
-            {data.blogs.edges.map(({ node }) => {
-              const { body, date, title } = node;
+      <main className="blog">
+        <Container>
+          <Row>
+            <Col md={2} />
+            <Col>
+              {data.blogs.edges.map(({ node }) => {
+                const { body, date, title } = node;
 
-              return (
-                <Card key={uuidv4()}>
-                  <CardTitle className="text-center">
-                    <h2 className="mt-3">{title}</h2>
-                    <h3>{date}</h3>
-                  </CardTitle>
-                  <CardBody className="mb-1 mb-md-3 mx-auto">
-                    {renderRichText(body, rendererOptions)}
-                  </CardBody>
-                </Card>
-              );
-            })}
-          </Col>
-        </Row>
-      </Container>
+                return (
+                  <Card key={uuidv4()}>
+                    <CardTitle className="text-center">
+                      <h2 className="mt-3">{title}</h2>
+                      <h3>{date}</h3>
+                    </CardTitle>
+                    <CardBody className="mb-1 mb-md-3 mx-auto">
+                      {renderRichText(body, rendererOptions)}
+                    </CardBody>
+                  </Card>
+                );
+              })}
+            </Col>
+            <Col md={2} />
+          </Row>
+        </Container>
+      </main>
     )}
   />
 );

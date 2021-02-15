@@ -23,8 +23,8 @@ const Header = (props) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Helmet>
       <Sidebar pathname={pathname} />
-      <nav>
-        <Navbar className="navbar-dark sticky-top" expand="md">
+      <nav className="sticky-top">
+        <Navbar className="navbar-dark" expand="md">
           <Link className="navbar-brand" to="/">
             <h1 className="mb-0 text-light">
               Brandon W. Kipp

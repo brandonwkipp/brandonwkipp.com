@@ -1,16 +1,19 @@
-.navbar {
-  background: $funeral-black;
-  height: $navbar-height-md;
+nav {
 
-  .navbar-brand h1 {
-    vertical-align: middle;
-  }
+  .navbar {
+    background: $funeral-black;
+    height: $navbar-height-md;
 
-  .navbar-brand img {
-    background: cornsilk;
-    border-radius: 4px;
-    height: 48px;
-    width: 74px;
+    .navbar-brand h1 {
+      vertical-align: middle;
+    }
+
+    .navbar-brand img {
+      background: cornsilk;
+      border-radius: 4px;
+      height: 48px;
+      width: 74px;
+    }
   }
 }
 
