@@ -12,11 +12,13 @@ const Page = (props) => {
 
   return (
     <main className="page">
-      <Container className="py-5">
+      <Container className="py-3">
         <Row>
-          <Col className="px-5 text-left">
+          <Col md={2} />
+          <Col className="text-left">
             {renderRichText(body, rendererOptions)}
           </Col>
+          <Col md={2} />
         </Row>
       </Container>
     </main>
