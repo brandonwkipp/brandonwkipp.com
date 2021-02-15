@@ -11,7 +11,7 @@ main.blog {
     .card-body {
       letter-spacing: 0.4px;
       line-height: 1.8;
-      width: 55%;
+      max-width: 500px;
 
       a {
         color: mediumvioletred;
@@ -24,8 +24,12 @@ main.blog {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   main.blog {
+    .container {
+      max-width: 100%;
+    }
+
     .card {
       .card-body {
         padding: 0 2em;

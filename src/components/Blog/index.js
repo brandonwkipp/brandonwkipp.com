@@ -23,7 +23,7 @@ const BLOG_POSTS = graphql`
               ... on ContentfulAsset {
                 contentful_id
                 __typename
-                fluid(maxWidth: 300, quality: 100) {
+                fluid(maxWidth: 500, quality: 100) {
                   ...GatsbyContentfulFluid_withWebp
                 }
               }
@@ -55,7 +55,7 @@ const Blog = () => (
                       <h2 className="mt-3">{title}</h2>
                       <h3>{date}</h3>
                     </CardTitle>
-                    <CardBody className="mb-1 mb-md-3 mx-auto">
+                    <CardBody className="mb-1 mb-md-3 mx-auto px-0">
                       {renderRichText(body, rendererOptions)}
                     </CardBody>
                   </Card>
