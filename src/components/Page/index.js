@@ -15,8 +15,10 @@ const Page = (props) => {
       <Container className="py-3">
         <Row>
           <Col md={2} />
-          <Col className="text-left">
-            {renderRichText(body, rendererOptions)}
+          <Col>
+            <div className="body mx-auto">
+              {renderRichText(body, rendererOptions)}
+            </div>
           </Col>
           <Col md={2} />
         </Row>
