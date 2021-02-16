@@ -2,11 +2,6 @@
   "name": "brandonwkipp.com",
   "private": true,
   "author": "Brandon W. Kipp <brandonwkipp@gmail.com>",
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint"
-    }
-  },
   "scripts": {
     "build": "gatsby clean && gatsby build",
     "checkyarn": "echo \"$npm_execpath\" | grep -q \"yarn\\.js$\" || (echo '⚠️ Please use yarn instead of npm! ⚠️ ' && echo && exit 1)",
@@ -18,15 +13,20 @@
     "depcheck": "node -r @babel/register scripts/depcheck.js",
     "develop": "gatsby develop --port 4000",
     "fetch:cv": "node scripts/fetch-cv.js",
+    "preinstall": "$npm_execpath --silent run checkyarn",
+    "postinstall": "npm-run-all setup && node_modules/.bin/sort-package-json && yarn depcheck",
     "lint": "npm-run-all lint:*",
     "lint:code": "node_modules/.bin/eslint .",
     "lint:style": "node_modules/.bin/stylelint \"**/*.{*css,js}\"",
-    "preinstall": "$npm_execpath --silent run checkyarn",
-    "postinstall": "npm-run-all setup && node_modules/.bin/sort-package-json && yarn depcheck",
     "serve": "gatsby serve --port 4000",
     "setup": "npm-run-all setup:*",
     "setup:development": "cp -n env.example .env.development || true",
     "setup:production": "cp -n env.example .env.production || true"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
   },
   "dependencies": {
     "@contentful/rich-text-types": "^14.1.1",
@@ -80,6 +80,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
+    "gatsby-cypress-endpoints": "^0.0.6",
     "gatsby-plugin-eslint": "^2.0.8",
     "husky": "^4.2.5",
     "lodash": "^4.17.20",
