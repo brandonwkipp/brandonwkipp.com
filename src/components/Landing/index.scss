@@ -8,7 +8,7 @@ main.landing {
 }
 
 @media screen and (max-width: 991px) {
-  main.landing {  
+  main.landing {
     .container {
       max-width: 95%;
 
@@ -22,9 +22,9 @@ main.landing {
 }
 
 @media screen and (max-width: 736px) {
-  main.landing {  
+  main.landing {
     height: auto;
-    
+
     .jumbotron {
       margin-bottom: 0;
     }

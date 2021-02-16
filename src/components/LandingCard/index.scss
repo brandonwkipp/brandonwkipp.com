@@ -1,8 +1,8 @@
 .landing-card {
-  animation-name: shadow-color;
   animation-direction: alternate;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+  animation-name: shadow-color;
   animation-timing-function: linear;
   background: $white;
   border-radius: 21px;
@@ -24,30 +24,25 @@
 }
 
 @keyframes shadow-color {
-  0% {box-shadow: aqua 4px 4px;}
-  100% {box-shadow: cornflowerblue 4px 4px;}
+  0% { box-shadow: aqua 4px 4px; }
+  100% { box-shadow: cornflowerblue 4px 4px; }
 }
 
 @media screen and (max-width: 991px) {
   .landing-card {
     height: 195px;
     width: 90%;
-  
+
     .image-container {
       height: initial;
       width: 100%;
-  
+
       svg {
         font-size: 50px;
-        margin-top: 0px;
+        margin-top: 0;
         max-height: 120px;
       }
     }
-  }
-}
-
-@media screen and (max-width: 736px) {
-  .landing-card {
   }
 }
 
@@ -58,14 +53,14 @@
     .card-body {
       padding: 10px 0 0;
     }
-  
+
     .image-container {
       height: initial;
     }
   }
 
   @keyframes shadow-color {
-    0% {box-shadow: aqua 2px 2px;}
-    100% {box-shadow: cornflowerblue 2px 2px;}
+    0% { box-shadow: aqua 2px 2px; }
+    100% { box-shadow: cornflowerblue 2px 2px; }
   }
 }
