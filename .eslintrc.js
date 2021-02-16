@@ -1,29 +1,29 @@
 module.exports = {
-  'extends': 'airbnb',
-  'env': {
-    'browser': true,
-    'cypress/globals': true
+  extends: 'airbnb',
+  env: {
+    browser: true,
+    'cypress/globals': true,
   },
-  'plugins': [
-    'cypress'
+  plugins: [
+    'cypress',
   ],
-  'rules': {
+  rules: {
     'react/jsx-filename-extension': [
       1,
       {
-        'extensions': [
+        extensions: [
           '.js',
-          '.jsx'
-        ]
-      }
-    ]
+          '.jsx',
+        ],
+      },
+    ],
   },
-  'settings': {
+  settings: {
     'import/resolver': {
-      'alias': [
+      alias: [
         ['@components', './src/components'],
         ['@utils', './src/utils'],
-      ]
-    }
-  }
+      ],
+    },
+  },
 };
