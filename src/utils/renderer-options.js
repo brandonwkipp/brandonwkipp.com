@@ -1,5 +1,5 @@
 import { BLOCKS, INLINES } from '@contentful/rich-text-types';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
 
@@ -13,7 +13,7 @@ const rendererOptions = {
         const { contentful_id, fluid, __typename } = target;
 
         // eslint-disable-next-line
-        return <Img className={`${__typename}${contentful_id}`} fluid={fluid} />;
+        return <GatsbyImage className={`${__typename}${contentful_id}`} image={getImage(node.data.target.gatsbyImageData)} />;
       }
 
       return null;

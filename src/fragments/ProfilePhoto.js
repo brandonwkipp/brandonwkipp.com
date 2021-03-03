@@ -6,9 +6,12 @@ export const ProfilePhoto = graphql`
     ... on ContentfulAsset {
       contentful_id
       __typename
-      fluid(maxWidth: 300, quality: 100) {
-        ...GatsbyContentfulFluid_withWebp
-      }
+      gatsbyImageData(
+        formats: [AUTO, WEBP]
+        layout: FIXED
+        quality: 100
+        width: 250
+      )
     }
   }
 `;

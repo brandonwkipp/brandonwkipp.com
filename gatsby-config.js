@@ -6,11 +6,12 @@ const excludedPages = ['/the-list/', '/time/'];
 
 module.exports = {
   siteMetadata: {
-    title: 'Brandon W. Kipp',
-    description: 'Kick off your next, great Gatsby project with this default starter.',
     author: 'Brandon W. Kipp',
+    description: '',
+    title: 'Brandon W. Kipp',
   },
   plugins: [
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -47,10 +48,12 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        data: `@import "${__dirname}/src/styles/variables";`,
-        includePaths: [
-          'src/components',
-        ],
+        additionalData: `@import "${__dirname}/src/styles/variables";`,
+        sassOptions: {
+          includePaths: [
+            'src/components',
+          ],
+        },
       },
     },
   ],
