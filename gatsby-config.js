@@ -7,7 +7,6 @@ const excludedPages = ['/the-list/', '/time/'];
 module.exports = {
   siteMetadata: {
     author: 'Brandon W. Kipp',
-    description: '',
     title: 'Brandon W. Kipp',
   },
   plugins: [
