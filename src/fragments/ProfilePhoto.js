@@ -9,7 +9,7 @@ export const ProfilePhoto = graphql`
       gatsbyImageData(
         formats: [AUTO, WEBP]
         layout: FIXED
-        quality: 100
+        quality: 50
         width: 250
       )
     }
