@@ -14,7 +14,7 @@
     "develop": "gatsby develop --port 4000",
     "fetch:cv": "node scripts/fetch-cv.js",
     "preinstall": "$npm_execpath --silent run checkyarn",
-    "postinstall": "npm-run-all setup && node_modules/.bin/sort-package-json && yarn depcheck",
+    "postinstall": "npm-run-all setup && node_modules/.bin/sort-package-json && yarn depcheck && husky install",
     "lint": "npm-run-all lint:*",
     "lint:code": "node_modules/.bin/eslint .",
     "lint:style": "node_modules/.bin/stylelint \"**/*.{*css,js}\"",
@@ -25,7 +25,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn lint"
+      "pre-commit": "yarn lint"
     }
   },
   "dependencies": {
