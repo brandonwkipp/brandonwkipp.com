@@ -7,10 +7,12 @@ export const BlogMediaAsset = graphql`
       contentful_id
       caption
       media {
-        file {
-          contentType
-          url
-        }
+        gatsbyImageData(
+          formats: [AUTO, WEBP]
+          layout: CONSTRAINED
+          quality: 100
+          width: 500
+        )
         title
       }
     }

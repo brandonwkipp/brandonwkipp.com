@@ -20,13 +20,6 @@ const BLOG_POSTS = graphql`
             raw
             references {
               ...BlogMediaAsset
-              ... on ContentfulAsset {
-                contentful_id
-                __typename
-                fluid(maxWidth: 500, quality: 100) {
-                  ...GatsbyContentfulFluid_withWebp
-                }
-              }
             }
           }
           date(formatString: "MMMM Do, YYYY")

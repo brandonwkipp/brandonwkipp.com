@@ -1,3 +1,4 @@
+/* eslint camelcase: 0 */
 import { BLOCKS, INLINES } from '@contentful/rich-text-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
@@ -9,16 +10,18 @@ const rendererOptions = {
       const { data: { target } } = node;
 
       if (target) {
-        // eslint-disable-next-line
-        const { contentful_id, fluid, __typename } = target;
+        const { contentful_id, __typename } = target;
 
-        // eslint-disable-next-line
-        return <GatsbyImage className={`${__typename}${contentful_id}`} image={getImage(node.data.target.gatsbyImageData)} />;
+        return (
+          <GatsbyImage
+            className={`${__typename}${contentful_id}`}
+            image={getImage(node.data.target.gatsbyImageData)}
+          />
+        );
       }
 
       return null;
     },
-    // Render embedded images from RichText fields
     [BLOCKS.EMBEDDED_ENTRY]: (node) => {
       const { data: { target: { caption, media } } } = node;
 
@@ -26,16 +29,18 @@ const rendererOptions = {
         <Container className="text-center" fluid>
           <Row>
             <Col>
-              <img
+              <GatsbyImage
                 alt={media.title}
                 className="mb-0 w-100"
-                src={media.file.url}
+                image={getImage(media)}
               />
             </Col>
           </Row>
-          <Row>
-            <Col>{caption}</Col>
-          </Row>
+          {caption && (
+            <Row>
+              <Col>{caption}</Col>
+            </Row>
+          )}
         </Container>
       );
     },
