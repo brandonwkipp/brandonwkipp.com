@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ actions, getConfig, stage }) => {
   actions.setWebpackConfig({
     module: {
       rules: [
@@ -29,6 +29,19 @@ exports.onCreateWebpackConfig = ({ actions }) => {
       },
     },
   });
+
+  if (stage === 'develop' || stage === 'build-javascript') {
+    const config = getConfig();
+    const miniCssExtractPlugin = config.plugins.find(
+      (plugin) => plugin.constructor.name === 'MiniCssExtractPlugin',
+    );
+
+    if (miniCssExtractPlugin) {
+      miniCssExtractPlugin.options.ignoreOrder = true;
+    }
+
+    actions.replaceWebpackConfig(config);
+  }
 };
 
 exports.createPages = async ({ actions, graphql }) => {
