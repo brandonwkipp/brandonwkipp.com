@@ -1,12 +1,12 @@
 ## 👨‍💻 Technical Experience
 
-**Full Stack Developer** @ [Science Museum of Minnesota](https://smm.org/) _(Mar 2019–Present)_
+**Full Stack Developer** @ [Science Museum of Minnesota](https://smm.org/) _(Mar 2019–Present)_<br/>
 A place for everyone to turn on the science, inspire learning, inform policy, and improve lives.
   - User experience design, feature development, and CI/CD pipeline automation of the main [website](https://smm.org/)
   - React application & Arduino development for interactive museum exhibits around the world
   - Data source unification of discrete backend APIs & other sources under a single GraphQL gateway
   - Infrastructure provisioning and management on both Amazon Web Services and the Google Cloud Platform
-  - CMS (Contentful) integration and migration scripting to enable new Marketing department
+  - CMS (Contentful) integration and migration scripting
 
 **_Technologies used:_** React, Gatsby, GraphQL, Cypress, Electron, Express.js, Apollo GraphQL, Docker, Github Actions, AWS, GCP, Terraform, Arduino
 
@@ -15,9 +15,9 @@ A place for everyone to turn on the science, inspire learning, inform policy, an
   - [arduino-base](https://github.com/scimusmn/arduino-base), a curated Arduino library for enabling rapid prototyping and serial communication between React applications and microcontrollers
   - [stele](https://github.com/scimusmn/stele), a kiosk browser built to safely house exhibit applications
 ___
-**Junior Developer** @ [Auction Harmony](https://www.auctionharmony.com/) _(Aug 2016–Mar 2019)_
+**Junior Developer** @ [Auction Harmony](https://www.auctionharmony.com/) _(Aug 2016–Mar 2019)_<br/>
 Professional event management service helping nonprofits raise millions for those in need.
-  - Developed new features for the in-house CRM product to help to manage external clients' fundraising events
+  - Developed new features for the in-house CRM product to help manage external clients' fundraising events
   - Administrated physical network infrastructure for high-traffic fundraising events at offsite locations
   - Produced hundreds of customized templates, including website themes, PDFs, and event-related materials
 
@@ -25,17 +25,18 @@ Professional event management service helping nonprofits raise millions for thos
 ___
 ## 🎧 Audio Engineering Experience
 
-**Operations Manager** @ [Maple Tree Studio](https://www.beloit.edu/celeb/recording-studio/) _(Sep 2013–May 2016)_
-**Audio Engineer** @ [Maple Tree Studio](https://www.beloit.edu/celeb/recording-studio/) _(Sep 2011–May 2016)_
+**Operations Manager** @ [Maple Tree Studio](https://www.beloit.edu/celeb/recording-studio/) _(Sep 2013–May 2016)_<br/>
+**Audio Engineer** @ [Maple Tree Studio](https://www.beloit.edu/celeb/recording-studio/) _(Sep 2011–May 2016)_<br/>
 ___
-## 💬 Languages
+## 💬 Communication
 
-**English**: Native
+**Languages**: English (Native)<br/>
+**Timezone**: UTC−06:00 (CST) /	UTC−05:00 (CDT)
 ___
 ## 🧑‍🎓 Education
 
-**Madison Media Institute** - Madison, Wisconsin _(Sep 2011–Feb 2013)_
+**Madison Media Institute** - Madison, Wisconsin _(Sep 2011–Feb 2013)_<br/>
 _Associate of Applied Science_, Recording & Music Technology
 
-**[Beloit College](https://www.beloit.edu/)** - Beloit, Wisconsin _(2009–2011)_
+**[Beloit College](https://www.beloit.edu/)** - Beloit, Wisconsin _(2009–2011)_<br/>
 Studied Music Theory & Composition
