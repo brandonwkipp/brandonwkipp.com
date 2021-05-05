@@ -32,19 +32,7 @@ const Footer = () => (
                 <Container className="mt-3 px-0" fluid>
                   <Row>
                     <Col>
-                      <h4>Music</h4>
-                      <p>
-                        <a
-                          href="https://soundcloud.com/brandonwkipp/tracks"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          Soundcloud
-                        </a>
-                      </p>
-                    </Col>
-                    <Col>
-                      <h4>Connect</h4>
+                      <h4>Connect with me</h4>
                       <p>
                         <a
                           href="https://github.com/brandonwkipp"
