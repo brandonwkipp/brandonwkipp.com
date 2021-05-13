@@ -2,13 +2,13 @@
 
 **Full Stack Developer** @ [Science Museum of Minnesota](https://smm.org/) _(Mar 2019–Present)_<br/>
 A place for everyone to turn on the science, inspire learning, inform policy, and improve lives.
-  - User experience design, feature development, and CI/CD pipeline automation of the main [website](https://smm.org/)
+  - User experience design, feature development, & accessibility compliance on the main [website](https://smm.org/)
   - React application & Arduino development for interactive museum exhibits around the world
-  - Data source unification of discrete backend APIs & other sources under a single GraphQL gateway
-  - Infrastructure provisioning and management on both Amazon Web Services and the Google Cloud Platform
-  - CMS (Contentful) integration and migration scripting
+  - REST / GraphQL API and serverless application development
+  - Infrastructure provisioning, end-to-end testing, and CI/CD pipeline automation
+  - CMS integration, data modeling, schema customization, and migration scripting
 
-**_Technologies used:_** React, Gatsby, GraphQL, Cypress, Electron, Express.js, Apollo GraphQL, Docker, Github Actions, AWS, GCP, Terraform, Arduino
+**_Technologies used:_** React, Gatsby, GraphQL, Cypress, Contentful, Electron, Express.js, Apollo GraphQL, Docker, Github Actions, AWS, GCP, Terraform, Arduino
 
 **_Selected open-source work:_**
   - [app-template](https://github.com/scimusmn/app-template), a boilerplate GatsbyJS project for creating new exhibit applications
