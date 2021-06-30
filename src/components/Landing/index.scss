@@ -23,6 +23,9 @@ main.landing {
 
 @media screen and (max-width: 736px) {
   main.landing {
+    height: auto;
+    min-height: calc(100% - #{$navbar-height-md} - #{$footer-height-md});
+
     .jumbotron {
       margin-bottom: 0;
     }
