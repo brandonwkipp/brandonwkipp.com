@@ -3,12 +3,12 @@
 **Full Stack Developer** @ [Science Museum of Minnesota](https://smm.org/) _(Mar 2019–Present)_<br/>
 A place for everyone to turn on the science, inspire learning, inform policy, and improve lives.
   - User experience design, feature development, & accessibility compliance on the main [website](https://smm.org/)
-  - React application & Arduino development for interactive museum exhibits around the world
+  - React SPA development & Arduino development for interactive museum exhibits around the world
   - REST / GraphQL API and serverless application development
   - Infrastructure provisioning, end-to-end testing, and CI/CD pipeline automation
   - CMS integration, data modeling, schema customization, and migration scripting
 
-**_Technologies used:_** React, Gatsby, GraphQL, Cypress, Contentful, Electron, Express.js, Apollo GraphQL, Docker, Github Actions, AWS, GCP, Terraform, Arduino
+**_Technologies used:_** Node.js, React, Gatsby, GraphQL, Apollo, Cypress, Contentful, Electron, Express.js, Docker, Github Actions, AWS, GCP, Terraform, Arduino
 
 **_Selected open-source work:_**
   - [app-template](https://github.com/scimusmn/app-template), a boilerplate GatsbyJS project for creating new exhibit applications
@@ -17,9 +17,9 @@ A place for everyone to turn on the science, inspire learning, inform policy, an
 ___
 **Junior Developer** @ [Auction Harmony](https://www.auctionharmony.com/) _(Aug 2016–Mar 2019)_<br/>
 Professional event management service helping nonprofits raise millions for those in need.
-  - Developed new features for the in-house CRM product to help manage external clients' fundraising events
-  - Administrated physical network infrastructure for high-traffic fundraising events at offsite locations
-  - Produced hundreds of customized templates, including website themes, PDFs, and event-related materials
+  - Cross-browser, responsive SaaS application development with a focus on User Experience
+  - Network administration and troubleshooting for high-traffic fundraising events
+  - Produced hundreds of customized templates including website themes, PDFs, and event-related materials
 
 **_Technologies used:_** PHP, Java, PSQL, Swagger, GWT, REST, HTML, CSS, JavaScript
 ___
