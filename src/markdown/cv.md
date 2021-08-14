@@ -1,6 +1,6 @@
 ## 👨‍💻 Technical Experience
 
-**Full Stack Developer** @ [Science Museum of Minnesota](https://smm.org/) _(Mar 2019–Present)_<br/>
+**Full Stack Developer** @ [Science Museum of Minnesota](https://smm.org/) _(Mar 2019–Aug 2021)_<br/>
 A place for everyone to turn on the science, inspire learning, inform policy, and improve lives.
   - User experience design, feature development, & accessibility compliance on the main [website](https://smm.org/)
   - React SPA development & Arduino development for interactive museum exhibits around the world
