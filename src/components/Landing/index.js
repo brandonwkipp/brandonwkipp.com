@@ -13,7 +13,7 @@ const Landing = () => (
   <main className="landing">
     <Container className="p-0">
       <Jumbotron className="d-flex align-items-center justify-content-center">
-        <h2 className="mb-0">Web Developer | Musician</h2>
+        <h2 className="mb-0">Full Stack Developer | Musician</h2>
       </Jumbotron>
       <Row className="mt-md-3 no-gutters">
         <Col md={4} sm={4} xs={6}>
