@@ -10,7 +10,6 @@
     "cy:gui-develop": "cypress open --env environment=development",
     "cy:run-deploy": "cypress run --env environment=deployment",
     "cy:run-develop": "cypress run --env environment=development",
-    "depcheck": "node -r @babel/register scripts/depcheck.js",
     "develop": "gatsby develop --port 4000",
     "fetch:cv": "node scripts/fetch-cv.js",
     "preinstall": "$npm_execpath --silent run checkyarn",
@@ -68,10 +67,6 @@
   },
   "devDependencies": {
     "@babel/register": "^7.12.13",
-    "chalk": "^4.1.0",
-    "cypress": "^5.6.0",
-    "cypress-axe": "^0.10.0",
-    "depcheck": "^1.3.1",
     "eslint": "^7.8.1",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-import-resolver-alias": "^1.1.2",
@@ -84,16 +79,15 @@
     "gatsby-plugin-eslint": "^2.0.8",
     "husky": "^5.1.3",
     "lodash": "^4.17.20",
-    "node-sass": "^4.14.1",
+    "node-sass": "^6.0.1",
     "npm-run-all": "^4.1.5",
     "sort-package-json": "^1.48.1",
     "stylelint": "^13.7.0",
     "stylelint-config-standard": "^20.0.0",
-    "stylelint-order": "^4.1.0",
-    "yamljs": "^0.3.0"
+    "stylelint-order": "^4.1.0"
   },
   "engines": {
-    "node": ">=14.15.5"
+    "node": ">=16.13.0"
   },
   "engineStrict": true
 }

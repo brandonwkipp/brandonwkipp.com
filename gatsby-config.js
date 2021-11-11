@@ -2,7 +2,7 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const excludedPages = ['/the-list/', '/time/'];
+const excludedPages = ['/the-list/'];
 
 module.exports = {
   siteMetadata: {
@@ -38,8 +38,8 @@ module.exports = {
         name: 'gatsby-starter-default',
         short_name: 'starter',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#e2ffd8',
+        theme_color: '#e2ffd8',
         display: 'minimal-ui',
         icon: 'src/images/puzzle.png',
       },

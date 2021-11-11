@@ -1,4 +1,3 @@
-const fs = require('fs');
 const path = require('path');
 
 exports.onCreateWebpackConfig = ({ actions, getConfig, stage }) => {
@@ -47,7 +46,7 @@ exports.onCreateWebpackConfig = ({ actions, getConfig, stage }) => {
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  const createFromTemplate = (entries, prefix, template, type) => {
+  const createFromTemplate = (entries, prefix, template) => {
     entries.forEach(({ node }) => {
       if (node.slug) {
         createPage({
@@ -59,16 +58,6 @@ exports.createPages = async ({ actions, graphql }) => {
         });
       }
     });
-
-    // Generate cypress text fixture for Blog pages
-    fs.writeFile(
-      `${__dirname}/cypress/fixtures/dynamic-pages/${type}.json`,
-      JSON.stringify(entries),
-      (err) => {
-        if (err) console.error(err);
-        else console.log(`${type} cypress fixtures have been created.`);
-      },
-    );
   };
 
   const { data: { blogs, pages } } = await graphql(`
@@ -92,19 +81,7 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `);
 
-  // Blog posts
-  createFromTemplate(
-    blogs.edges,
-    '/blog',
-    './src/templates/Blog/index.js',
-    'blogPost',
-  );
-
-  // Pages
-  createFromTemplate(
-    pages.edges,
-    '',
-    './src/templates/Page/index.js',
-    'page',
-  );
+  // Create pages from templates
+  createFromTemplate(blogs.edges, '/blog', './src/templates/Blog/index.js');
+  createFromTemplate(pages.edges, '', './src/templates/Page/index.js');
 };

@@ -1,7 +1,0 @@
-invalid:
-  # missing @ symbol and alpha characters
-  - 12345834909182347
-  # apostrophe after @ symbol
-  - dunkindonuts@dun'kin.com
-  # sql injection
-  - <?php echo "AND 1=1

@@ -1,5 +1,0 @@
-invalid:
-  # no alpha characters
-  - 12345
-  # has non-alpha characters
-  - <?php echo "AND 1=1
