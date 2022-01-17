@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "./src",
+    "checkJs": false,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "paths": {
+      "@components/*": [
+        "components/*"
+      ],
+      "@fragments/*": [
+        "fragments/*"
+      ],
+      "@markdown/*": [
+        "markdown/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ]
+    },
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext"
+  },
+  "include": [
+    "*.js",
+    "**/*.js",
+    "**/*.ts",
+    "**/*.tsx",
+    ".eslintrc.js",
+    "scripts/.eslintrc.js"
+  ],
+  "exclude": [
+    ".cache/*",
+    "node_modules/*",
+    "public/*"
+  ]
+}

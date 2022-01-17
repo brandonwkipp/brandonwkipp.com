@@ -1,26 +1,49 @@
 module.exports = {
-  extends: [
-    'airbnb',
-    'plugin:jsx-a11y/strict',
-  ],
   env: {
     browser: true,
-    'cypress/globals': true,
+    node: true,
   },
+  extends: [
+    'airbnb-typescript',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:jsx-a11y/strict',
+    'plugin:react/recommended',
+  ],
   ignorePatterns: [
     'public/*',
   ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+    project: ['tsconfig.json'],
+  },
   plugins: [
-    'cypress',
+    '@typescript-eslint',
+    'import',
+    'react-hooks',
   ],
   rules: {
-    'import/no-extraneous-dependencies': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 0,
+    '@typescript-eslint/no-use-before-define': ['error'],
+    '@typescript-eslint/no-var-requires': 0,
+    'import/no-extraneous-dependencies': 0,
+    'import/no-unresolved': 0,
+    'linebreak-style': ['error', 'unix'],
+    'no-use-before-define': 0,
+    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/rules-of-hooks': 'error',
     'react/jsx-filename-extension': [
       1,
       {
         extensions: [
           '.js',
           '.jsx',
+          '.ts',
+          '.tsx',
         ],
       },
     ],
@@ -29,8 +52,13 @@ module.exports = {
     'import/resolver': {
       alias: [
         ['@components', './src/components'],
+        ['@markdown', './src/markdown'],
         ['@utils', './src/utils'],
       ],
+    },
+    // Tells eslint-plugin-react to automatically detect the version of React to use
+    react: {
+      version: 'detect',
     },
   },
 };
