@@ -5,14 +5,16 @@ import Header from '@components/Header';
 import Layout from '@components/Layout';
 import TheList from '@components/TheList';
 
-const TheListPage = () => (
-  <>
-    <Layout>
-      <Header />
-      <TheList />
-      <Footer />
-    </Layout>
-  </>
+interface PageProps {
+  location: Location;
+}
+
+const TheListPage = ({ location }: PageProps) => (
+  <Layout>
+    <Header location={location} />
+    <TheList />
+    <Footer />
+  </Layout>
 );
 
 export default TheListPage;
