@@ -1,1 +1,2 @@
-Hello
+# brandonwkipp.com
+This repository contains the code to build my personal website. I really enjoy using the Gatsby framework; to me, it's the best static website generator out there. The outputs of the build process are automatically deployed, via Github Actions, to an AWS S3 bucket and cached on AWS CloudFront.
