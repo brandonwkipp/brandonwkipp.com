@@ -5,7 +5,7 @@ import { Spinner } from 'reactstrap';
 import './index.scss';
 
 const TimeLeft = () => {
-  const [time, setTime] = useState(null);
+  const [time, setTime] = useState('');
 
   useEffect(() => {
     const interval = setInterval(() => {
