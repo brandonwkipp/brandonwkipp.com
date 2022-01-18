@@ -18,7 +18,7 @@ const LandingCard = ({ icon, tagline, title, url }: LandingCardProps) => {
         <h2 className="text-light">{title}</h2>
       </CardHeader>
       <CardBody>
-        <h3 className="text-light">{tagline}</h3>
+        <p className="text-light">{tagline}</p>
         <div className="image-container">
           {(icon) || null}
         </div>

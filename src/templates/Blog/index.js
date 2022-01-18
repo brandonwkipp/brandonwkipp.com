@@ -35,7 +35,7 @@ export default function Template({ data, location }) {
       <Header location={location} />
       <Card>
         <h2 className="mt-3">{title}</h2>
-        <h3>{date}</h3>
+        <p>{date}</p>
         <div className="mb-3 mx-auto w-75">
           {renderRichText(body, rendererOptions)}
         </div>

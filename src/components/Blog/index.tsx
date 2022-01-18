@@ -53,7 +53,7 @@ const Blog = () => (
                 <Card key={id}>
                   <CardTitle className="text-center">
                     <h2 className="mt-3">{title}</h2>
-                    <h3>{date}</h3>
+                    <p>{date}</p>
                   </CardTitle>
                   <CardBody className="mb-1 mb-md-3 mx-auto px-0">
                     {renderRichText(body, rendererOptions)}
