@@ -83,6 +83,6 @@ exports.createPages = async ({ actions, graphql }) => {
   `);
 
   // Create pages from templates
-  createFromTemplate(blogs.edges, '/blog', './src/templates/Blog/index.js');
-  createFromTemplate(pages.edges, '', './src/templates/Page/index.js');
+  createFromTemplate(blogs.edges, '/blog', './src/templates/Blog/index.tsx');
+  createFromTemplate(pages.edges, '', './src/templates/Page/index.tsx');
 };

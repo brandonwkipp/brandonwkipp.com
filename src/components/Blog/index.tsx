@@ -16,15 +16,7 @@ const BLOG_POSTS = graphql`
     blogs: allContentfulBlogPost(sort: {order: DESC, fields: date}) {
       edges {
         node {
-          body {
-            raw
-            references {
-              ...BlogMediaAsset
-            }
-          }
-          date(formatString: "MMMM Do, YYYY")
-          id
-          title
+          ...BlogPost
         }
       }
     }
