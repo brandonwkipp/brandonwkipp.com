@@ -28,6 +28,13 @@ module.exports = {
   ],
   rules: {
     '@typescript-eslint/explicit-module-boundary-types': 0,
+    // We need this to accomodate internal field names from Contentful
+    '@typescript-eslint/naming-convention': [
+      1,
+      {
+        leadingUnderscore: 'allow',
+      },
+    ],
     '@typescript-eslint/no-use-before-define': ['error'],
     '@typescript-eslint/no-var-requires': 0,
     'import/no-extraneous-dependencies': 0,
