@@ -2,29 +2,9 @@ const path = require('path');
 
 exports.onCreateWebpackConfig = ({ actions, getConfig, stage }) => {
   actions.setWebpackConfig({
-    module: {
-      rules: [
-        {
-          test: /\.md$/,
-          loader: 'html-loader',
-        },
-        {
-          test: /\.md$/,
-          loader: 'markdown-loader',
-        },
-        {
-          test: /\.html$/,
-          loader: 'html-loader',
-          options: {
-            minimize: false,
-          },
-        },
-      ],
-    },
     resolve: {
       alias: {
         '@components': path.resolve(__dirname, './src/components'),
-        '@markdown': path.resolve(__dirname, './src/markdown'),
         '@utils': path.resolve(__dirname, './src/utils'),
       },
     },

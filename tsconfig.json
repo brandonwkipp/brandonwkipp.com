@@ -22,9 +22,6 @@
       "@fragments/*": [
         "fragments/*"
       ],
-      "@markdown/*": [
-        "markdown/*"
-      ],
       "@styles/*": [
         "styles/*"
       ],

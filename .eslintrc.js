@@ -59,7 +59,6 @@ module.exports = {
     'import/resolver': {
       alias: [
         ['@components', './src/components'],
-        ['@markdown', './src/markdown'],
         ['@utils', './src/utils'],
       ],
     },
