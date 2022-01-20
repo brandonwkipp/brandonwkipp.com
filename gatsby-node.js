@@ -51,7 +51,6 @@ exports.createPages = async ({ actions, graphql }) => {
           }
         }
       }
-
       pages: allContentfulPage {
         edges {
           node {
