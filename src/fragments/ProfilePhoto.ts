@@ -4,8 +4,11 @@ import { graphql } from 'gatsby';
 export const ProfilePhoto = graphql`
   fragment ProfilePhoto on ContentfulAsset {
     ... on ContentfulAsset {
-      contentful_id
       __typename
+      contentful_id
+      file {
+        contentType
+      }
       gatsbyImageData(
         formats: [AUTO, WEBP]
         layout: FIXED
