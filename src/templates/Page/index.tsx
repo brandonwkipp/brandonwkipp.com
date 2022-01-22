@@ -4,10 +4,8 @@ import {
 } from 'gatsby-source-contentful/rich-text';
 import React from 'react';
 
-import Footer from '@components/Footer';
-import Header from '@components/Header';
-import Layout from '@components/Layout';
 import Page from '@components/Page';
+import DefaultView from '@views/DefaultView';
 
 interface PageTemplateProps {
   data: {
@@ -33,12 +31,10 @@ export const PAGE_QUERY = graphql`
   }
 `;
 
-const PageTemplate = ({ data: { page }, location }: PageTemplateProps) => (
-  <Layout bg="bg-resume">
-    <Header location={location} />
+const PageTemplate = ({ data: { page }, location: { pathname } }: PageTemplateProps) => (
+  <DefaultView path={pathname}>
     <Page data={page} />
-    <Footer />
-  </Layout>
+  </DefaultView >
 );
 
 export default PageTemplate;

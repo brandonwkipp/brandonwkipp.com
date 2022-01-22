@@ -1,20 +1,16 @@
 import React from 'react';
 
-import Footer from '@components/Footer';
-import Header from '@components/Header';
-import Layout from '@components/Layout';
 import TimeLeft from '@components/TimeLeft';
+import DefaultView from '@views/DefaultView';
 
 interface PageProps {
   location: Location;
 }
 
-const TimeLeftPage = ({ location }: PageProps) => (
-  <Layout>
-    <Header location={location} />
+const TimePage = ({ location: { pathname } }: PageProps) => (
+  <DefaultView path={pathname}>
     <TimeLeft />
-    <Footer />
-  </Layout>
+  </DefaultView>
 );
 
-export default TimeLeftPage;
+export default TimePage;

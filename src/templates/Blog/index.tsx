@@ -5,9 +5,7 @@ import {
 import React from 'react';
 import { Card, Col, Container, Row } from 'reactstrap';
 
-import Footer from '@components/Footer';
-import Header from '@components/Header';
-import Layout from '@components/Layout';
+import DefaultView from '@views/DefaultView';
 import rendererOptions from '@utils/renderer-options';
 
 import '@components/Blog/index.scss';
@@ -33,13 +31,12 @@ interface BlogTemplateProps {
   }
 }
 
-const BlogTemplate = ({ data, location }: BlogTemplateProps) => {
+const BlogTemplate = ({ data, location: { pathname } }: BlogTemplateProps) => {
   const { blog } = data;
   const { body, date, title } = blog;
 
   return (
-    <Layout bg="bg-resume">
-      <Header location={location} />
+    <DefaultView path={pathname}>
       <main className="blog">
         <Container>
           <Row>
@@ -57,8 +54,7 @@ const BlogTemplate = ({ data, location }: BlogTemplateProps) => {
           </Row>
         </Container>
       </main>
-      <Footer />
-    </Layout>
+    </DefaultView>
   );
 };
 

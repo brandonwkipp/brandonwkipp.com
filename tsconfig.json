@@ -22,11 +22,20 @@
       "@fragments/*": [
         "fragments/*"
       ],
+      "@mocks/*": [
+        "__mocks__/*"
+      ],
       "@styles/*": [
         "styles/*"
       ],
+      "@tests/*": [
+        "__tests__/*"
+      ],
       "@utils/*": [
         "utils/*"
+      ],
+      "@views/*": [
+        "views/*"
       ]
     },
     "skipLibCheck": true,

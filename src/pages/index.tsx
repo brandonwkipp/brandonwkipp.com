@@ -1,20 +1,18 @@
 import React from 'react';
 
-import Footer from '@components/Footer';
-import Header from '@components/Header';
 import Landing from '@components/Landing';
-import Layout from '@components/Layout';
+import DefaultView from '@views/DefaultView';
 
 interface PageProps {
-  location: Location;
+  location: {
+    pathname: string;
+  };
 }
 
-const IndexPage = ({ location }: PageProps) => (
-  <Layout bg="bg-landing">
-    <Header location={location} />
+const IndexPage = ({ location: { pathname } }: PageProps) => (
+  <DefaultView path={pathname}>
     <Landing />
-    <Footer />
-  </Layout>
+  </DefaultView>
 );
 
 export default IndexPage;

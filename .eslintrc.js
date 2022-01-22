@@ -60,7 +60,9 @@ module.exports = {
     'import/resolver': {
       alias: [
         ['@components', './src/components'],
+        ['@mocks', './src/__mocks__'],
         ['@utils', './src/utils'],
+        ['@views', './src/views'],
       ],
     },
     // Tells eslint-plugin-react to automatically detect the version of React to use

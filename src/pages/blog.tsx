@@ -1,20 +1,16 @@
 import React from 'react';
 
 import Blog from '@components/Blog';
-import Footer from '@components/Footer';
-import Header from '@components/Header';
-import Layout from '@components/Layout';
+import DefaultView from '@views/DefaultView';
 
 interface PageProps {
   location: Location;
 }
 
-const BlogPage = ({ location }: PageProps) => (
-  <Layout bg="bg-resume">
-    <Header location={location} />
+const BlogPage = ({ location: { pathname } }: PageProps) => (
+  <DefaultView path={pathname}>
     <Blog />
-    <Footer />
-  </Layout>
+  </DefaultView>
 );
 
 export default BlogPage;

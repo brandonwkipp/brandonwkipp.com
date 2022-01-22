@@ -7,17 +7,17 @@ import { slide as Menu } from 'react-burger-menu';
 import './index.scss';
 
 interface SidebarProps {
-  pathname: string;
+  path: string;
 }
 
-const Sidebar = ({ pathname }: SidebarProps) => (
+const Sidebar = ({ path }: SidebarProps) => (
   <Menu
     customBurgerIcon={<FontAwesomeIcon icon={faBars} />}
     width={280}
   >
-    {pathname !== '/' ? <Link to="/">Home</Link> : null}
-    {pathname !== '/blog' ? <Link to="/blog">Blog</Link> : null}
-    {pathname !== '/about' ? <Link to="/about">About</Link> : null}
+    {path !== '/' ? <Link to="/">Home</Link> : null}
+    {path !== '/blog' ? <Link to="/blog">Blog</Link> : null}
+    {path !== '/about' ? <Link to="/about">About</Link> : null}
   </Menu>
 );
 
