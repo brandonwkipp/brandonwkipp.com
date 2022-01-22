@@ -1,5 +1,5 @@
 import React from 'react';
-import { cleanup, render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 
 import Footer from '@components/Footer';
 
@@ -10,10 +10,6 @@ describe('Test <Footer>', () => {
     { link: 'https://github.com/brandonwkipp', title: 'GitHub' },
     { link: 'https://linkedin.com/in/brandonwkipp', title: 'LinkedIn' },
   ];
-
-  afterEach(() => {
-    cleanup();
-  });
 
   it('<Footer> renders correctly', async () => {
     render(<Footer />);
