@@ -12,9 +12,7 @@ const Header = ({ path }: HeaderProps) => (
   <nav className="nav-container sticky-top">
     <Navbar className="navbar-dark" expand="md">
       <Link className="navbar-brand" to="/">
-        <h1 className="mb-0 text-light">
-          Brandon W. Kipp
-        </h1>
+        <h1 className="mb-0 text-light">Brandon W. Kipp</h1>
       </Link>
       <Nav className="d-none d-md-flex ml-auto" navbar>
         {path !== '/' ? (
