@@ -9,7 +9,7 @@ interface HeaderProps {
 }
 
 const Header = ({ path }: HeaderProps) => (
-  <nav className="nav-container sticky-top">
+  <nav aria-label="Primary Navigation" className="nav-container sticky-top">
     <Navbar className="navbar-dark" expand="md">
       <Link className="navbar-brand" to="/">
         <h1 className="mb-0 text-light">Brandon W. Kipp</h1>

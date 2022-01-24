@@ -14,6 +14,10 @@ describe('Test <Header>', () => {
   it('<Header> renders correctly with minimum props', async () => {
     render(<Header path={paths.root} />);
 
+    // Ensure top-level nav is present
+    expect(screen.getByRole('navigation', { name: 'Primary Navigation' })).toBeInTheDocument();
+    expect(screen.getByRole('navigation', { name: 'Primary Navigation' })).toBeVisible();
+
     // Check the root link is not displayed
     expect(screen.queryByRole('link', { name: 'Home' })).not.toBeInTheDocument();
 
