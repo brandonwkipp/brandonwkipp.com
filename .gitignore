@@ -1,6 +1,7 @@
 .cache
 .DS_Store
 .env*
+coverage
 node_modules/
 public
 yarn-error.log

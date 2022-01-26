@@ -6,6 +6,21 @@ const paths = pathsToModuleNameMapper(compilerOptions.paths, {
 })
 
 module.exports = {
+  collectCoverage: true,
+  collectCoverageFrom: [
+    '**/*.{js,jsx,ts,tsx}',
+    '!.*rc.js',
+    '!*.config.js',
+    '!**/.cache/**',
+    '!**/.coverage/**',
+    '!**/.jest/**',
+    '!jest-preprocess.js',
+    '!jest.config.js',
+    '!loadershim.js',
+    '!**/node_modules/**',
+    '!**/public/**',
+    '!**/scripts/**',
+  ],
   globals: {
     __PATH_PREFIX__: ``,
   },
