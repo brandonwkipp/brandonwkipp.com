@@ -9,6 +9,14 @@ const Resume = () => (
     <Col md={2} />
     <Col>
     <h2><span role="image">&#128104;&#8205;&#128187;</span> Technical Experience</h2>
+    <p><strong>Full Stack Developer</strong> @ <a href="https://sierrainteractive.com/">Sierra Interactive</a> <em>(Aug 2021–Present)</em><br />
+      The most powerful, end-to-end real estate platform available.</p>
+    <ul>
+      <li>Conversion of JavaScript/jQuery/ASPX pages into modernized React components with TypeScript</li>
+      <li>Third-party API (Google Ads, Structurely) integration development for the admin portal website</li>
+      <li>Documentation of developer onboarding, stack overview, and development standards</li>
+    </ul>
+    <p><strong><em>Technologies used:</em></strong> React, TypeScript, Node.js, Postman, C#, .NET, Microsoft SQL Server</p>
     <p><strong>Full Stack Developer</strong> @ <a href="https://smm.org/">Science Museum of Minnesota</a> <em>(Mar 2019–Aug 2021)</em><br />
       A place for everyone to turn on the science, inspire learning, inform policy, and improve lives.</p>
     <ul>
@@ -18,7 +26,7 @@ const Resume = () => (
       <li>Infrastructure provisioning, end-to-end testing, and CI/CD pipeline automation</li>
       <li>CMS integration, data modeling, schema customization, and migration scripting</li>
     </ul>
-    <p><strong><em>Technologies used:</em></strong> Node.js, React, TypeScript, Gatsby, GraphQL, Apollo, Cypress, Contentful, Electron, Express.js, Docker, Github Actions, AWS, GCP, Terraform, Arduino, Raspberry Pi</p>
+    <p><strong><em>Technologies used:</em></strong> Node.js, React, TypeScript, Gatsby, GraphQL, Apollo, Cypress, Contentful, Electron, Express.js, Docker, Github Actions, Amazon Web Services, Google Cloud Platform, Terraform, Arduino, Raspberry Pi</p>
     <p><strong><em>Selected open-source work:</em></strong></p>
     <ul>
       <li><a href="https://github.com/scimusmn/app-template">app-template</a>, a boilerplate Gatsby project for creating new exhibit applications</li>
