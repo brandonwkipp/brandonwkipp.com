@@ -13,11 +13,10 @@ axios.get('https://raw.githubusercontent.com/brandonwkipp/cv/main/README.md')
         import './index.scss';
 
         const Resume = () => (
-          <main className="resume">
-            <Container className="py-3">
-              <Row>
-                <Col md={2} />
-                <Col>
+          <Container className="py-3">
+            <Row>
+              <Col md={2} />
+              <Col>
       `;
 
       resume += marked.parse(
@@ -26,10 +25,9 @@ axios.get('https://raw.githubusercontent.com/brandonwkipp/cv/main/README.md')
       );
 
       resume += `</Col>
-                <Col md={2} />
-              </Row>
-            </Container>
-          </main>
+              <Col md={2} />
+            </Row>
+          </Container>
         );
 
         export default Resume;

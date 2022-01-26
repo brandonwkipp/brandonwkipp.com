@@ -9,10 +9,12 @@ import './index.scss';
 
 interface DefaultViewProps {
   children: React.ReactNode;
+  mainAriaLabel?: string;
+  mainClass?: string;
   path: string;
 }
 
-const DefaultView = ({ children, path }: DefaultViewProps) => (
+const DefaultView = ({ children, mainAriaLabel, mainClass, path }: DefaultViewProps) => (
   <>
     <Helmet>
       <html lang="en" />
@@ -26,7 +28,9 @@ const DefaultView = ({ children, path }: DefaultViewProps) => (
     <div className="default-view">
       <Header path={path} />
       <Sidebar path={path} />
-      {children}
+      <main aria-label={mainAriaLabel} className={mainClass}>
+        {children}
+      </main>
       <Footer />
     </div>
   </>

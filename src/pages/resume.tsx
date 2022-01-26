@@ -8,7 +8,7 @@ interface PageProps {
 }
 
 const ResumePage = ({ location: { pathname } }: PageProps) => (
-  <DefaultView path={pathname}>
+  <DefaultView mainClass="resume" path={pathname}>
     <Resume />
   </DefaultView>
 );

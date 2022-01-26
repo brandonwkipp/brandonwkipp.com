@@ -10,7 +10,7 @@ interface PageProps {
 }
 
 const IndexPage = ({ location: { pathname } }: PageProps) => (
-  <DefaultView path={pathname}>
+  <DefaultView mainClass="landing" path={pathname}>
     <Landing />
   </DefaultView>
 );

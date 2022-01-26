@@ -13,8 +13,11 @@ describe('Test <DefaultView>', () => {
       </DefaultView>
     );
 
-    // Ensure <Header> is present
-    expect(screen.getByRole('navigation', { name: 'Primary Navigation' })).toBeInTheDocument();
+    // Ensure <Header> & <Sidebar> are present
+    // TODO: Submit PR to react-burger-menu to add aria-label
+    expect(screen.queryAllByRole('navigation')).toHaveLength(2);
+
+    expect(screen.getByRole('main')).toBeInTheDocument();
 
     // Ensure <Footer> is present
     expect(screen.getByRole('contentinfo')).toBeInTheDocument();
