@@ -11,10 +11,7 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ path }: SidebarProps) => (
-  <Menu
-    customBurgerIcon={<FontAwesomeIcon icon={faBars} />}
-    width={280}
-  >
+  <Menu customBurgerIcon={<FontAwesomeIcon icon={faBars} />} width={280}>
     {path !== '/' ? <Link to="/">Home</Link> : null}
     {path !== '/blog' ? <Link to="/blog">Blog</Link> : null}
     {path !== '/about' ? <Link to="/about">About</Link> : null}
