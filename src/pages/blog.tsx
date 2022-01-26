@@ -8,7 +8,7 @@ interface PageProps {
 }
 
 const BlogPage = ({ location: { pathname } }: PageProps) => (
-  <DefaultView mainClass="blog" path={pathname}>
+  <DefaultView mainClass="blog" noHeightContraint path={pathname}>
     <Blog />
   </DefaultView>
 );

@@ -8,7 +8,7 @@ interface PageProps {
 }
 
 const ResumePage = ({ location: { pathname } }: PageProps) => (
-  <DefaultView mainClass="resume" path={pathname}>
+  <DefaultView mainClass="resume" noHeightContraint path={pathname}>
     <Resume />
   </DefaultView>
 );
