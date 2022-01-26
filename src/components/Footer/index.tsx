@@ -4,7 +4,7 @@ import { Col, Container, Row } from 'reactstrap';
 import './index.scss';
 
 const Footer = () => (
-  <footer className="footer py-md-5 py-3" role="contentinfo">
+  <footer className="footer py-md-5 py-3">
     <Container className="w-50">
       <Row>
         <Col md={5}>
