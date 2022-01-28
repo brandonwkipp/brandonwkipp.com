@@ -35,7 +35,7 @@ module.exports = {
   testPathIgnorePatterns: ['node_modules', '\\.cache', '<rootDir>.*/public'],
   testURL: 'http://localhost',
   transform: {
-    '^.+\\.[jt]sx?$': '<rootDir>/jest-preprocess.js',
+    '^.+\\.[jt]sx?$': 'ts-jest', //'<rootDir>/jest-preprocess.js',
   },
   transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],
 }
