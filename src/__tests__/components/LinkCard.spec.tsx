@@ -3,17 +3,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 
-import LandingCard from '@components/LandingCard';
+import LinkCard from '@components/LinkCard';
 
-describe('Test <LandingCard>', () => {
+describe('Test <LinkCard>', () => {
   const links = ['https://google.com', '/page'];
   const tagline = 'Some Text';
   const title = 'Some Title';
 
-  it('<LandingCard> renders correctly with minimum props', async () => {
-    render(<LandingCard tagline={tagline} title={title} url={links[0]} />);
+  it('<LinkCard> renders correctly with minimum props', async () => {
+    render(<LinkCard tagline={tagline} title={title} url={links[0]} />);
 
-    // Check <LandingCard> is rendered correctly
+    // Check <LinkCard> is rendered correctly
     expect(screen.getByRole('link')).toBeInTheDocument();
     expect(screen.getByRole('link')).toBeVisible();
 
@@ -29,10 +29,10 @@ describe('Test <LandingCard>', () => {
     expect(screen.queryByRole('img')).not.toBeInTheDocument();
   });
 
-  it('<LandingCard> renders icons correctly', async () => {
+  it('<LinkCard> renders icons correctly', async () => {
     render(
-      <LandingCard
-        icon={<FontAwesomeIcon icon={faBars} />}
+      <LinkCard
+        icon={< FontAwesomeIcon icon={faBars} />}
         tagline={tagline}
         title={title}
         url={links[0]}
@@ -46,18 +46,18 @@ describe('Test <LandingCard>', () => {
     });
   });
 
-  it('<LandingCard> renders external & internal links correctly', async () => {
+  it('<LinkCard> renders external & internal links correctly', async () => {
     // Render external link
-    const { rerender } = render(<LandingCard tagline={tagline} title={title} url={links[0]} />);
+    const { rerender } = render(<LinkCard tagline={tagline} title={title} url={links[0]} />);
 
-    // Check <LandingCard> renders external links correctly
+    // Check <LinkCard> renders external links correctly
     expect(screen.getByRole('link')).toHaveAttribute('href', links[0]);
     expect(screen.getByRole('link')).toHaveAttribute('target', '_blank');
 
     // Render internal link
-    rerender(<LandingCard tagline={tagline} title={title} url={links[1]} />);
+    rerender(<LinkCard tagline={tagline} title={title} url={links[1]} />);
 
-    // Check <LandingCard> renders internal links correctly
+    // Check <LinkCard> renders internal links correctly
     expect(screen.getByRole('link')).toHaveAttribute('href', links[1]);
     expect(screen.getByRole('link')).not.toHaveAttribute('target');
   });

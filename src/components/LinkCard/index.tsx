@@ -4,16 +4,16 @@ import { Card, CardBody, CardHeader } from 'reactstrap';
 
 import './index.scss';
 
-interface LandingCardProps {
+interface LinkCardProps {
   icon?: JSX.Element;
   tagline: string;
   title: string;
   url: string;
 }
 
-const LandingCard = ({ icon, tagline, title, url }: LandingCardProps) => {
+const LinkCard = ({ icon, tagline, title, url }: LinkCardProps) => {
   const renderCard = (
-    <Card className="landing-card bg-dark mb-3 py-2">
+    <Card className="link-card bg-dark mb-3 py-2">
       <CardHeader className="py-0">
         <h2 className="text-light">{title}</h2>
       </CardHeader>
@@ -39,4 +39,4 @@ const LandingCard = ({ icon, tagline, title, url }: LandingCardProps) => {
   );
 };
 
-export default LandingCard;
+export default LinkCard;

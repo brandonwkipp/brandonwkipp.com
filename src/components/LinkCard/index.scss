@@ -1,4 +1,4 @@
-.landing-card {
+.link-card {
   animation-direction: alternate;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -29,7 +29,7 @@
 }
 
 @media screen and (max-width: 991px) {
-  .landing-card {
+  .link-card {
     height: 195px;
     width: 90%;
 
@@ -47,7 +47,7 @@
 }
 
 @media screen and (max-width: 414px) {
-  .landing-card {
+  .link-card {
     height: 165px;
 
     .card-body {
