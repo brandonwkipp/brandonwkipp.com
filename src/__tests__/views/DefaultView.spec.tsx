@@ -1,14 +1,15 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 import DefaultView from '@views/DefaultView';
 
 describe('Test <DefaultView>', () => {
   const child = <div>Some Text</div>;
+  const path = '/';
 
   it('<DefaultView> renders correctly with minimum props', async () => {
     render(
-      <DefaultView>
+      <DefaultView path={path}>
         {child}
       </DefaultView>
     );
