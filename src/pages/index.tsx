@@ -8,6 +8,8 @@ import {
 import LinkCard from '@components/LinkCard';
 import DefaultView from '@views/DefaultView';
 
+import './index.scss';
+
 interface PageProps {
   location: {
     pathname: string;
