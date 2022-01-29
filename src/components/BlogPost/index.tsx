@@ -16,7 +16,7 @@ interface BlogPostProps {
 }
 
 const BlogPost = ({ body, date, id, title }: BlogPostProps) => (
-  <Card key={id}>
+  <Card key={id} role="article">
     <CardTitle className="text-center">
       <h2 className="mt-3">{title}</h2>
       <p>{date}</p>
