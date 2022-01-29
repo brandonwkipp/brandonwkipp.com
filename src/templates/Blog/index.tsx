@@ -8,7 +8,7 @@ import { Card, Col, Container, Row } from 'reactstrap';
 import DefaultView from '@views/DefaultView';
 import rendererOptions from '@utils/renderer-options';
 
-import '@components/Blog/index.scss';
+import '@components/BlogPost/index.scss';
 
 export const PAGE_QUERY = graphql`
   query($slug: String!) {
