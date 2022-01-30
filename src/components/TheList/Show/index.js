@@ -1,5 +1,4 @@
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 
@@ -30,10 +29,6 @@ const Show = (props) => {
       </ListGroup>
     </div>
   );
-};
-
-Show.propTypes = {
-  node: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 export default Show;
