@@ -1,22 +1,14 @@
 import { graphql } from 'gatsby';
 import {
-  ContentfulRichTextGatsbyReference, RenderRichTextData,
+  ContentfulRichTextGatsbyReference, RenderRichTextData, renderRichText,
 } from 'gatsby-source-contentful/rich-text';
 import React from 'react';
+import { Col, Container, Row } from 'reactstrap';
 
-import Page from '@components/Page';
+import rendererOptions from '@utils/renderer-options';
 import DefaultView from '@views/DefaultView';
 
-interface PageTemplateProps {
-  data: {
-    page: {
-      body: RenderRichTextData<ContentfulRichTextGatsbyReference>;
-    };
-  }
-  location: {
-    pathname: string;
-  }
-}
+import './index.scss';
 
 export const PAGE_QUERY = graphql`
   query($slug: String!) {
@@ -31,9 +23,30 @@ export const PAGE_QUERY = graphql`
   }
 `;
 
-const PageTemplate = ({ data: { page }, location: { pathname } }: PageTemplateProps) => (
-  <DefaultView path={pathname}>
-    <Page data={page} />
+interface PageTemplateProps {
+  data: {
+    page: {
+      body: RenderRichTextData<ContentfulRichTextGatsbyReference>;
+    };
+  }
+  location: {
+    pathname: string;
+  }
+}
+
+const PageTemplate = ({ data: { page: { body } }, location: { pathname } }: PageTemplateProps) => (
+  <DefaultView mainClass="page" path={pathname}>
+    <Container className="py-3">
+      <Row>
+        <Col md={2} />
+        <Col>
+          <div className="body mx-auto">
+            {renderRichText(body, rendererOptions)}
+          </div>
+        </Col>
+        <Col md={2} />
+      </Row>
+    </Container>
   </DefaultView >
 );
 
