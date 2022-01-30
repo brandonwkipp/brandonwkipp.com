@@ -9,11 +9,8 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: [
     '**/*.{js,jsx,ts,tsx}',
-    '!.*rc.js',
-    '!*.config.js',
     '!**/.cache/**',
-    '!**/.coverage/**',
-    '!**/.jest/**',
+    '!**/coverage/**',
     '!jest-preprocess.js',
     '!jest.config.js',
     '!loadershim.js',
