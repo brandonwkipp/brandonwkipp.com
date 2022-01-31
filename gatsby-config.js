@@ -2,8 +2,6 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const excludedPages = ['/the-list/'];
-
 module.exports = {
   siteMetadata: {
     author: 'Brandon W. Kipp',
@@ -13,10 +11,6 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    {
-      resolve: 'gatsby-plugin-exclude',
-      options: { paths: excludedPages },
-    },
     {
       resolve: 'gatsby-source-contentful',
       options: {
@@ -35,8 +29,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'brandonwkipp.com',
         start_url: '/',
         background_color: '#e2ffd8',
         theme_color: '#e2ffd8',
