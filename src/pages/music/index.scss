@@ -1,0 +1,29 @@
+#theList {
+  background: aliceblue;
+
+  .iframe-container {
+    // Aspect ratio (in case of 16:9 it is 9/16= 0.5625)
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: calc(56.25% * 0.8);
+    position: relative;
+    width: 80%;
+
+    iframe {
+      border: 0;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  .list-group-item-heading {
+    margin-bottom: 0;
+
+    a {
+      color: blue;
+    }
+  }
+}
