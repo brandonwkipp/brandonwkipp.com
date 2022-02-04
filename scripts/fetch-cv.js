@@ -10,13 +10,20 @@ axios.get('https://raw.githubusercontent.com/brandonwkipp/cv/main/README.md')
         import React from 'react';
         import { Col, Container, Row } from 'reactstrap';
 
+        import DefaultView from '@views/DefaultView';
+
         import './index.scss';
 
-        const Resume = () => (
-          <Container className="py-3">
-            <Row>
-              <Col md={2} />
-              <Col>
+        interface PageProps {
+          location: Location;
+        }
+
+        const ResumePage = ({ location: { pathname } }: PageProps) => (
+          <DefaultView mainClass="resume" noHeightContraint path={pathname}>
+            <Container className="py-3">
+              <Row>
+                <Col md={2} />
+                <Col>
       `;
 
       resume += marked.parse(
@@ -25,16 +32,17 @@ axios.get('https://raw.githubusercontent.com/brandonwkipp/cv/main/README.md')
       );
 
       resume += `</Col>
-              <Col md={2} />
-            </Row>
-          </Container>
+                <Col md={2} />
+              </Row>
+            </Container>
+          </DefaultView>
         );
 
-        export default Resume;
+        export default ResumePage;
       `;
 
       fs.writeFileSync(
-        'src/components/Resume/index.tsx',
+        'src/pages/resume/index.tsx',
         beautify(
           resume,
           {
