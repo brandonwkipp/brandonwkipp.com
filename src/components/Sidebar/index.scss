@@ -1,8 +1,9 @@
 .bm-burger-button {
   color: $white;
   height: $navbar-height-md;
-  position: fixed;
+  position: absolute;
   right: 12px;
+  top: 0;
   visibility: hidden;
   width: 36px;
   z-index: 1030 !important;

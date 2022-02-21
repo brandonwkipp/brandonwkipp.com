@@ -5,7 +5,7 @@ import './index.scss';
 
 const Footer = () => (
   <footer className="footer py-md-5 py-3">
-    <Container className="w-50">
+    <Container>
       <Row>
         <Col md={5}>
           <p className="mb-5">

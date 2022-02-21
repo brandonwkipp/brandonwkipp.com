@@ -1,7 +1,11 @@
-.footer {
+footer {
   background: $funeral-black;
   color: $white;
   height: $footer-height-md;
+
+  .container {
+    width: 50%;
+  }
 
   .footer-title {
     color: $white;
@@ -10,5 +14,13 @@
 
   p {
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    .container {
+      width: auto;
+    }
   }
 }
