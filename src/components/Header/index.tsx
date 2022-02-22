@@ -2,6 +2,8 @@ import { Link } from 'gatsby';
 import React from 'react';
 import { Nav, NavItem, Navbar } from 'reactstrap';
 
+import Sidebar from '@components/Sidebar';
+
 import './index.scss';
 
 interface HeaderProps {
@@ -32,6 +34,7 @@ const Header = ({ path }: HeaderProps) => (
         ) : null}
       </Nav>
     </Navbar>
+    <Sidebar path={path} />
   </nav>
 );
 

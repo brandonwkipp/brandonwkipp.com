@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 
 import Footer from '@components/Footer';
 import Header from '@components/Header';
-import Sidebar from '@components/Sidebar';
 
 import './index.scss';
 
@@ -31,7 +30,6 @@ const DefaultView = ({ children, mainAriaLabel, mainClass, noHeightContraint, pa
       </Helmet>
       <div className={viewClass}>
         <Header path={path} />
-        <Sidebar path={path} />
         <main aria-label={mainAriaLabel} className={mainClass}>
           {children}
         </main>
