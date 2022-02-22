@@ -35,7 +35,7 @@ interface PageTemplateProps {
 }
 
 const PageTemplate = ({ data: { page: { body } }, location: { pathname } }: PageTemplateProps) => (
-  <DefaultView mainClass="page" path={pathname}>
+  <DefaultView mainClass="page" noHeightContraint path={pathname}>
     <Container className="py-3">
       <Row>
         <Col md={2} />
