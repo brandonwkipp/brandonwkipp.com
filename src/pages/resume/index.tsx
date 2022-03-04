@@ -52,7 +52,7 @@ const ResumePage = ({ location: { pathname } }: PageProps) => (
       <p><strong><em>Technologies used:</em></strong> PHP, Java, PostgreSQL, Swagger, Google Web Toolkit, HTML, CSS, JavaScript</p>
       <hr />
       <h2><span role="image">&#127911;</span> Audio Engineering Experience</h2>
-      <p><strong>Adjunct Instructor &amp; Studio Manager</strong> @ <a href="https://www.beloit.edu/celeb/recording-studio/">Maple Tree Studio</a> <em>(Jan 2013–May 2016)</em><br /></p>
+      <p><strong>Community Volunteer</strong> @ <a href="https://www.beloit.edu/celeb/recording-studio/">Maple Tree Studio</a> <em>(Jan 2013–May 2016)</em><br /></p>
       <hr />
       <h2><span role="image">&#128172;</span> Communication</h2>
       <p><strong>Language</strong>: English (Native)<br />
