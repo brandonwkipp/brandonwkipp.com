@@ -16,7 +16,7 @@ const ResumePage = ({ location: { pathname } }: PageProps) => (
       <Col md={2} />
       <Col>
       <h2><span role="image">&#128104;&#8205;&#128187;</span> Technical Experience</h2>
-      <p><strong>Full Stack Developer</strong> @ <a href="https://sierrainteractive.com/">Sierra Interactive</a> <em>(Aug 2021–Present)</em><br />
+      <p><strong>Full Stack Developer</strong> @ <a href="https://sierrainteractive.com/">Sierra Interactive</a> <em>(Aug 2021–Mar 2022)</em><br />
         The most powerful, end-to-end real estate platform available.</p>
       <ul>
         <li>Conversion of JavaScript/jQuery/ASPX pages into modernized React components with TypeScript</li>
