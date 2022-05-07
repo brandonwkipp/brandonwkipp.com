@@ -34,8 +34,8 @@
       "@utils/*": [
         "utils/*"
       ],
-      "@views/*": [
-        "views/*"
+      "@views": [
+        "views"
       ]
     },
     "skipLibCheck": true,

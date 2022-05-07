@@ -6,7 +6,7 @@ import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
 
 import BlogPost from '@components/BlogPost';
-import DefaultView from '@views/DefaultView';
+import { DefaultView } from '@views';
 
 interface BlogPost {
   node: {
