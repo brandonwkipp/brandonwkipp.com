@@ -1,0 +1,40 @@
+main.blog {
+  .container {
+    background-color: aliceblue;
+  }
+
+  .card {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+
+    .card-body {
+      letter-spacing: 0.4px;
+      line-height: 1.8;
+      max-width: 500px;
+
+      a {
+        color: mediumvioletred;
+
+        &:hover {
+          color: mediumvioletred;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  main.blog {
+    .container {
+      max-width: 100%;
+    }
+
+    .card {
+      .card-body {
+        padding: 0 2em;
+        width: 100%;
+      }
+    }
+  }
+}

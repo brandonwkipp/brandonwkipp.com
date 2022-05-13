@@ -3,6 +3,8 @@ import { Card, CardBody, CardTitle, Col, Container, Row } from 'reactstrap';
 
 import { DefaultView } from '@views';
 
+import './index.scss';
+
 interface BlogViewProps {
   children: React.ReactNode;
   date: string;
@@ -15,6 +17,7 @@ const BlogView = ({ children, date, path, title }: BlogViewProps) => {
     <DefaultView mainClass="blog" noHeightContraint path={path}>
       <Container>
         <Row>
+          <Col md={2} />
           <Col>
             <Card role="article">
               <CardTitle className="text-center">
@@ -26,6 +29,7 @@ const BlogView = ({ children, date, path, title }: BlogViewProps) => {
               </CardBody>
             </Card>
           </Col>
+          <Col md={2} />
         </Row>
       </Container>
     </DefaultView>

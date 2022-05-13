@@ -5,14 +5,15 @@ import { Col, Container, Row } from 'reactstrap';
 interface ImageProps {
   alt: string;
   caption?: string;
+  className?: string;
   data: IGatsbyImageData;
 }
 
-const Image = ({ alt, caption, data }: ImageProps) => (
+const Image = ({ alt, caption, className, data }: ImageProps) => (
   <Container className="text-center" fluid>
     <Row>
       <Col>
-        <GatsbyImage alt={alt} image={data} />
+        <GatsbyImage alt={alt} className={className} image={data} />
       </Col>
     </Row>
     {caption && (

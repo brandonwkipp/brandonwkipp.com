@@ -1,0 +1,29 @@
+import React from 'react';
+
+import { BlogView } from '@views';;
+
+const Records = () => (
+  <BlogView
+    date="March 4th, 2019"
+    path={'/blog/records'}
+    title="Records"
+  >
+    <p>
+      How is it that I feel on top of the world one day, and not the next? Easy, every day is an opportunity
+      to climb the mountain. Every day is a chance to be the best. Every day is gift to be squandered or to
+      be utilized to maximum efficiency. When I'm working on beats, sometimes it really just feels like I'm
+      not good enough. I can never seem to finish something, never find quite the right way I meant to express
+      myself when I started. I'm beginning to really believe that the day one starts a beat, is the day one
+      finishes the beat. It's hard to remember what head space you were one, to remember all of those feelings,
+      everything about that day is gone. When you revisit something like this, you end up adding your current
+      mood to it. I guess in that way, these pieces of music are just piles of moods and energies across time,
+      sort of like an emotional battery. Maybe that's why humans like music, presumably because artists pour
+      themselves into the work and listeners extrapolate some sort of condolence or some sort of state of being
+      with someone else, like if the music is happy. I guess I have to remember that these things aren't necessarily
+      products that come flying off a machine, but are literal parts of my soul cobbled together across time. They're,
+      you know, records.
+    </p>
+  </BlogView>
+);
+
+export default Records;

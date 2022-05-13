@@ -3,7 +3,7 @@ import { getImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
 
-import Image from '@components/BlogImage';
+import Image from '@components/Image';
 import { DefaultView } from '@views';
 
 import './index.scss';
@@ -33,10 +33,7 @@ const AboutPage = () => (
               <Col md={2} />
               <Col>
                 {image && (
-                  <Image
-                    alt="Headshot of me"
-                    data={gatsbyImageData}
-                  />
+                  <Image alt="Headshot of me" data={gatsbyImageData} />
                 )}
                 <div className="body mx-auto">
                   Thanks for visiting my website. I am an experienced, self-taught, Full Stack Developer
