@@ -12,19 +12,18 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `blogs`,
-        path: `${__dirname}/src/blogs`,
-      },
-    },
-    `gatsby-transformer-remark`,
-    {
       resolve: 'gatsby-source-contentful',
       options: {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         host: process.env.CONTENTFUL_HOST,
         spaceId: process.env.CONTENTFUL_SPACE_ID,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/images`,
       },
     },
     {
