@@ -8,7 +8,7 @@ import {
 } from 'reactstrap';
 
 import ShowCard from '@components/ShowCard';
-import DefaultView from '@views/DefaultView';
+import { DefaultView } from '@views';
 
 import './index.scss';
 

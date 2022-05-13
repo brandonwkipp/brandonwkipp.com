@@ -7,15 +7,16 @@ interface ImageProps {
   caption?: string;
   className?: string;
   data: IGatsbyImageData;
+  imageBreak?: boolean;
 }
 
-const Image = ({ alt, caption, className, data }: ImageProps) => (
-  <Container className="text-center" fluid>
+const Image = ({ alt, caption, className, data, imageBreak }: ImageProps) => (
+  <Container className={imageBreak ? 'mb-3 text-center' : 'text-center'} fluid>
     <Row>
       <Col>
         <GatsbyImage alt={alt} className={className} image={data} />
       </Col>
-    </Row>
+    </Row >
     {caption && (
       <Row>
         <Col>{caption}</Col>

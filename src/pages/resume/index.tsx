@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
 
-import DefaultView from '@views/DefaultView';
+import { DefaultView } from '@views';
 
 import './index.scss';
 
