@@ -6,7 +6,7 @@ import {
 } from 'reactstrap';
 
 import LinkCard from '@components/LinkCard';
-import DefaultView from '@views/DefaultView';
+import { DefaultView } from '@views';
 
 import './index.scss';
 

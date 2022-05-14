@@ -1,37 +1,29 @@
-import {
-  ContentfulRichTextGatsbyReference, RenderRichTextData, renderRichText
-} from 'gatsby-source-contentful/rich-text';
 import React from 'react';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 
 interface ShowCardProps {
   artist: string;
-  description: RenderRichTextData<ContentfulRichTextGatsbyReference>;
+  children: React.ReactNode;
   date: string;
-  id: string;
   venue: {
     cityState: string;
     name: string;
   };
 }
 
-const ShowCard = ({
-  artist, date, description, id, venue,
-}: ShowCardProps) => (
-  <div className="mb-3" key={id}>
+const ShowCard = ({ artist, children, date, venue }: ShowCardProps) => (
+  <div className="mb-3">
     <ListGroup>
       <ListGroupItem>
         <p className="mb-0">{artist}</p>
         <p className="mb-0">{date}</p>
         <p className="mb-0">{`${venue.name} (${venue.cityState})`}</p>
-        {description ? (
+        {children && (
           <>
             <hr />
-            <span className="mb-0">
-              {renderRichText(description)}
-            </span>
+            <span className="mb-0">{children}</span>
           </>
-        ) : null}
+        )}
       </ListGroupItem>
     </ListGroup>
   </div>
