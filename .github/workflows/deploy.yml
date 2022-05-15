@@ -19,17 +19,6 @@ jobs:
       - name: Checkout Source Code
         uses: actions/checkout@v2
 
-      - name: Setup Node.js LTS
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16.13.0'
-
-      - name: Install Dependencies
-        run: yarn install
-
-      - name: Build the Site
-        run: yarn build
-
       - name: Validate AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -39,8 +28,8 @@ jobs:
 
       - name: Sync Gatsby build to S3
         run: |
-          aws s3 sync public s3://brandonwkipp.com --cache-control public,max-age=0,must-revalidate --include "*" --exclude "*.js" --exclude "*.css" --exclude "static/*" --include "sw.js" --delete
-          aws s3 sync public s3://brandonwkipp.com --cache-control public,max-age=31536000,immutable --exclude "*" --include "*.js" --include "*.css" --include "static/*" --exclude "sw.js" --delete
+          aws s3 sync src s3://brandonwkipp.com --cache-control public,max-age=0,must-revalidate --include "*" --exclude "*.css" --delete
+          aws s3 sync public s3://brandonwkipp.com --cache-control public,max-age=31536000,immutable --exclude "*" --include "*.css" --delete
 
       - name: Invalidate Cloudfront
         run: |

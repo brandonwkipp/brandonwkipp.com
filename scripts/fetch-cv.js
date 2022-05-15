@@ -7,23 +7,26 @@ axios.get('https://raw.githubusercontent.com/brandonwkipp/cv/main/README.md')
   .then((response) => {
     if (response.status === 200) {
       let resume = `
-        import React from 'react';
-        import { Col, Container, Row } from 'reactstrap';
+      <!DOCTYPE html>
+      <html>
 
-        import { DefaultView } from '@views';
+      <head>
+        <title>Brandon W. Kipp</title>
+        <meta content="text/html; charset=utf-8" httpEquiv="Content-Type" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#e2ffd8" />
+        <meta name="Description" content="Software Engineer &amp; Musician." />
+        <meta name="theme-color" content="#e2ffd8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="styles/index.css">
+      </head>
 
-        import './index.scss';
-
-        interface PageProps {
-          location: Location;
-        }
-
-        const ResumePage = ({ location: { pathname } }: PageProps) => (
-          <DefaultView mainClass="resume" noHeightContraint path={pathname}>
-            <Container className="py-3">
-              <Row>
-                <Col md={2} />
-                <Col>
+      <body>
+        <main>
+          <header>
+            <h2>Brandon W. Kipp, <small>Software Engineer & Musician</small></h2>
+          </header>
+          <hr />
+          <section>
       `;
 
       resume += marked.parse(
@@ -31,18 +34,13 @@ axios.get('https://raw.githubusercontent.com/brandonwkipp/cv/main/README.md')
         { headerIds: false, xhtml: true },
       );
 
-      resume += `</Col>
-                <Col md={2} />
-              </Row>
-            </Container>
-          </DefaultView>
-        );
-
-        export default ResumePage;
+      resume += `</section>
+          </body>
+        </html>
       `;
 
       fs.writeFileSync(
-        'src/pages/resume/index.tsx',
+        'src/resume.html',
         beautify(
           resume,
           {
