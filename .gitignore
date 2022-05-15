@@ -1,8 +1,4 @@
-.cache
 .DS_Store
-.env*
-coverage
 images
 node_modules/
-public
 yarn-error.log
