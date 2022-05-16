@@ -63,3 +63,8 @@ nav h2 {
 nav h3 {
   flex-basis: 100%;
 }
+
+section.next-blog {
+  margin-bottom: 1rem;
+  text-align: center;
+}
