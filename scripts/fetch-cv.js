@@ -8,7 +8,7 @@ axios.get('https://raw.githubusercontent.com/brandonwkipp/cv/main/README.md')
     if (response.status === 200) {
       let resume = `
       <!DOCTYPE html>
-      <html>
+      <html lang="en">
 
       <head>
         <title>Brandon W. Kipp</title>
