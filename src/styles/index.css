@@ -68,3 +68,24 @@ section.next-blog {
   margin-bottom: 1rem;
   text-align: center;
 }
+
+@media (max-width: 768px)  {
+  h3 {
+    margin-top: 0;
+  }
+
+  main {
+    padding: 0 10px;
+    width: fit-content;
+  }
+
+  nav > div {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+
+  nav p {
+    margin-bottom: 0;
+  }
+}
