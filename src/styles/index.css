@@ -43,7 +43,7 @@ nav {
   justify-content: center;
 }
 
-nav > div {
+nav > a {
   animation-direction: alternate;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -79,7 +79,7 @@ section.next-blog {
     width: fit-content;
   }
 
-  nav > div {
+  nav > a {
     margin: 0.5rem;
     padding: 0.5rem 1rem;
     width: 100%;
