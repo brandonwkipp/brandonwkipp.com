@@ -4,6 +4,10 @@ root = true
 indent_size = 2
 indent_style = space
 
+[*.html]
+indent_size = 2
+indent_style = space
+
 [*.js]
 indent_size = 2
 indent_style = space
@@ -13,10 +17,6 @@ indent_size = 2
 indent_style = space
 
 [*.md]
-indent_size = 2
-indent_style = space
-
-[*.scss]
 indent_size = 2
 indent_style = space
 
