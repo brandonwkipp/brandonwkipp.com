@@ -36,6 +36,22 @@ main {
   width: 750px;
 }
 
+main.blog section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+main.blog section h2 {
+  margin-bottom: 0;
+}
+
+main.blog section p {
+  margin-bottom: 2rem;
+  margin-top: 0;
+  text-align: center;
+}
+
 nav {
   align-items: center;
   display: flex;
@@ -67,6 +83,10 @@ nav h3 {
 section.next-blog {
   margin-bottom: 1rem;
   text-align: center;
+}
+
+span.deg {
+  font-size: 2rem;
 }
 
 @media (max-width: 768px)  {
