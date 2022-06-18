@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'README.md'
+      - '.editorconfig'
+      - '.gitignore'
+      - '.github/*'
+      - '.nvmrc'
 
   repository_dispatch:
     types: [publish-event]
