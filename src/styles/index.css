@@ -17,13 +17,10 @@ body {
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
-}
-
-code {
   background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
+  padding: 0 2.5px;
+  text-decoration: none;
 }
 
 img {
@@ -65,8 +62,10 @@ nav > a {
   animation-iteration-count: infinite;
   animation-name: shadow-color;
   animation-timing-function: linear;
+  background: transparent;
   border: 3px solid rgb(49, 52, 65);
   border-radius: 10px;
+  color: rgb(255, 255, 255);
   margin: 0 15px;
   padding: 1rem 1.5rem;
   width: 150px;
