@@ -12,7 +12,7 @@ axios.get('https://raw.githubusercontent.com/brandonwkipp/cv/main/README.md')
 
       <head>
         <link rel="manifest" href="brandonwkipp.webmanifest">
-        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="../styles/index.css">
         <meta content="text/html; charset=utf-8" httpEquiv="Content-Type" />
         <meta name="apple-mobile-web-app-status-bar-style" content="#e2ffd8" />
         <meta name="Description" content="Software Engineer &amp; Musician." />
@@ -41,7 +41,7 @@ axios.get('https://raw.githubusercontent.com/brandonwkipp/cv/main/README.md')
       `;
 
       fs.writeFileSync(
-        'src/resume.html',
+        'src/resume/index.html',
         beautify(
           resume,
           {
