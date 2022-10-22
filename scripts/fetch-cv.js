@@ -31,7 +31,10 @@ axios.get('https://raw.githubusercontent.com/brandonwkipp/cv/main/README.md')
       `;
 
       resume += marked.parse(
-        response.data.split('\n').slice(6).join('\n'),
+        response.data
+          .split('\n')
+          .slice(6)
+          .join('\n'),
         { headerIds: false, xhtml: true },
       );
 
