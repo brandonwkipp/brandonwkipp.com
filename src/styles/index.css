@@ -1,6 +1,6 @@
 @keyframes shadow-color {
-  0% { box-shadow: aqua 2px 2px; }
-  100% { box-shadow: cornflowerblue 2px 2px; }
+  0% { box-shadow: rgb(110, 60, 220) 2px 2px; }
+  100% { box-shadow: red 2px 2px; }
 }
 
 html,
