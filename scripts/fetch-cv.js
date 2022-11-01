@@ -13,6 +13,7 @@ axios.get('https://raw.githubusercontent.com/brandonwkipp/cv/main/README.md')
       <head>
         <link rel="manifest" href="brandonwkipp.webmanifest">
         <link rel="stylesheet" href="../styles/index.css">
+        <link rel="stylesheet" href="../styles/navigation-menu.css">
         <meta content="text/html; charset=utf-8" httpEquiv="Content-Type" />
         <meta name="apple-mobile-web-app-status-bar-style" content="#e2ffd8" />
         <meta name="Description" content="Software Engineer &amp; Musician." />
@@ -22,11 +23,31 @@ axios.get('https://raw.githubusercontent.com/brandonwkipp/cv/main/README.md')
       </head>
 
       <body>
+        <nav aria-label="Main site navigation" role="navigation">
+          <div id="menuToggle">
+            <input name="toggle" type="checkbox" />
+            <label for="toggle">
+              <span>menu</span>
+              <!-- Hamburger -->
+              <div></div>
+              <div></div>
+              <div></div>
+            </label>
+            <ul id="menu">
+              <a href="../index.html">
+                <li>Home</li>
+              </a>
+              <a href="../blog/index.html">
+                <li>Blog</li>
+              </a>
+            </ul>
+          </div>
+        </nav>
+        <header>
+          <h2>Brandon W. Kipp, <small>Software Engineer & Musician</small></h2>
+        </header>
+        <hr />
         <main>
-          <header>
-            <h2>Brandon W. Kipp, <small>Software Engineer & Musician</small></h2>
-          </header>
-          <hr />
           <section>
       `;
 

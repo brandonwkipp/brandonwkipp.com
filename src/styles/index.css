@@ -24,6 +24,15 @@ a {
   text-decoration: none;
 }
 
+header {
+  margin: 10px auto;
+  width: 750px;
+}
+
+header > h2 {
+  margin: 0;
+}
+
 img {
   max-width: 100%;
 }
@@ -92,6 +101,10 @@ span.deg {
 @media (max-width: 768px)  {
   h3 {
     margin-top: 0;
+  }
+
+  header {
+    width: fit-content;
   }
 
   main {

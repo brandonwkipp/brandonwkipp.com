@@ -1,0 +1,111 @@
+nav[aria-label="Main site navigation"] {
+  left: 15px;
+  position: absolute;
+  top: 15px;
+}
+
+#menuToggle {
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: #4f7794;
+}
+
+/* The hamburger button hidden inside an input element */
+#menuToggle input {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+#menuToggle label {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+#menuToggle label span {
+  display: none;
+}
+
+/* Hamburger */
+#menuToggle label div {
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin-bottom: 6px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  -webkit-transform-origin: 4px 0px;
+      -ms-transform-origin: 4px 0px;
+          transform-origin: 4px 0px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#menuToggle label div:first-child {
+  -webkit-transform-origin: 0% 100%;
+      -ms-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+#menuToggle label div:nth-child(2) {
+    -webkit-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+#menuToggle input:checked + label div {
+  background: #dfdfdf;
+}
+
+#menu {
+  position: absolute;
+  width: 300px;
+  padding: 50px;
+  background: #ededed;
+  list-style-type: none;
+  left: -415px;
+  -webkit-transition: left 0.3s ease;
+  -o-transition: left 0.3s ease;
+  transition: left 0.3s ease;
+}
+
+#menu a {
+  background: transparent;
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+  left: -15px;
+}
