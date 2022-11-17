@@ -14,8 +14,6 @@ on:
   repository_dispatch:
     types: [publish-event]
 
-  workflow_dispatch:
-
 jobs:
   build-and-deploy:
     name: Build & Deploy Static Site
@@ -34,7 +32,7 @@ jobs:
 
       - name: Sync src to S3
         run: |
-          aws s3 sync src s3://brandonwkipp.com --cache-control public,max-age=0,must-revalidate --include "*" --exclude "*.css" --delete
+          aws s3 sync src s3://brandonwkipp.com --cache-control public,max-age=0,must-revalidate --include "*" --exclude "*.css" --exclude "images/*" --delete
           aws s3 sync src s3://brandonwkipp.com --cache-control public,max-age=31536000,immutable --exclude "*" --include "*.css" --delete
 
       - name: Invalidate Cloudfront
