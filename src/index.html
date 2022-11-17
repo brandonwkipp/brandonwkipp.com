@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-  <link rel="manifest" href="brandonwkipp.webmanifest">
   <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="styles/navigation-menu.css" />
   <meta content="text/html; charset=utf-8" httpEquiv="Content-Type" />
@@ -93,15 +92,6 @@
       </a>
     </div>
   </footer>
-  <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js").then(function (registration) {
-        console.log("ServiceWorker registration successful with scope: ", registration.scope);
-      }).catch(function (err) {
-        console.log("ServiceWorker registration failed: ", err);
-      });
-    }
-  </script>
 </body>
 
 </html>

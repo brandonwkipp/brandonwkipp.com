@@ -11,7 +11,6 @@ axios.get('https://raw.githubusercontent.com/brandonwkipp/cv/main/README.md')
       <html lang="en">
 
       <head>
-        <link rel="manifest" href="brandonwkipp.webmanifest">
         <link rel="stylesheet" href="../styles/index.css">
         <link rel="stylesheet" href="../styles/navigation-menu.css">
         <meta content="text/html; charset=utf-8" httpEquiv="Content-Type" />
