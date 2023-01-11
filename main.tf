@@ -41,7 +41,7 @@ resource "aws_route53_zone" "brandonkipp_com" {
 }
 
 module "brandonwkipp_com" {
-  source = "git@github.com:brandonwkipp/terraform-aws-static-site.git"
+  source = "github.com/brandonwkipp/terraform-aws-static-site"
 
   aws_access_key            = var.aws_access_key
   aws_secret_key            = var.aws_secret_key
