@@ -1,16 +1,16 @@
 # Seed our AWS variables
 provider "aws" {
-  access_key = var.access_key
+  access_key = var.aws_access_key
   region     = var.region
-  secret_key = var.access_secret
+  secret_key = var.aws_secret_key
 }
 
 # Seed from US-East-1 for use in ACM
 provider "aws" {
-  access_key = var.access_key
+  access_key = var.aws_access_key
   alias      = "us-east-1"
   region     = "us-east-1"
-  secret_key = var.access_secret
+  secret_key = var.aws_secret_key
 }
 
 # Terraform Backend Config
