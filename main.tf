@@ -1,11 +1,3 @@
-variable "access_key" {}
-variable "access_secret" {}
-variable "bucket_name" {}
-variable "domain" {
-  default = "brandonwkipp.com"
-}
-variable "region" {}
-
 # Seed our AWS variables
 provider "aws" {
   access_key = var.access_key
@@ -21,106 +13,46 @@ provider "aws" {
   secret_key = var.access_secret
 }
 
-module "hosted-zone-primary" {
-  source = "../website-modules/route53-hosted-zone"
-  providers = {
-    aws = aws
+# Terraform Backend Config
+terraform {
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "brandonwkipp"
+
+    workspaces {
+      name = "brandonwkipp-com"
+    }
   }
 
-  zone_name = var.bucket_name
-}
-
-module "hosted-zone-secondary" {
-  source = "../website-modules/route53-hosted-zone"
-  providers = {
-    aws = aws
-  }
-
-  zone_name = "brandonkipp.com"
-}
-
-module "s3-bucket" {
-  source = "../website-modules/s3-bucket"
-  providers = {
-    aws = aws
-  }
-
-  bucket_name = var.bucket_name
-}
-
-module "acm-cert-main" {
-  source = "../website-modules/acm-cert"
-  providers = {
-    aws = aws.us-east-1
-  }
-
-  domain                    = var.bucket_name
-  subject_alternative_names = ["www.${var.bucket_name}", "brandonkipp.com", "www.brandonkipp.com"]
-  zones = {
-    "brandonwkipp.com"     = module.hosted-zone-primary.hosted_zone_id,
-    "www.brandonwkipp.com" = module.hosted-zone-primary.hosted_zone_id,
-    "brandonkipp.com"      = module.hosted-zone-secondary.hosted_zone_id,
-    "www.brandonkipp.com"  = module.hosted-zone-secondary.hosted_zone_id,
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.24"
+    }
   }
 }
 
-module "cloudfront-distribution" {
-  source = "../website-modules/cloudfront"
-  providers = {
-    aws = aws.us-east-1
-  }
-
-  aliases                = [var.domain, "www.${var.domain}", "brandonkipp.com", "www.brandonkipp.com"]
-  bucket_name            = var.bucket_name
-  certificate_arn        = module.acm-cert-main.arn
-  certificate_validation = [module.acm-cert-main]
-  website_endpoint       = module.s3-bucket.website_endpoint
+resource "aws_route53_zone" "brandonwkipp_com" {
+  name = "brandonwkipp.com"
 }
 
-module "route53-dns-brandonwkipp-com" {
-  source = "../website-modules/route53-dns"
-  providers = {
-    aws = aws.us-east-1
-  }
-
-  cloudfront_domain_name    = module.cloudfront-distribution.domain_name
-  cloudfront_hosted_zone_id = module.cloudfront-distribution.hosted_zone_id
-  domain                    = var.domain
-  hosted_zone_id            = module.hosted-zone-primary.hosted_zone_id
+resource "aws_route53_zone" "brandonkipp_com" {
+  name = "brandonkipp.com"
 }
 
-module "route53-dns-www-brandonwkipp-com" {
-  source = "../website-modules/route53-dns"
-  providers = {
-    aws = aws.us-east-1
+module "brandonwkipp_com" {
+  source = "github.com/brandonwkipp/static-site-module"
+
+  aws_access_key            = var.aws_access_key
+  aws_secret_key            = var.aws_secret_key
+  bucket_name               = "brandonwkipp.com"
+  hosted_zone_id            = aws_route53_zone.brandonwkipp_com.id
+  region                    = "us-west-2"
+  stage                     = "production"
+  subject_alternative_names = ["www.brandonwkipp.com"]
+
+  redirects = {
+    "brandonkipp.com" : aws_route53_zone.brandonkipp_com.id,
+    "www.brandonkipp.com" : aws_route53_zone.brandonkipp_com.id,
   }
-
-  cloudfront_domain_name    = module.cloudfront-distribution.domain_name
-  cloudfront_hosted_zone_id = module.cloudfront-distribution.hosted_zone_id
-  domain                    = "www.${var.domain}"
-  hosted_zone_id            = module.hosted-zone-primary.hosted_zone_id
-}
-
-module "route53-dns-brandonkipp-com" {
-  source = "../website-modules/route53-dns"
-  providers = {
-    aws = aws.us-east-1
-  }
-
-  cloudfront_domain_name    = module.cloudfront-distribution.domain_name
-  cloudfront_hosted_zone_id = module.cloudfront-distribution.hosted_zone_id
-  domain                    = "brandonkipp.com"
-  hosted_zone_id            = module.hosted-zone-secondary.hosted_zone_id
-}
-
-module "route53-dns-www-brandonkipp-com" {
-  source = "../website-modules/route53-dns"
-  providers = {
-    aws = aws.us-east-1
-  }
-
-  cloudfront_domain_name    = module.cloudfront-distribution.domain_name
-  cloudfront_hosted_zone_id = module.cloudfront-distribution.hosted_zone_id
-  domain                    = "www.brandonkipp.com"
-  hosted_zone_id            = module.hosted-zone-secondary.hosted_zone_id
 }
