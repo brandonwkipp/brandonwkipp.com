@@ -11,8 +11,7 @@ on:
       - '.github/**'
       - '.nvmrc'
 
-  repository_dispatch:
-    types: [publish-event]
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
