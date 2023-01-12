@@ -52,7 +52,6 @@ module "brandonwkipp_com" {
   bucket_name               = "brandonwkipp.com"
   hosted_zone_id            = aws_route53_zone.brandonwkipp_com.id
   region                    = "us-west-2"
-  stage                     = "production"
   subject_alternative_names = ["www.brandonwkipp.com"]
 
   redirects = {
