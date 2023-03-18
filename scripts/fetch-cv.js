@@ -43,7 +43,7 @@ axios.get('https://raw.githubusercontent.com/brandonwkipp/cv/main/README.md')
           </div>
         </nav>
         <header>
-          <h2>Brandon W. Kipp, <small>Software Engineer & Musician</small></h2>
+          <h2>Brandon W. Kipp</h2>
         </header>
         <hr />
         <main>

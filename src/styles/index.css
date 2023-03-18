@@ -24,6 +24,21 @@ a {
   text-decoration: none;
 }
 
+a.decoration {
+  animation-direction: alternate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: shadow-color;
+  animation-timing-function: linear;
+  background: transparent;
+  border: 3px solid rgb(49, 52, 65);
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  margin: 0 15px;
+  padding: 1rem 1.5rem;
+  width: 150px;
+}
+
 header {
   margin: 10px auto;
   width: 750px;
@@ -43,12 +58,6 @@ main {
   width: 750px;
 }
 
-main.blog section {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-
 main.blog section h2 {
   margin-bottom: 0;
 }
@@ -64,21 +73,6 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-nav > a {
-  animation-direction: alternate;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-name: shadow-color;
-  animation-timing-function: linear;
-  background: transparent;
-  border: 3px solid rgb(49, 52, 65);
-  border-radius: 10px;
-  color: rgb(255, 255, 255);
-  margin: 0 15px;
-  padding: 1rem 1.5rem;
-  width: 150px;
 }
 
 nav h2 {
@@ -99,6 +93,12 @@ span.deg {
 }
 
 @media (max-width: 768px)  {
+  a.decoration {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+
   h3 {
     margin-top: 0;
   }
@@ -110,12 +110,6 @@ span.deg {
   main {
     padding: 0 10px;
     width: fit-content;
-  }
-
-  nav > a {
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    width: 100%;
   }
 
   nav p {
