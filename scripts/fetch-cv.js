@@ -36,9 +36,6 @@ axios.get('https://raw.githubusercontent.com/brandonwkipp/cv/main/README.md')
               <a href="/">
                 <li>Home</li>
               </a>
-              <a href="/blog">
-                <li>Blog</li>
-              </a>
             </ul>
           </div>
         </nav>
