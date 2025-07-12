@@ -1,8 +1,9 @@
-variable aws_access_key {}
-variable aws_secret_key {}
-variable hosted_zone_id_brandonwkipp_com {}
-variable hosted_zone_id_brandonkipp_com {}
-variable region {}
+variable "aws_access_key" {}
+variable "aws_secret_key" {}
+variable "hosted_zone_id_brandonwkipp_com" {}
+variable "hosted_zone_id_brandonkipp_com" {}
+variable "hosted_zone_id_brandonwkipp_music" {}
+variable "region" {}
 
 # Seed our AWS variables
 provider "aws" {
@@ -51,5 +52,7 @@ module "brandonwkipp_com" {
   redirects = {
     "brandonkipp.com" : var.hosted_zone_id_brandonkipp_com,
     "www.brandonkipp.com" : var.hosted_zone_id_brandonkipp_com,
+    "brandonwkipp.music" : var.hosted_zone_id_brandonwkipp_music,
+    "www.brandonwkipp.music" : var.hosted_zone_id_brandonwkipp_music
   }
 }
